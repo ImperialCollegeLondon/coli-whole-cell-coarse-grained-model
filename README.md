@@ -7,7 +7,7 @@ For the `c++` code, the source is given, but the binary has been compiled on a m
 
 The folder `experimental-data` contains data from the following studies: `Scott et al., 2010`, `Basan et al., 2015` and `Si et al., 2017`.
 
-The folder `figures-scripts` contains the `matlab` scripts that does the model fitting and simulation (fitted parameters are stored in the folder `results-data`, and simulation data to use in figures are stored in the folder `figures-data`).
+The folder `scripts` contains the `matlab` scripts that does the model fitting and simulation (fitted parameters are stored in the folder `results-data`, and simulation data to use in figures are stored in the folder `figures-data`).
 
 The folder `figure-plotting` contains the `matlab` scripts that generate the figures plots. They don't do computations: just loading data, plotting it and styling it.
 
@@ -28,12 +28,15 @@ The folder `figure-plotting` contains the `matlab` scripts that generate the fig
 ### Figure 1
 
 Predictions of proteome allocation data for the best fit model parameterization.
+
 The data used for the fit is the ribosomal fraction data from `Scott et al.` for a two-dimensional growth modulation: nutrient quality and chloramphenicol-mediated translation inhibition.
+
 Model prediction for forced expression of useless proteins is also compared to data from `Scott et al.` (useless proteome fraction vs growth rate for several nutrient quality), but this data is not used in the fit.
 
 ### Supplemental figure 2
 
 Displays the model-data agreement for the ribosome fraction data from `Scott et al.` used in the fit as a function of the parameters.
+
 It highlights some partial un-identifiability between `\sigma` and `a_{sat}`.
 
 ### Figure 2
