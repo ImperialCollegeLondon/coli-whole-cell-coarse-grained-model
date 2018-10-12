@@ -27,7 +27,7 @@ The folder `figure-plotting` contains the `matlab` scripts that generate the fig
 
 ### Figure 1
 
-Predictions of proteome allocation data for the best fit model parameterization.
+Predictions of proteome allocation data for the best fit model parameterisation.
 
 The data used for the fit is the ribosomal fraction data from `Scott et al.` for a two-dimensional growth modulation: nutrient quality and chloramphenicol-mediated translation inhibition.
 
@@ -41,6 +41,14 @@ It highlights some partial un-identifiability between `\sigma` and `a_{sat}`.
 
 ### Figure 2
 
+Illustrate the dynamics of the deterministic model, including cell growth and division.
+
+Eventually, cell composition (concentrations) is steady.
+
+The parameters are the fitted ones, with in addition `X_{div}` and `f_X`.
+
 ### Figure 3
+
+
 
 ### Figure 4
