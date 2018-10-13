@@ -3,13 +3,13 @@
 Code for paper in preparation.
 
 The folder `model-code` contains all the model analytics and simulation functions, mostly in `matlab`, except the simulation code for the stochastic model that is written in `c++`.
-For the `c++` code, the source is given, but the binary has been compiled on a make with `qmake`.
+For the `c++` code, the source is given, but the binary has been compiled using a `Makefile` generated with `qmake`.
 
 The folder `experimental-data` contains data from the following studies: `Scott et al., 2010`, `Basan et al., 2015` and `Si et al., 2017`.
 
 The folder `scripts` contains the `matlab` scripts that does the model fitting and simulation (fitted parameters are stored in the folder `results-data`, and simulation data to use in figures are stored in the folder `figures-data`).
 
-The folder `figure-plotting` contains the `matlab` scripts that generate the figures plots. They don't do computations: just loading data, plotting it and styling it.
+The folder `figure-plotting` contains the `python` scripts that generate the figures plots (using `seaborn`). They don't do computations: just loading data, plotting it and styling it.
 
 ## List of figures
 
