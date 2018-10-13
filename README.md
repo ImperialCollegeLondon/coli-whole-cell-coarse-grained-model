@@ -9,7 +9,7 @@ The folder `experimental-data` contains data from the following studies: `Scott 
 
 The folder `scripts` contains the `matlab` scripts that does the model fitting and simulation (fitted parameters are stored in the folder `results-data`, and simulation data to use in figures are stored in the folder `figures-data`).
 
-The folder `figure-plotting` contains the `python` scripts that generate the figures plots (using `seaborn`). They don't do computations: just loading data, plotting it and styling it.
+The folder `figure-plotting` contains the `matlab` scripts that generate the figures plots. They don't do computations: just loading data, plotting it and styling it.
 
 ## List of figures
 
