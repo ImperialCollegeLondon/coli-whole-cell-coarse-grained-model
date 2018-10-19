@@ -1,4 +1,4 @@
-growth_rate_per_hr,estimated_volume,nutrient_type,cm_type,useless_type
+growth_rate_per_hr,estim_vol_um3,nutrient_type,cm_type,useless_type
 1.71,3.4,7,0,0
 1.63,3,7,1,0
 0.98,2.39,7,1,0
