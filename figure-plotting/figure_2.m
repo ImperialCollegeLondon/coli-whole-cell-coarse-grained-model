@@ -1,36 +1,44 @@
 
 %% load data
-traj = readtable('../results-data/dynamic-det-model/trajectory.csv');
-
-%% figure layout
-ax_size = subplot(2,2,1);
-ax_X = subplot(2,2,2);
-ax_conc = subplot(2,2,3);
-f = gcf;
+traj = readtable('../results-data/res6_dynamic-det-model/trajectory.csv');
 
 %% plot the size
-subplot(2,2,1);
-plot(traj.t, traj.M_or_V, 'k', 'LineWidth', 2);
+subplot(3,1,1);
+plot(traj.t, traj.M_or_V, 'k', 'LineWidth', 3);
+ylabel('Total cell size');
+ylim([0 2000]);
 
 %% plot X
-subplot(2,2,2);
-plot(traj.t, traj.X, 'r', 'LineWidth', 2);
+subplot(3,1,2);
+plot(traj.t, traj.X, 'r', 'LineWidth', 3);
+ylabel('X amount');
+ylim([0 100]);
 
 %% plot concentrations
-subplot(2,2,3);
-plot( traj.t , traj.a , 'm', 'LineWidth', 2); hold on;
-plot( traj.t , traj.e , 'g', 'LineWidth', 2); hold on;
-plot( traj.t , traj.r , 'b', 'LineWidth', 2); hold on;
-plot( traj.t , traj.q , 'Color', [0.6 0 0], 'LineWidth', 2); hold on;
-plot( traj.t , traj.x , 'r', 'LineWidth', 2); hold on;
-legend({'a','e','r','q','x'});
+subplot(3,1,3);
+plot( traj.t , traj.a , 'm', 'LineWidth', 3); hold on;
+plot( traj.t , traj.e , 'g', 'LineWidth', 3); hold on;
+plot( traj.t , traj.r , 'b', 'LineWidth', 3); hold on;
+plot( traj.t , traj.q , 'Color', [0.6 0 0], 'LineWidth', 3); hold on;
+plot( traj.t , traj.x , 'r', 'LineWidth', 3); hold on;
+legend({'a','e','r','q','x'},'FontSize',30);
+ylabel('Concentration');
+xlabel('Time (hrs)');
+ylim([0 0.6]);
 
-%% common fig styling
-f.Position = [0 0 1200 800];
-
-%% common ax styling
-for i=[1, 2, 3]
-    subplot(2,2,i);
-    set(gca,'FontSize',20,'LineWidth',2);
-    grid();
+%% styling
+for i=[1,2,3]
+    subplot(3,1,i);
+    set(gca,'FontSize',35,'LineWidth',3);
+    xlim([0 10.5]);
 end
+set(gcf,'Position',[0 0 1300 1000],'Color','w');
+
+
+%% save figures
+addpath('../utils-code/export_fig');
+export_fig(gcf,'../figure-assembly/figure-2-components/figure_2_panel_size_X_conc.pdf');
+close all;
+
+
+
