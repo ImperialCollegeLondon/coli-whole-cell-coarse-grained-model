@@ -31,7 +31,7 @@ composition_basan = compute_cell_composition_from_growth_modulation(fitted_pars,
 writetable(composition_basan, '../results-data/res2_cell-compositions/basan_2015_modulations.csv');
 
 %%% third, the si data
-data_si = readtable('../external-data/si_2017.csv');
+data_si = readtable('../external-data/si_2017_data.csv');
 % compute composition
 composition_si = compute_cell_composition_from_growth_modulation(fitted_pars, data_si);
 % output
