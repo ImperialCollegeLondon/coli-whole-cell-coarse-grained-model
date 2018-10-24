@@ -1,0 +1,1 @@
+V_{div} \propto a^{-1.24} \times ra^{0.14}

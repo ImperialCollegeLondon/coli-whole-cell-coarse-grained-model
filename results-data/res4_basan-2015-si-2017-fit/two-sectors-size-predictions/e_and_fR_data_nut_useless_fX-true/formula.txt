@@ -1,0 +1,1 @@
+f_X \propto e^{0.98} \times fR^{-0.25}

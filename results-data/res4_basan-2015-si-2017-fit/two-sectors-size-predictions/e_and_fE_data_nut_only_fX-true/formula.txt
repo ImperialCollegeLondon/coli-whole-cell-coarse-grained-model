@@ -1,0 +1,1 @@
+f_X \propto e^{6.02} \times fE^{-4.93}

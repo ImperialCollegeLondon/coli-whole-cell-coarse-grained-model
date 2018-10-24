@@ -1,0 +1,1 @@
+f_X \propto e^{1.22} \times ra^{-0.12}

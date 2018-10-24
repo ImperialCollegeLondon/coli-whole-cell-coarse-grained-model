@@ -1,0 +1,1 @@
+V_{div} \propto a^{-93.31} \times fR^{90.2}

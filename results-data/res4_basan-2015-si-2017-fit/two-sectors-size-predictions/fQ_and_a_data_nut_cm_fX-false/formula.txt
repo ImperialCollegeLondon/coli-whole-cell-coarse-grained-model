@@ -1,0 +1,1 @@
+V_{div} \propto a^{35.82} \times a^{-1.02}

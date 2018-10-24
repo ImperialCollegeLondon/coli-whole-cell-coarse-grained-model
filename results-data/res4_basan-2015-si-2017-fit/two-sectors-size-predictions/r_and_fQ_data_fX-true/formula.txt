@@ -1,0 +1,1 @@
+f_X \propto r^{-0.16} \times fQ^{-15.49}

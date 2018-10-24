@@ -1,0 +1,1 @@
+f_X \propto fE^{1.23} \times a^{-0.23}

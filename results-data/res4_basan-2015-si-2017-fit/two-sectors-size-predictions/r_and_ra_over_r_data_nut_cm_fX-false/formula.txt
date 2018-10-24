@@ -1,0 +1,1 @@
+V_{div} \propto a^{1.52} \times (r_a/r)^{0.67}

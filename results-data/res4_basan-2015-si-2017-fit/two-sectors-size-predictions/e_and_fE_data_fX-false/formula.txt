@@ -1,0 +1,1 @@
+V_{div} \propto a^{-19.45} \times fE^{18.79}

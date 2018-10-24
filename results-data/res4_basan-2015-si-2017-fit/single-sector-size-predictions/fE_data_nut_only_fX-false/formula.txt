@@ -1,0 +1,1 @@
+V_{div} \propto fE^{-1.45}

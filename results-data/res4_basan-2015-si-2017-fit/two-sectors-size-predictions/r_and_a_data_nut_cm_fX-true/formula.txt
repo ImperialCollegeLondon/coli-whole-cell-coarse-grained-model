@@ -1,0 +1,1 @@
+f_X \propto r^{-0.84} \times a^{-0.9}

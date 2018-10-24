@@ -1,0 +1,1 @@
+f_X \propto e^{18.45} \times fE^{-17.79}

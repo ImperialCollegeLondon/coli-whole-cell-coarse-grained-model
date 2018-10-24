@@ -1,0 +1,1 @@
+f_X \propto fQ^{-18.69} \times a^{0.18}

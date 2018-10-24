@@ -1,0 +1,1 @@
+V_{div} \propto a^{-0.75} \times fR^{-0.33}
