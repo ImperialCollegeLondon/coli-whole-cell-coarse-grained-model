@@ -37,13 +37,13 @@ for i_data=1:2
     title(titles{i_data});
     xlabel('Growth rate (hr^{-1})');
     ylabel('Size');
-    ylim([0 10]); xlim([0 2]);
-    set(gca,'FontSize',25,'LineWidth',2);
-    grid();
+    ylim([0 12]); xlim([0 2]);
+    set(gca,'FontSize',30,'LineWidth',2.5);
+%     grid();
     legend(hs, ...
-           {'nutrient (Basan 2015 and Si 2017)', 'chloramphenicol (Basan 2015 and Si 2017)', 'useless expression (Basan 2015)'}, ...
-           'FontSize',11,'LineWidth',1.0,'Location','North');
-    set(gcf,'Color','w');
+           {'nutrient (Basan and Si studies)', 'chloramphenicol (Basan and Si studies)', 'useless expression (Basan study)'}, ...
+           'FontSize',20,'LineWidth',1.5,'Location','NorthEast');
+    set(gcf,'Color','w','Position',[0 0 600 500]);
 end
 export_fig(figure(1),'../figure-assembly/figure-3-components/figure_3_panel_data.pdf');
 export_fig(figure(2),'../figure-assembly/figure-3-components/figure_3_panel_prediction.pdf');
@@ -73,10 +73,10 @@ for i=1:3
     ylim([0 2.5]); xlim([0 2.5]);
     title(formulas{i},'FontSize',15);
     axis square;
-    grid();
+%     grid();
     set(gca,'XTick',0:0.5:2.5,'YTick',0:0.5:2.5);
 end
-set(gcf,'Position',[0 0 1660 360],'Color','w');
+set(gcf,'Position',[0 0 1200 400],'Color','w');
 export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_panel_single_sector.pdf');
     
 
@@ -102,10 +102,10 @@ for i=1:3
     ylim([0 2.5]); xlim([0 2.5]);
     title(formulas{i},'FontSize',15);
     axis square;
-    grid();
+%     grid();
     set(gca,'XTick',0:0.5:2.5,'YTick',0:0.5:2.5);
 end
-set(gcf,'Position',[0 0 1660 360],'Color','w');
+set(gcf,'Position',[0 0 1200 400],'Color','w');
 export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_panel_two_sectors.pdf');
 
 
