@@ -143,6 +143,8 @@ StochSimulator::describereactions()
   // RI -> R
   outstate[2][7] = 1.0;
   outstate[6][7] = -1.0;
+  // X -> 0
+  outstate[5][8] = -1.0;  
   // dispatches
 	dispatch[0] = &StochSimulator::rate0; // metabolism
 	dispatch[1] = &StochSimulator::rate1; // R_synth
@@ -152,4 +154,5 @@ StochSimulator::describereactions()
 	dispatch[5] = &StochSimulator::rate5; // X_synth
   dispatch[6] = &StochSimulator::rate6; // R -> RI
   dispatch[7] = &StochSimulator::rate7; // RI -> R
+  dispatch[8] = &StochSimulator::rate8; // X_degrad
 }

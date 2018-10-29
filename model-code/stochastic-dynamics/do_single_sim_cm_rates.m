@@ -1,10 +1,9 @@
-function sim_data = do_single_sim_cm_rates(pars)
+function sim_data = do_single_sim_cm_rates(pars, path2cpp, path2output)
 
 addpath('../utils-code');
 
 % path to simulator binary and output folder
-path2cpp = 'cpp-simulator-cm-rates/simulator.app/Contents/MacOS/simulator';
-pars.out_folder = 'cpp-sim-data';
+pars.out_folder = path2output;
 
 
 % call the cpp code

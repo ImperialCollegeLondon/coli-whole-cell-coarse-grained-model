@@ -11,6 +11,6 @@ ModelParameters::ModelParameters()
 {
   // init parameter values
 	mf_NumSpecies = 7; // R,E,Q,U,X,A = 6 species + RI = 7 species
-	mf_NumReacs = 8; // metabolism + 5 synthesis + R <-> RI
+	mf_NumReacs = 9; // metabolism + 5 synthesis + R <-> RI + X degradation
 	mf_ReacRates = VecDoub(mf_NumReacs, 0.);
 }

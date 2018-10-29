@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
 
     // parsing model variants
     string partitioning_type = sim_params.get_string_param("partitioning_type");
+    modelParameters->destroy_X = sim_params.get_int_param("destroy_X_after_div");
 
     // parsing media parameters
     modelParameters->k_media = sim_params.get_double_param("k_media");
@@ -39,6 +40,9 @@ int main(int argc, char *argv[])
     modelParameters->fQ = sim_params.get_double_param("f_Q");
     modelParameters->fU = sim_params.get_double_param("f_U");
     modelParameters->fX = sim_params.get_double_param("f_X");
+
+    // parsing X degradation rate
+    modelParameters->X_degrad_rate = sim_params.get_double_param("X_degrad_rate");
 
     // check allocation sums to 1
     Doub sum_allocation = modelParameters->fR + modelParameters->fE + modelParameters->fQ + modelParameters->fU + modelParameters->fX;
@@ -122,6 +126,7 @@ int main(int argc, char *argv[])
                 cell->previous_Lb = cell->Lb;
 
                 // binomial partitioning of mRNA and prot
+                if (modelParameters->destroy_X) {cell->set_P_X_Level(0.);}
                 do_partitioning(partitioning_type, 0.5, cell, stochSimulator);
                 cell->Lb = cell->get_size();
 

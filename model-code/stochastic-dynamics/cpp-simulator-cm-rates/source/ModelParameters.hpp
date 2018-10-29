@@ -20,6 +20,8 @@ struct ModelParameters
 
     // for division control
     Doub X_div;
+    Bool destroy_X;
+    Doub X_degrad_rate;
 
     // for synthesis
     Doub sigma;

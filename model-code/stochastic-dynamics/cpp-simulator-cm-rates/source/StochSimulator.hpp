@@ -49,6 +49,7 @@ struct StochSimulator
   	Doub rate5(VecDoub &s){return mf_ModelParameters->fX * get_tot_synth(s);} // X_synth
     Doub rate6(VecDoub &s){return mf_ModelParameters->r_ri_rate * s[2];} // R gets inactivated
     Doub rate7(VecDoub &s){return mf_ModelParameters->ri_r_rate * s[6];} // RI gets activated back
+    Doub rate8(VecDoub &s){return mf_ModelParameters->X_degrad_rate * s[5];}
 };
 
 
