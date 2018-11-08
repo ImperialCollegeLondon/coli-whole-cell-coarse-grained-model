@@ -36,6 +36,14 @@ for i_cond=1:size(modulation_data)
                                         modulation_data.nutrient_type == this_cond.nutrient_type, :);
     env_pars.ri = 0; cell_pars.allocation.fU = 0;
     env_pars.k = fit_k_from_alpha(cell_pars, env_pars, media_only_cond.growth_rate_per_hr);
+    if isempty(env_pars.k)
+        disp('could not fit k ?');
+        disp(cell_pars.biophysical);
+        disp(cell_pars.allocation);
+        disp(cell_pars.constraint);
+        disp(media_only_cond.growth_rate_per_hr);
+        error('r');
+    end
     % if also cm but not useless, compute the ri
     if (this_cond.cm_type > 0 && this_cond.useless_type == 0)
         env_pars.ri = fit_ri_from_alpha(cell_pars, env_pars, this_cond.growth_rate_per_hr);

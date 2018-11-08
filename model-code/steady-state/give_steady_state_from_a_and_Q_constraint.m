@@ -1,4 +1,4 @@
-function [steady_state,cell_pars] = give_steady_state_from_a_and_Q_constraint( a , cell_pars , env_pars )
+function [steady_state,cell_pars] = give_steady_state_from_a_and_Q_constraint(a, cell_pars, env_pars)
 
 % compute fQ, check
 fQ = cell_pars.constraint.q / (1-a);
