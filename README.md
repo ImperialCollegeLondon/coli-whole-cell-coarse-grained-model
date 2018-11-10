@@ -15,7 +15,7 @@ The folder `figure-plotting` contains the `matlab` scripts that generate the fig
 ## List of figures
 
 * Figure 1: A simple whole-cell coarse-grained model of bacterial growth reproduces proteome allocation data
-* Supplementary figure 1: `stuff with fit landscape`
+* Supplementary figure 1: Fitting `\sigma`, `a_{sat}` and `q` from scott proteome allocation data - landspace and partial un-identifiability
 * Figure 2: Integration of the structural model enables prediction of both cell composition and cell size
 * Figure 3: Regulation of division proteins by two proteome sectors quantitatively explain cell size across growth modulations
 * Supplementary figure 2: Scale normalization between Si et al. and Basan et al. data
@@ -38,7 +38,11 @@ Model prediction for forced expression of useless proteins is also compared to d
 
 Displays the model-data agreement for the ribosome fraction data from `Scott et al.` used in the fit as a function of the parameters.
 
+Currently: fix a_sat for different values, 2D sobol explo (sigma and q) for each a_sat, exclude parameter sets where `alpha_{max}` < 15 minutes doubling time,
+
 It highlights some partial un-identifiability between `\sigma` and `a_{sat}`.
+
+We will select three parameters sets spanning different values of `a_{sat}` and display the ribosome fraction model data agreement for each.
 
 ### Figure 2
 
