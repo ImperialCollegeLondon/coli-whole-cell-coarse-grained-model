@@ -54,6 +54,16 @@ The parameters are the fitted ones, with in addition `X_{div}` and `f_X`.
 
 ### Figure 3
 
+We show the size data for all datasets vs growth rate, color and shape-coded by type of growth modulation.
 
+We explain the rationale of searching regulation of X expression as function of coarse-grained cell composition and show results for different combinations of sectors and data.
+
+We show the size vs growth rate prediction for the best X regulation (by *E* concentration and fraction of active ribosomes).
+
+### Supplementary figure 3
+
+We search for the best scaling factor to 'normalize' the nutrient modulation size vs growth rate curve for the three datasets: `Scott et al.`, `Si et al.` and `Taheri-Araghi et al.`.
+
+We display the final agreement side by side with the original data.
 
 ### Figure 4
