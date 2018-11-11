@@ -4,23 +4,23 @@ addpath('../utils-code/export_fig');
 
 %% load prediction data
 %
-best_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_ra_over_r_data_fX-true/predictions.csv');
-best_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_ra_over_r_data_fX-true/formula.txt');
+best_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/e_and_ra_over_r_data_fX-true/predictions.csv');
+best_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/e_and_ra_over_r_data_fX-true/formula.txt');
 %
-r_nut_useless_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/r_data_nut_useless_fX-true/predictions.csv');
-r_nut_useless_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/r_data_nut_useless_fX-true/formula.txt');
+r_nut_useless_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/single-sector-size-predictions/r_data_nut_useless_fX-true/predictions.csv');
+r_nut_useless_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/single-sector-size-predictions/r_data_nut_useless_fX-true/formula.txt');
 %
-e_nut_useless_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/e_data_nut_useless_fX-true/predictions.csv');
-e_nut_useless_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/e_data_nut_useless_fX-true/formula.txt');
+e_nut_useless_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/single-sector-size-predictions/e_data_nut_useless_fX-true/predictions.csv');
+e_nut_useless_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/single-sector-size-predictions/e_data_nut_useless_fX-true/formula.txt');
 %
-e_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/e_data_fX-true/predictions.csv');
-e_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/e_data_fX-true/formula.txt');
+e_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/single-sector-size-predictions/e_data_fX-true/predictions.csv');
+e_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/single-sector-size-predictions/e_data_fX-true/formula.txt');
 %
-e_and_r_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_r_data_fX-true/predictions.csv');
-e_and_r_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_r_data_fX-true/formula.txt');
+e_and_r_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/e_and_r_data_fX-true/predictions.csv');
+e_and_r_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/e_and_r_data_fX-true/formula.txt');
 %
-e_and_ra_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_ra_data_fX-true/predictions.csv');
-e_and_ra_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_ra_data_fX-true/formula.txt');
+e_and_ra_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/e_and_ra_data_fX-true/predictions.csv');
+e_and_ra_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/e_and_ra_data_fX-true/formula.txt');
 
 %% make the two size vs growth rate plots (data and best prediction)
 mk_size = 12;
