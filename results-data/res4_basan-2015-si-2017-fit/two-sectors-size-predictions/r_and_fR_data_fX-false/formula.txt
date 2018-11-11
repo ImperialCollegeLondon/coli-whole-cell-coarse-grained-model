@@ -1,1 +1,0 @@
-V_{div} \propto a^{-16.34} \times fR^{16.49}

@@ -1,0 +1,1 @@
+f_X \propto e^{0.9} \times a^{-0.63}

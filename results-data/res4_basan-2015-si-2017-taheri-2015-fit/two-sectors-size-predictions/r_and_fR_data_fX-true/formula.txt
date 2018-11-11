@@ -1,0 +1,1 @@
+f_X \propto r^{17.83} \times fR^{-18.01}

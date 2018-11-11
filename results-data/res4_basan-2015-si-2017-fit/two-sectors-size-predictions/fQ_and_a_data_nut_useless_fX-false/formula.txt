@@ -1,1 +1,0 @@
-V_{div} \propto a^{29.49} \times a^{-0.98}

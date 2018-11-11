@@ -1,8 +1,14 @@
 
 addpath('../model-code');
 
+% do it for the three parameter sets (best, low asat, high asat)
+model_names = {'','_low_asat','_high_asat'}
+data_files = {'basan_2015_si_2017_taheri_2015_modulations.csv', ...
+              'basan_2015_si_2017_taheri_2015_modulations_low_asat.csv', ...
+              'basan_2015_si_2017_taheri_2015_modulations_high_asat.csv'};
+
 %%% load the data with size to predict and cell composition
-data = readtable('../results-data/res3_cell-compositions/basan_2015_si_2017_modulations.csv');
+data = readtable('../results-data/res3_cell-compositions/basan_2015_si_2017_taheri_2015_modulations.csv');
 data_nut_only = data(data.cm_type == 0 & data.useless_type == 0, :);
 data_nut_cm = data(data.useless_type == 0, :);
 data_nut_useless = data(data.cm_type == 0, :);
@@ -29,7 +35,7 @@ for sector=single_sectors
             end
             % make and write tables with the regression parameters and the
             % predictions
-            out_dir = ['../results-data/res4_basan-2015-si-2017-fit/single-sector-size-predictions/' sector{1} '_' data_str{1} '_fX-' fX_str{1}];
+            out_dir = ['../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/' sector{1} '_' data_str{1} '_fX-' fX_str{1}];
             mkdir(out_dir);
             writetable(table(scale_factor),[out_dir '/scale_factor.csv']);
             writetable(table(exponents),[out_dir '/exponents.csv']);
@@ -56,7 +62,7 @@ end
 table_row_str = strjoin([table_row_str{1}(1:end-1) "});"],'');
 table_creation_str = strjoin([table_str table_row_str],'');
 eval(table_creation_str);
-writetable(results,'../results-data/res4_basan-2015-si-2017-fit/single-sector-size-predictions-R2-values.csv','WriteRowNames',true);
+writetable(results,'../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions-R2-values.csv','WriteRowNames',true);
 
 
 %%% do two sectors prediction
@@ -76,7 +82,7 @@ for i_sector_1=1:length(single_sectors)
                 end
                 % make and write tables with the regression parameters and the
                 % predictions
-                out_dir = ['../results-data/res4_basan-2015-si-2017-fit/two-sectors-size-predictions/' sector_1{1} '_and_' sector_2{1} '_' data_str{1} '_fX-' fX_str{1}];
+                out_dir = ['../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/' sector_1{1} '_and_' sector_2{1} '_' data_str{1} '_fX-' fX_str{1}];
                 mkdir(out_dir);
                 writetable(table(scale_factor),[out_dir '/scale_factor.csv']);
                 writetable(table(exponents),[out_dir '/exponents.csv']);
@@ -103,7 +109,7 @@ end
 table_row_str = strjoin([table_row_str{1}(1:end-1) "});"],'');
 table_creation_str = strjoin([table_str table_row_str],'');
 eval(table_creation_str);
-writetable(results,'../results-data/res4_basan-2015-si-2017-fit/two-sectors-size-predictions-R2-values.csv','WriteRowNames',true);
+writetable(results,'../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions-R2-values.csv','WriteRowNames',true);
 
 
 

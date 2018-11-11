@@ -1,1 +1,0 @@
-f_X \propto fQ^{-52.67} \times a^{1.7}

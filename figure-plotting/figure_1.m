@@ -3,7 +3,7 @@
 scott_data = readtable('../external-data/scott_2010_data.csv');
 
 % load the corresponding model data
-model_data = readtable('../results-data/res2_cell-compositions/scott_2010_modulations.csv');
+model_data = readtable('../results-data/res3_cell-compositions/scott_2010_modulations.csv');
 
 % 
 nutrients = sort(unique(scott_data.nutrient_type));

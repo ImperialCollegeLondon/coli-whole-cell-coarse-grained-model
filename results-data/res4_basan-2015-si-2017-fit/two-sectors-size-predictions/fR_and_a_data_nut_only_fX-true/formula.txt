@@ -1,1 +1,0 @@
-f_X \propto fR^{12.19} \times a^{-19.17}

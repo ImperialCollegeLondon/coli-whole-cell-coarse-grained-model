@@ -1,1 +1,0 @@
-f_X \propto r^{48.52} \times fR^{-47.53}

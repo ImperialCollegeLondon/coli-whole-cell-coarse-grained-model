@@ -4,23 +4,23 @@ addpath('../utils-code/export_fig');
 
 %% load prediction data
 %
-best_pred_data = readtable('../results-data/res4_basan-2015-si-2017-fit/two-sectors-size-predictions/e_and_ra_over_r_data_fX-true/predictions.csv');
-best_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-fit/two-sectors-size-predictions/e_and_ra_over_r_data_fX-true/formula.txt');
+best_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_ra_over_r_data_fX-true/predictions.csv');
+best_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_ra_over_r_data_fX-true/formula.txt');
 %
-r_nut_useless_pred_data = readtable('../results-data/res4_basan-2015-si-2017-fit/single-sector-size-predictions/r_data_nut_useless_fX-true/predictions.csv');
-r_nut_useless_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-fit/single-sector-size-predictions/r_data_nut_useless_fX-true/formula.txt');
+r_nut_useless_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/r_data_nut_useless_fX-true/predictions.csv');
+r_nut_useless_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/r_data_nut_useless_fX-true/formula.txt');
 %
-e_nut_useless_pred_data = readtable('../results-data/res4_basan-2015-si-2017-fit/single-sector-size-predictions/e_data_nut_useless_fX-true/predictions.csv');
-e_nut_useless_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-fit/single-sector-size-predictions/e_data_nut_useless_fX-true/formula.txt');
+e_nut_useless_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/e_data_nut_useless_fX-true/predictions.csv');
+e_nut_useless_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/e_data_nut_useless_fX-true/formula.txt');
 %
-e_pred_data = readtable('../results-data/res4_basan-2015-si-2017-fit/single-sector-size-predictions/e_data_fX-true/predictions.csv');
-e_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-fit/single-sector-size-predictions/e_data_fX-true/formula.txt');
+e_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/e_data_fX-true/predictions.csv');
+e_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions/e_data_fX-true/formula.txt');
 %
-e_and_r_pred_data = readtable('../results-data/res4_basan-2015-si-2017-fit/two-sectors-size-predictions/e_and_r_data_fX-true/predictions.csv');
-e_and_r_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-fit/two-sectors-size-predictions/e_and_r_data_fX-true/formula.txt');
+e_and_r_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_r_data_fX-true/predictions.csv');
+e_and_r_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_r_data_fX-true/formula.txt');
 %
-e_and_ra_pred_data = readtable('../results-data/res4_basan-2015-si-2017-fit/two-sectors-size-predictions/e_and_ra_data_fX-true/predictions.csv');
-e_and_ra_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-fit/two-sectors-size-predictions/e_and_ra_data_fX-true/formula.txt');
+e_and_ra_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_ra_data_fX-true/predictions.csv');
+e_and_ra_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions/e_and_ra_data_fX-true/formula.txt');
 
 %% make the two size vs growth rate plots (data and best prediction)
 mk_size = 12;
@@ -37,12 +37,12 @@ for i_data=1:2
     title(titles{i_data});
     xlabel('Growth rate (hr^{-1})');
     ylabel('Size');
-    ylim([0 12]); xlim([0 2]);
+    ylim([0 15]); xlim([0 3]);
     set(gca,'FontSize',30,'LineWidth',2.5);
 %     grid();
     legend(hs, ...
-           {'nutrient (Basan and Si studies)', 'chloramphenicol (Basan and Si studies)', 'useless expression (Basan study)'}, ...
-           'FontSize',20,'LineWidth',1.5,'Location','NorthEast');
+           {'nutrient (Basan, Si and Taheri-Araghi studies)', 'chloramphenicol (Basan and Si studies)', 'useless expression (Basan study)'}, ...
+           'FontSize',15,'LineWidth',1.5,'Location','NorthWest');
     set(gcf,'Color','w','Position',[0 0 600 500]);
 end
 export_fig(figure(1),'../figure-assembly/figure-3-components/figure_3_panel_data.pdf');
@@ -70,7 +70,7 @@ for i=1:3
     set(gca,'FontSize',15,'LineWidth',1.5);
     xlabel('log real size');
     if i==1; ylabel('log predicted size'); end
-    ylim([0 2.5]); xlim([0 2.5]);
+    ylim([0 3]); xlim([0 3]);
     title(formulas{i},'FontSize',15);
     axis square;
 %     grid();
@@ -99,7 +99,7 @@ for i=1:3
     set(gca,'FontSize',15,'LineWidth',1.5);
     xlabel('log real size');
     if i==1; ylabel('log predicted size'); end
-    ylim([0 2.5]); xlim([0 2.5]);
+    ylim([0 3]); xlim([0 3]);
     title(formulas{i},'FontSize',15);
     axis square;
 %     grid();

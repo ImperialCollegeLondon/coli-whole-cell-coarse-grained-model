@@ -1,1 +1,0 @@
-V_{div} \propto a^{-0.91} \times fQ^{8.1}

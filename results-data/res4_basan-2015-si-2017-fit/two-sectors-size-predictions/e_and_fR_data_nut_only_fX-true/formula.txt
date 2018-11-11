@@ -1,1 +1,0 @@
-f_X \propto e^{1.21} \times fR^{-0.12}

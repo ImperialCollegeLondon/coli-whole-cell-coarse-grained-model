@@ -1,0 +1,1 @@
+f_X \propto e^{1.25} \times (r_a/r)^{0}

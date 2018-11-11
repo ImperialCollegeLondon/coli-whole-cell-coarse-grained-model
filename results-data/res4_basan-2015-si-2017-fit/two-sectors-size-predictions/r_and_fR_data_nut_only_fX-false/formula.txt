@@ -1,1 +1,0 @@
-V_{div} \propto a^{-49.52} \times fR^{48.53}

@@ -1,1 +1,0 @@
-V_{div} \propto a^{-3.11} \times fQ^{93.31}

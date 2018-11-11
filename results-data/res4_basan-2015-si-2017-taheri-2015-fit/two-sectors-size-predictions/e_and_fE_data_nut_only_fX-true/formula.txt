@@ -1,0 +1,1 @@
+f_X \propto e^{28.36} \times fE^{-28.26}

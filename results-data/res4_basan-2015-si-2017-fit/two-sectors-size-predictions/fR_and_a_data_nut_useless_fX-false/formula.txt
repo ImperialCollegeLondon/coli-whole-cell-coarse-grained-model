@@ -1,1 +1,0 @@
-V_{div} \propto a^{-3.24} \times a^{6.24}

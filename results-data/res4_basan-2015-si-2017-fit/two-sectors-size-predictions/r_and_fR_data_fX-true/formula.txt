@@ -1,1 +1,0 @@
-f_X \propto r^{15.34} \times fR^{-15.49}

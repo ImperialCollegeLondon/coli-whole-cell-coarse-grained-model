@@ -1,0 +1,1 @@
+V_{div} \propto a^{0.77} \times fQ^{19.92}

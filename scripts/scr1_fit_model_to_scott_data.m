@@ -89,26 +89,27 @@ for i_a = 1:length(a_sats)
     writetable(composition_data,['../results-data/res1_scott-2010-fit/scott-predictions_local-fixed-asat-fit_asat-' num2str(a_sats(i_a)) '.csv']);
 end
 
-% %%%
-%
-% %%%
-% figure(2);
-% for i_a=1:length(a_sats)
-%     data = readtable(['../results-data/res1_scott-2010-fit/sobol-exploration-with-cost_asat-' num2str(a_sats(i_a)) '.csv']);
-%     subplot(3,4,i_a);
-%     scatter(data.sigma, data.q, [], data.log_goodness_fit);
-%     title(['a_{sat} = ' num2str(a_sats(i_a))]);
-%     colorbar;
-% end
 
+%%% find best parameter sets and output in table
+% best best
+sigma = scott_fit_best_pars.sigma_best_local(scott_fit_best_pars.a_sat==0.02);
+a_sat = scott_fit_best_pars.a_sat(scott_fit_best_pars.a_sat==0.02);
+q = scott_fit_best_pars.q_best_local(scott_fit_best_pars.a_sat==0.02);
+fit_pars_table = table(sigma, a_sat, q);
+writetable(fit_pars_table, '../results-data/res1_scott-2010-fit/fitted-parameters_proteome-allocation.csv');
+% good low asat
+sigma = scott_fit_best_pars.sigma_best_local(scott_fit_best_pars.a_sat==0.001);
+a_sat = scott_fit_best_pars.a_sat(scott_fit_best_pars.a_sat==0.001);
+q = scott_fit_best_pars.q_best_local(scott_fit_best_pars.a_sat==0.001);
+fit_pars_table = table(sigma, a_sat, q);
+writetable(fit_pars_table, '../results-data/res1_scott-2010-fit/fitted-parameters_proteome-allocation_good-low-asat.csv');
+% good high asat
+sigma = scott_fit_best_pars.sigma_best_local(scott_fit_best_pars.a_sat==0.1);
+a_sat = scott_fit_best_pars.a_sat(scott_fit_best_pars.a_sat==0.1);
+q = scott_fit_best_pars.q_best_local(scott_fit_best_pars.a_sat==0.1);
+fit_pars_table = table(sigma, a_sat, q);
+writetable(fit_pars_table, '../results-data/res1_scott-2010-fit/fitted-parameters_proteome-allocation_good-high-asat.csv');
 
-
-%%% find best parameter set and output in table
-% sigma = 6.1538;
-% a_sat = 0.0214;
-% q = 0.466;
-% fit_pars_table = table(sigma, a_sat, q);
-% writetable(fit_pars_table, '../results-data/scott-2010-fit/fitted-parameters_proteome-allocation.csv');
 
 end
 

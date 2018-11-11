@@ -1,0 +1,1 @@
+f_X \propto fE^{0.1} \times fQ^{-28.36}

@@ -1,1 +1,0 @@
-V_{div} \propto a^{-0.92} \times a^{0.55}

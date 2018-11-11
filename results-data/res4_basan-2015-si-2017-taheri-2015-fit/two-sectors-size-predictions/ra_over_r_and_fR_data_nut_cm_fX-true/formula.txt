@@ -1,0 +1,1 @@
+f_X \propto (r_a/r)^{-0.68} \times fR^{-1.49}

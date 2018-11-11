@@ -1,1 +1,0 @@
-V_{div} \propto a^{0.58} \times (r_a/r)^{-0.11}
