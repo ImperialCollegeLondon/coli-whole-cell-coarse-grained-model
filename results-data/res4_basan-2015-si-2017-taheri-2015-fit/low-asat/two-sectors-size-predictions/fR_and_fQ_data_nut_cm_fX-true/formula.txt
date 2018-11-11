@@ -1,0 +1,1 @@
+f_X \propto fR^{-0.71} \times fQ^{-74.21}

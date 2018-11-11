@@ -1,0 +1,1 @@
+f_X \propto r^{4.25} \times a^{-8.38}

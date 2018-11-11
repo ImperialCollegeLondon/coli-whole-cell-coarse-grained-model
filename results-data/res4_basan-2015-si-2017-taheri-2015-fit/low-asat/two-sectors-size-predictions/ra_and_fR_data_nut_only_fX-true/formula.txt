@@ -1,0 +1,1 @@
+f_X \propto ra^{141.54} \times fR^{-141.32}

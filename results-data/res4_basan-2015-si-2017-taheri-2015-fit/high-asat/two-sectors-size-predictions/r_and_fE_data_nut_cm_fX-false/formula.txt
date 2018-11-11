@@ -1,0 +1,1 @@
+V_{div} \propto a^{-0.59} \times fE^{-0.87}

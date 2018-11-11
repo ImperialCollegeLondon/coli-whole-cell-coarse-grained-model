@@ -1,0 +1,1 @@
+f_X \propto r^{10.55} \times fR^{-11.38}

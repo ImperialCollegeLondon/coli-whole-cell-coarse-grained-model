@@ -1,0 +1,1 @@
+f_X \propto fR^{-0.88} \times a^{-1.06}

@@ -1,0 +1,1 @@
+f_X \propto e^{120.76} \times fE^{-120.75}

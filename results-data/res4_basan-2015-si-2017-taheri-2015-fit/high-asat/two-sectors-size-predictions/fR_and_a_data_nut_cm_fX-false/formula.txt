@@ -1,0 +1,1 @@
+V_{div} \propto a^{0.88} \times a^{1.16}

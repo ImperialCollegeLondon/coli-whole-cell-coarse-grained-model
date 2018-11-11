@@ -1,0 +1,1 @@
+f_X \propto r^{9.4} \times fR^{-9.59}

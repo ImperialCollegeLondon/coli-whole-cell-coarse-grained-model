@@ -1,0 +1,1 @@
+f_X \propto fE^{0.44} \times fR^{-0.27}

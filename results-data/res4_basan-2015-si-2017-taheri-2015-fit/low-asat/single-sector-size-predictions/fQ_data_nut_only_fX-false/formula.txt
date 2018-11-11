@@ -1,0 +1,1 @@
+V_{div} \propto fQ^{122.17}

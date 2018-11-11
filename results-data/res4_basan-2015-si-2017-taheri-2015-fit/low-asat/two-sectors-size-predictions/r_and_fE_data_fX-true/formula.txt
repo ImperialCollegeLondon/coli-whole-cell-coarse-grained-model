@@ -1,0 +1,1 @@
+f_X \propto r^{0.19} \times fE^{0.72}

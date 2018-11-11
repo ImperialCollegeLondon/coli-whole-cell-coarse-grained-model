@@ -1,0 +1,1 @@
+f_X \propto r^{74.21} \times fR^{-74.93}

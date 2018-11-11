@@ -1,0 +1,1 @@
+V_{div} \propto a^{-0.67} \times fQ^{11.76}

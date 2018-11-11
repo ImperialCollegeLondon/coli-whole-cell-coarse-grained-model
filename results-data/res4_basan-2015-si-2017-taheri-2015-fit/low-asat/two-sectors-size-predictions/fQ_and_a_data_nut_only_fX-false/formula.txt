@@ -1,0 +1,1 @@
+V_{div} \propto a^{149.97} \times a^{-0.46}

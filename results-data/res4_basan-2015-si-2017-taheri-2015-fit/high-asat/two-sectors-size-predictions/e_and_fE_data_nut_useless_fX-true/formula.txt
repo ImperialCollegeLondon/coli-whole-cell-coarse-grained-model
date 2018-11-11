@@ -1,0 +1,1 @@
+f_X \propto e^{5.38} \times fE^{-4.51}

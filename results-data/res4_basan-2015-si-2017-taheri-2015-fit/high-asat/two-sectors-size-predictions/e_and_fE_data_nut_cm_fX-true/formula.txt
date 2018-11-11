@@ -1,0 +1,1 @@
+f_X \propto e^{11.16} \times fE^{-10.54}

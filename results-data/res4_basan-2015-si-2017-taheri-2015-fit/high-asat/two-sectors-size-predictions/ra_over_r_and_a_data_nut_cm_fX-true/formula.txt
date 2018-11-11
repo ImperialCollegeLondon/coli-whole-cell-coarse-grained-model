@@ -1,0 +1,1 @@
+f_X \propto (r_a/r)^{0.88} \times a^{-2.21}

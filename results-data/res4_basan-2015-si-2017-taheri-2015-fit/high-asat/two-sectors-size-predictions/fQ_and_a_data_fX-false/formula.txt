@@ -1,0 +1,1 @@
+V_{div} \propto a^{18.11} \times a^{-0.81}

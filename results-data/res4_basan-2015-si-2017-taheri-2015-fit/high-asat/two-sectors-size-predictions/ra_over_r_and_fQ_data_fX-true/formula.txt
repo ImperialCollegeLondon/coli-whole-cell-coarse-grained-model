@@ -1,0 +1,1 @@
+f_X \propto (r_a/r)^{0.34} \times fQ^{-13.72}

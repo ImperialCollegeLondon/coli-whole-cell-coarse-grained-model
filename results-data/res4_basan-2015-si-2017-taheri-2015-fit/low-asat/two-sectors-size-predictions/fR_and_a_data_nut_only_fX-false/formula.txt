@@ -1,0 +1,1 @@
+V_{div} \propto a^{-4.41} \times a^{8.7}

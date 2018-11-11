@@ -1,0 +1,1 @@
+V_{div} \propto a^{-6.38} \times fE^{5.51}

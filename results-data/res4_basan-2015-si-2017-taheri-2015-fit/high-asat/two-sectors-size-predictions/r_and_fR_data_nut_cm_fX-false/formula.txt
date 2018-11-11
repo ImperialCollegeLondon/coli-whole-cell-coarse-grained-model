@@ -1,0 +1,1 @@
+V_{div} \propto a^{-11.55} \times fR^{12.38}

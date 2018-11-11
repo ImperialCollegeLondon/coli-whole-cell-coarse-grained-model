@@ -1,0 +1,1 @@
+f_X \propto fE^{0.6}

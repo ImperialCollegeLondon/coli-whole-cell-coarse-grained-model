@@ -1,0 +1,1 @@
+f_X \propto r^{-1.24} \times ra^{0}

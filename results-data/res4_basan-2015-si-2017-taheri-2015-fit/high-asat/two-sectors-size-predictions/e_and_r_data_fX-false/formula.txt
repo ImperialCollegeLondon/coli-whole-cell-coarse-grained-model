@@ -1,0 +1,1 @@
+V_{div} \propto a^{-0.8} \times r^{-0.42}

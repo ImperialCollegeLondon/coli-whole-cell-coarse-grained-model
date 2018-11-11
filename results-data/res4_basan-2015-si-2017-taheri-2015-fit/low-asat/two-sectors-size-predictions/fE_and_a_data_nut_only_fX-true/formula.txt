@@ -1,0 +1,1 @@
+f_X \propto fE^{0.59} \times a^{-1.18}

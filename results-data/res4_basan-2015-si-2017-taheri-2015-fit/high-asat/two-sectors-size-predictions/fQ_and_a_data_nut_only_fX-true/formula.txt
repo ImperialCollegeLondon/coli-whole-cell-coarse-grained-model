@@ -1,0 +1,1 @@
+f_X \propto fQ^{-25.15} \times a^{1.09}

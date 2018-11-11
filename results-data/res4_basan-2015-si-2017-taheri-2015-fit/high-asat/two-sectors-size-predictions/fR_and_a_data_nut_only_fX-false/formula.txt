@@ -1,0 +1,1 @@
+V_{div} \propto a^{-23.03} \times a^{31.96}

@@ -1,0 +1,1 @@
+f_X \propto fQ^{-157.76} \times a^{1.07}

@@ -1,0 +1,1 @@
+f_X \propto e^{44.98} \times fE^{-44.1}

@@ -1,0 +1,1 @@
+f_X \propto fR^{2.07} \times fQ^{-300.16}

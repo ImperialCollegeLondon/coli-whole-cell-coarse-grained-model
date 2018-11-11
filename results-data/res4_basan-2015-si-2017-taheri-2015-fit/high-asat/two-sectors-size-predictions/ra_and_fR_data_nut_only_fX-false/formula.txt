@@ -1,0 +1,1 @@
+V_{div} \propto a^{-25.31} \times fR^{24.55}
