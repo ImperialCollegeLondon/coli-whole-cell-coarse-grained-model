@@ -3,7 +3,7 @@ addpath('../model-code/steady-state');
 addpath('../model-code/stochastic-dynamics');
 
 % load fitted pars on scott data
-fitted_scott_pars = readtable('../results-data/res1_scott-2010-fit/fitted-parameters_proteome-allocation.csv');
+fitted_scott_pars = readtable('../results-data/res1_scott-2010-fit/fitted-parameters_proteome-allocation.csv'); 
 
 % assemble the parameters structure for solving the det model
 det_pars.biophysical.sigma = fitted_scott_pars.sigma;
@@ -41,7 +41,7 @@ stoch_pars.X_degrad_rate = 0;
 stoch_pars.random_seed = 0;
 stoch_pars.partitioning_type = 'normal';
 stoch_pars.num_lineages = 1;
-stoch_pars.sim_duration = 3000;
+stoch_pars.sim_duration = 10000;
 stoch_pars.update_period = 0.005;
 stoch_pars.num_updates_per_output = 1;
 path2cpp = '../model-code/stochastic-dynamics/cpp-simulator-cm-rates/simulator.app/Contents/MacOS/simulator';
@@ -51,7 +51,7 @@ path2output = '../model-code/stochastic-dynamics/cpp-sim-data';
 %%% ratio that leads to the expected growth rate (0.5) in the simulation
 %%% by varing the inactivation rate
 ri_r_rate_base = 100;
-ratio_rib_inactiv_over_reactiv_rate_vec = linspace(0.5,3,15);
+ratio_rib_inactiv_over_reactiv_rate_vec = linspace(0.5,3,20);
 % store results
 real_growth_rate_vec = zeros(size(ratio_rib_inactiv_over_reactiv_rate_vec));
 real_ri_vec = zeros(size(ratio_rib_inactiv_over_reactiv_rate_vec));
@@ -65,15 +65,23 @@ for i=1:length(ratio_rib_inactiv_over_reactiv_rate_vec)
 end
 %
 [~,i_best] = min(abs(real_growth_rate_vec-0.5));
-real_growth_rate_best = real_growth_rate_vec(i_best)
-real_ri_best = real_ri_vec(i_best) % 'validation of consistency with deterministic model: the ri is very close the det model ri !'
+real_growth_rate_best = real_growth_rate_vec(i_best);
+real_ri_best = real_ri_vec(i_best); % 'validation of consistency with deterministic model: the ri is very close the det model ri !'
 r_ri_rate_base = ratio_rib_inactiv_over_reactiv_rate_vec(i_best) * ri_r_rate_base; 
+% format and output the data
+ri_r_rate = ri_r_rate_base .* ones(length(ratio_rib_inactiv_over_reactiv_rate_vec), 1);
+r_ri_rate = ri_r_rate_base .* ratio_rib_inactiv_over_reactiv_rate_vec';
+real_growth_rate_per_hr = real_growth_rate_vec';
+real_ri = real_ri_vec';
+det_ss_ri = env_pars.ri .* ones(length(ratio_rib_inactiv_over_reactiv_rate_vec), 1);
+det_ss_growth_rate_per_hr = 0.5 .* ones(length(ratio_rib_inactiv_over_reactiv_rate_vec), 1);
+writetable(table(ri_r_rate, r_ri_rate, real_growth_rate_per_hr, real_ri, det_ss_growth_rate_per_hr, det_ss_ri), '../results-data/res7_stoch-model-finding-rib-reactivation-rate/fixed-ri-r-rate_r-ri-rate-variation.csv');
 
 
 %%% now check that increasing the ri <-> r rate scale (ratio conserved)
 %%% does not change things above the base ri_r_rate
-scale_vec = logspace(-2,0.5,10);
-% store results
+scale_vec = logspace(-3,0.5,10);
+% obtain results
 real_growth_rate_vec = zeros(size(scale_vec));
 real_ri_vec = zeros(size(scale_vec));
 for i=1:length(scale_vec)
@@ -83,8 +91,15 @@ for i=1:length(scale_vec)
     real_ri_vec(i) = mean(sim.lineage_data.RI(31:end)./sim.lineage_data.V_birth(31:end)); % 'real' ri from the stochastic simulations
     real_growth_rate_vec(i) = log(2) / mean(sim.lineage_data.T_div(31:end));    
 end
-semilogx(scale_vec, real_growth_rate_vec, '-ro');
-ylim([0 0.7]);
+% format and output data
+ri_r_rate = ri_r_rate_base .* scale_vec';
+r_ri_rate = r_ri_rate_base .* scale_vec';
+scale_factor = scale_vec';
+real_growth_rate_per_hr = real_growth_rate_vec';
+real_ri = real_ri_vec';
+writetable(table(scale_factor, ri_r_rate, r_ri_rate, real_growth_rate_per_hr, real_ri), '../results-data/res7_stoch-model-finding-rib-reactivation-rate/scale-ri-r-and-r-ri-rates-variation.csv');
+
+
 
 
 

@@ -15,15 +15,15 @@ The folder `figure-plotting` contains the `matlab` scripts that generate the fig
 ## List of figures
 
 * Figure 1: A simple whole-cell coarse-grained model of bacterial growth reproduces proteome allocation data
-* Supplementary figure 1: Fitting `\sigma`, `a_{sat}` and `q` from scott proteome allocation data - landspace and partial un-identifiability
+* Supplementary figure 1: Fitting `\sigma`, `a_{sat}` and `q` from scott proteome allocation data - landscape and partial un-identifiability
 * Figure 2: Integration of the structural model enables prediction of both cell composition and cell size
 * Figure 3: Regulation of division proteins by two proteome sectors quantitatively explain cell size across growth modulations
 * Supplementary figure 2: Scale normalization between Si et al. and Basan et al. data
 * Supplementary figure 3: Size prediction capabilities do not depend on `a_{sat}`
 * Figure 4: Emergence of ‘adder’ size homeostasis and cellular individuality in the presence of reaction noise
-`stuff with rates representation of cm`
-* Supplementary figure 4: Stuff with cm rates
-* Supplementary figure 5: Many factors can generate deviation from 'adder' size homeostasis
+* Supplementary figure 4: Kinetic modeling of ribosome inactivation is consistent with deterministic steady-state model
+* Supplementary figure 5: Choice of `X_{div}` and `f_X scale` so that noise in size and growth rate is realistic
+* Supplementary figure 6: Many factors can generate deviation from 'adder' size homeostasis
 
 
 ## Details of figures data
