@@ -19,9 +19,11 @@ The folder `figure-plotting` contains the `matlab` scripts that generate the fig
 * Figure 2: Integration of the structural model enables prediction of both cell composition and cell size
 * Figure 3: Regulation of division proteins by two proteome sectors quantitatively explain cell size across growth modulations
 * Supplementary figure 2: Scale normalization between Si et al. and Basan et al. data
+* Supplementary figure 3: Size prediction capabilities do not depend on `a_{sat}`
 * Figure 4: Emergence of ‘adder’ size homeostasis and cellular individuality in the presence of reaction noise
-* Supplementary figure 3: `stuff with rates representation of cm`
-* Supplementary figure 4: Many factors can generate deviation from 'adder' size homeostasis
+`stuff with rates representation of cm`
+* Supplementary figure 4: Stuff with cm rates
+* Supplementary figure 5: Many factors can generate deviation from 'adder' size homeostasis
 
 
 ## Details of figures data
@@ -34,7 +36,7 @@ The data used for the fit is the ribosomal fraction data from `Scott et al.` for
 
 Model prediction for forced expression of useless proteins is also compared to data from `Scott et al.` (useless proteome fraction vs growth rate for several nutrient quality), but this data is not used in the fit.
 
-### Supplemental figure 2
+### Supplemental figure 1
 
 Displays the model-data agreement for the ribosome fraction data from `Scott et al.` used in the fit as a function of the parameters.
 
@@ -60,10 +62,17 @@ We explain the rationale of searching regulation of X expression as function of 
 
 We show the size vs growth rate prediction for the best X regulation (by *E* concentration and fraction of active ribosomes).
 
-### Supplementary figure 3
+### Supplementary figure 2
 
 We search for the best scaling factor to 'normalize' the nutrient modulation size vs growth rate curve for the three datasets: `Scott et al.`, `Si et al.` and `Taheri-Araghi et al.`.
 
 We display the final agreement side by side with the original data.
+
+### Supplementary figure 3
+
+We show the size prediction for other `a_{sat}` and `\sigma` values that could also fit `Scott et al.` ribosome fraction data (see Supplementary figure 1).
+
+The size prediction formula barely changes.
+
 
 ### Figure 4
