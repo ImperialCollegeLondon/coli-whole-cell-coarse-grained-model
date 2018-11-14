@@ -30,9 +30,9 @@ ylim([0.1 0.4]); xlabel('Rate of ribosome inactivation (hr^{-1})'); ylabel('Mean
 subplot(2,2,3);
 semilogx(scale_var.ri_r_rate, scale_var.real_growth_rate_per_hr,'-bo', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
 semilogx([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)], [1 1].* matching_det_model.det_ss_growth_rate_per_hr(1), 'k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-plot([1 1].* 207, [0 1], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+plot([1 1].* 100, [0 1], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
 ylim([0.4 0.6]); xlim([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)]);
-xlabel('Rate of ribosome inactivation (hr^{-1})'); ylabel('Growth rate (hr^{-1})');
+xlabel('Rate of ribosome re-activation (hr^{-1})'); ylabel('Growth rate (hr^{-1})');
 
 
 %%
@@ -40,8 +40,8 @@ subplot(2,2,4);
 semilogx(scale_var.ri_r_rate, scale_var.real_ri,'-bo', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
 semilogx([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)], [1 1].* matching_det_model.det_ss_ri(1), 'k', 'MarkerSize', mk_size, 'LineWidth', lw);
 ylim([0.1 0.4]); xlim([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)]); hold on;
-plot([1 1].* 207, [0 1], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-xlabel('Rate of ribosome inactivation (hr^{-1})'); ylabel('Mean inactive ribosome conc.');
+plot([1 1].* 100, [0 1], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+xlabel('Rate of ribosome re-activation (hr^{-1})'); ylabel('Mean inactive ribosome conc.');
 
 
 %%
