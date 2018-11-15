@@ -36,7 +36,7 @@ StepperDopr5<D>::StepperDopr5(VecDoub_IO &yy,VecDoub_IO &dydxx,Doub &xx,
 StepperBase(yy,dydxx,xx,atoll,rtoll,dens), k2(n),k3(n),k4(n),k5(n),k6(n),
 rcont1(n),rcont2(n),rcont3(n),rcont4(n),rcont5(n),dydxnew(n)
 {
-	EPS=numeric_limits<Doub>::epsilon() ;
+	EPS=numeric_limits<Doub>::epsilon();
 }
 
 template <class D>
@@ -163,7 +163,7 @@ void StepperDopr5<D>::step(const Doub htry,D &derivs)
 			throw("stepsize underflow in StepperDopr5");
 	}
 	if (dense)
-		prepare_dense(h,derivs) ;
+		prepare_dense(h,derivs);
 	dydx=dydxnew;
 	y=yout;
 	xold=x;

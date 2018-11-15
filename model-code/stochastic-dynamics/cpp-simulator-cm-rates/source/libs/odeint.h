@@ -12,14 +12,14 @@
 // structure for dense output
 struct Output
 {
-    Int kmax ;
-    Int nvar ;
-    Int nsave ;
-    bool dense ;
-    Int count ;
+    Int kmax;
+    Int nvar;
+    Int nsave;
+    bool dense;
+    Int count;
     Doub x1,x2,xout,dxout;
-    VecDoub xsave ;
-    MatDoub ysave ;
+    VecDoub xsave;
+    MatDoub ysave;
     Output() : kmax(-1),dense(false),count(0) {}
     
     Output(const Int nsavee) : kmax(500),nsave(nsavee),count(0),xsave(kmax)
@@ -100,7 +100,7 @@ struct Output
             throw("dense output not set in Output!");
         ostringstream filename;
         filename << prefix << ".txt";
-        ofstream sortie( ( filename.str() ).c_str(), ios::out);
+        ofstream sortie((filename.str() ).c_str(), ios::out);
         for (Int i=0;i<count;i++)
         {
             sortie << xsave[i] << "\t";

@@ -92,7 +92,7 @@ struct Ranhash {
         return  v;
     }
     inline Uint int32(Ullong u)
-    { return (Uint)(int64(u) & 0xffffffff) ; }
+    { return (Uint)(int64(u) & 0xffffffff); }
     inline Doub doub(Ullong u)
     { return 5.42101086242752217E-20 * int64(u); }
 };
@@ -130,7 +130,7 @@ struct Ranbyte {
         return v;
     }
     Doub doub() {
-        return 2.32830643653869629E-10 * ( int32() +
+        return 2.32830643653869629E-10 *(int32() +
                                            2.32830643653869629E-10 * int32() );
     }
 };
@@ -168,7 +168,7 @@ struct Ranlim32 {
     }
     inline Doub doub() { return 2.32830643653869629E-10 * int32(); }
     inline Doub truedoub() {
-        return 2.32830643653869629E-10 * ( int32() +
+        return 2.32830643653869629E-10 *(int32() +
                                            2.32830643653869629E-10 * int32() );
     }
 };

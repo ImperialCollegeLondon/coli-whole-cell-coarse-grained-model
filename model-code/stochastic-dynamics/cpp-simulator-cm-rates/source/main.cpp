@@ -6,7 +6,7 @@ __ December 2015 - September 2018
 
 
 #include "StochSimulator.hpp"
-#include "common.h"
+#include "libs/common.h"
 #include "simparams.h"
 #include "partitioningfunctions.hpp"
 

@@ -3,8 +3,8 @@ addpath('../model-code/steady-state');
 addpath('../model-code/stochastic-dynamics');
 
 % variation of X_div and fX to explore
-X_div_vec = linspace(30,170,8);
-fX_vec = linspace(0.01,0.15,8);
+X_div_vec = linspace(30,170,12);
+fX_vec = linspace(0.01,0.15,12);
 
 % load fitted pars on scott data
 fitted_scott_pars = readtable('../results-data/res1_scott-2010-fit/fitted-parameters_proteome-allocation.csv'); 
@@ -42,12 +42,15 @@ stoch_pars.X_degrad_rate = 0;
 % simulation parameters
 stoch_pars.random_seed = 0;
 stoch_pars.partitioning_type = 'normal';
-stoch_pars.sim_duration = 20000;
+stoch_pars.sim_duration = 30000;
 stoch_pars.num_lineages = 1;
 stoch_pars.update_period = 0.005;
 stoch_pars.num_updates_per_output = 100;
-path2cpp = '../model-code/stochastic-dynamics/cpp-simulator-cm-rates/simulator.app/Contents/MacOS/simulator';
+path2cpp = '../model-code/stochastic-dynamics/cpp-simulator-cm-rates/build/simulator';
 path2output = '../model-code/stochastic-dynamics/cpp-sim-data';
+if ~exist(path2output,'dir')
+    mkdir(path2output);
+end
 
 % main loop
 CV_birth_size_mat = zeros(length(X_div_vec), length(fX_vec));
@@ -81,7 +84,7 @@ end
 data = table(X_div, fX, CV_birth_size, CV_growth_rate);
 writetable(data, '../results-data/res8_fX-scale-and-Xdiv/Xdiv_fX_impact_on_noise.csv');
 
-% data from taheri araghi : for tcpically intermediate growth rate, CV growth rate
+% data from taheri araghi : for ~ intermediate growth rate, CV growth rate
 % ~ 0.07, and CV birth at size is ~ 0.11
 [sq_diff_cv_alpha,I_sorted_diff_cv_alpha] = sort((data.CV_growth_rate-0.07).^2);
 [sq_diff_cv_birth_size,I_sorted_diff_cv_birth_size] = sort((data.CV_birth_size-0.11).^2);
