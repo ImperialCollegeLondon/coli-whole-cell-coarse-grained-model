@@ -99,7 +99,11 @@ real_growth_rate_per_hr = real_growth_rate_vec';
 real_ri = real_ri_vec';
 writetable(table(scale_factor, ri_r_rate, r_ri_rate, real_growth_rate_per_hr, real_ri), '../results-data/res7_stoch-model-finding-rib-reactivation-rate/scale-ri-r-and-r-ri-rates-variation.csv');
 
-
+%%% output the found rates 
+condition_independent_ri_r_rate = ri_r_rate_base;
+cm_2X_alpha_decrease_from_1_per_hr_nut_r_ri_rate = r_ri_rate_base;
+writetable(table(condition_independent_ri_r_rate, cm_2X_alpha_decrease_from_1_per_hr_nut_r_ri_rate),...
+    '../results-data/res7_stoch-model-finding-rib-reactivation-rate/summary-cm-rates-stoch-model.csv');
 
 
 
