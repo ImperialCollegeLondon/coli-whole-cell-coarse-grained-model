@@ -5,9 +5,8 @@ addpath('../utils-code/export_fig');
 
 %% load the simulation data
 traj_example = readtable('../results-data/res9_dynamic-stoch-model/trajectory.csv');
-adder_data_ref = readtable('../results-data/res11_adder-sizer/ref_model.csv');
-adder_data_X_degrad = readtable('../results-data/res11_adder-sizer/with_X_degrad_rate.csv');
-% adder_data_X_degrad_slow_growth = readtable('../results-data/res11_adder-sizer/with_X_degrad_rate_slow_growth.csv');
+% adder_data_ref = readtable('../results-data/res11_adder-sizer/ref_model.csv');
+% adder_data_X_degrad = readtable('../results-data/res11_adder-sizer/with_X_degrad_rate.csv');
 if false
     nutrient_mod = cell(5,1);
     cm_mod = cell(2,1);
