@@ -101,7 +101,8 @@ best_set = data(I_good(1),:);
 % compute what is the scale of fX
 X_div = best_set.X_div;
 fX_scale = best_set.fX ./ det_ss.e^(fitted_size_formula.exponents(1));
-writetable(table(X_div, fX_scale), '../results-data/res8_fX-scale-and-Xdiv/Xdiv_fX_scale_fit.csv');
+fX = best_set.fX;
+writetable(table(X_div, fX_scale, fX), '../results-data/res8_fX-scale-and-Xdiv/Xdiv_fX_scale_fit.csv');
     
 
 
