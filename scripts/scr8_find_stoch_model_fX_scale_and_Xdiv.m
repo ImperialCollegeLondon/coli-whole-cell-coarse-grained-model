@@ -9,6 +9,9 @@ fX_vec = linspace(0.01,0.15,12);
 % load fitted pars on scott data
 fitted_scott_pars = readtable('../results-data/res1_scott-2010-fit/fitted-parameters_proteome-allocation.csv'); 
 
+% load fitted size formula
+fitted_size_formula = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/e_and_ra_over_r_data_fX-true/exponents.csv');      
+
 % assemble the parameters structure for solving the det model
 det_pars.biophysical.sigma = fitted_scott_pars.sigma;
 det_pars.biophysical.a_sat = fitted_scott_pars.a_sat;
@@ -93,8 +96,12 @@ while isempty(intersect(I_sorted_diff_cv_alpha(1:n),I_sorted_diff_cv_birth_size(
     n = n+1;
 end
 I_good = intersect(I_sorted_diff_cv_alpha(1:n),I_sorted_diff_cv_birth_size(1:n));
-assert(length(I_good)==1);
-best_set = data(I_good,:)
+best_set = data(I_good(1),:);
+
+% compute what is the scale of fX
+X_div = best_set.X_div;
+fX_scale = best_set.fX ./ det_ss.e^(fitted_size_formula.exponents(1));
+writetable(table(X_div, fX_scale), '../results-data/res8_fX-scale-and-Xdiv/Xdiv_fX_scale_fit.csv');
     
 
 
