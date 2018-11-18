@@ -6,13 +6,13 @@ traj = readtable('../results-data/res6_dynamic-det-model/trajectory.csv');
 subplot(3,1,1);
 plot(traj.t, traj.M_or_V, 'k', 'LineWidth', 3);
 ylabel('Total cell size');
-ylim([0 2000]);
+ylim([0 1000]);
 
 %% plot X
 subplot(3,1,2);
 plot(traj.t, traj.X, 'r', 'LineWidth', 3);
 ylabel('X amount');
-ylim([0 100]);
+ylim([0 130]);
 
 %% plot concentrations
 subplot(3,1,3);
@@ -24,7 +24,7 @@ plot( traj.t , traj.x , 'r', 'LineWidth', 3); hold on;
 legend({'a','e','r','q','x'},'FontSize',30);
 ylabel('Concentration');
 xlabel('Time (hrs)');
-ylim([0 0.6]);
+ylim([0 0.4]);
 
 %% styling
 for i=[1,2,3]

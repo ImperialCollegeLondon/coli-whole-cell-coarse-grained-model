@@ -15,7 +15,7 @@ if min(y_0) < 0
 end
 
 % check validity of parameters
-if sum(cell_pars.allocation.fE+cell_pars.allocation.fR+cell_pars.allocation.fQ+cell_pars.allocation.fU+cell_pars.allocation.fX) ~= 1
+if (sum(cell_pars.allocation.fE+cell_pars.allocation.fR+cell_pars.allocation.fQ+cell_pars.allocation.fU+cell_pars.allocation.fX) - 1) > 1e-12
     error('sum of allocation fractions must be one');
 end
 if cell_pars.allocation.fE < 0 || cell_pars.allocation.fR < 0 || cell_pars.allocation.fQ < 0 || cell_pars.allocation.fU || cell_pars.allocation.fX < 0

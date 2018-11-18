@@ -1,0 +1,4 @@
+
+
+addpath('../model-code/deterministic-dynamics');
+
