@@ -3,10 +3,11 @@
 addpath('../model-code/steady-state');
 addpath('../model-code/stochastic-dynamics');
 
-% load fitted pars on scott data
+% load fitted pars
 fitted_scott_pars = readtable('../results-data/res1_scott-2010-fit/fitted-parameters_proteome-allocation.csv');
 fitted_size_pars = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/e_and_ra_over_r_data_fX-true/exponents.csv');      
 fitted_Xdiv_fX_scale = readtable('../results-data/res8_fX-scale-and-Xdiv/Xdiv_fX_scale_fit.csv'); 
+cm_rate_pars = readtable('../results-data/res7_stoch-model-finding-rib-reactivation-rate/summary-cm-rates-stoch-model.csv');
 
 % assemble the parameters structure for solving the det model
 det_pars.biophysical.sigma = fitted_scott_pars.sigma;
@@ -32,7 +33,7 @@ stoch_pars.f_X = fitted_Xdiv_fX_scale.fX_scale * det_ss.e^(fitted_size_pars.expo
 stoch_pars.f_Q = det_ss.fQ - stoch_pars.f_X;
 stoch_pars.destroy_X_after_div = 0;
 stoch_pars.X_degrad_rate = 0;
-stoch_pars.ri_r_rate = 100; % does not matter since no cm
+stoch_pars.ri_r_rate = cm_rate_pars.condition_independent_ri_r_rate; % does not matter since no cm
 stoch_pars.r_ri_rate = 0;
 
 % sim params, do the sim
