@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.38} \times fE^{-1.02}
+V_{div} \propto ra^{0.38} \times fE^{-1.02}

@@ -1,1 +1,1 @@
-V_{div} \propto a^{-301.16} \times fR^{299.1}
+V_{div} \propto ra^{-301.16} \times fR^{299.1}

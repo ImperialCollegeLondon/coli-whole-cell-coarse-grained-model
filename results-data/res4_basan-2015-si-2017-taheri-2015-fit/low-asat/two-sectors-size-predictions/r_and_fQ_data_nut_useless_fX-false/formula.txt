@@ -1,1 +1,1 @@
-V_{div} \propto a^{-2.07} \times fQ^{299.1}
+V_{div} \propto r^{-2.07} \times fQ^{299.1}

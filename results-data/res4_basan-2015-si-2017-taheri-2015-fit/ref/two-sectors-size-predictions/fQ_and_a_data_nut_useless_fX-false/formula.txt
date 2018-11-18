@@ -1,1 +1,1 @@
-V_{div} \propto a^{49.02} \times a^{-1.9}
+V_{div} \propto fQ^{49.02} \times a^{-1.9}

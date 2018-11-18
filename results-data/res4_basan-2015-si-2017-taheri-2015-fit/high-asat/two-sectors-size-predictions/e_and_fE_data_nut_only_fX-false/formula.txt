@@ -1,1 +1,1 @@
-V_{div} \propto a^{-15.17} \times fE^{14.97}
+V_{div} \propto e^{-15.17} \times fE^{14.97}

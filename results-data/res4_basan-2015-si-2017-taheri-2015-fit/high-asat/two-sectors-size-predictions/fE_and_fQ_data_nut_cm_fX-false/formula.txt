@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.62} \times fQ^{12.16}
+V_{div} \propto fE^{-0.62} \times fQ^{12.16}

@@ -1,1 +1,1 @@
-V_{div} \propto a^{24.36} \times a^{-1.39}
+V_{div} \propto fQ^{24.36} \times a^{-1.39}

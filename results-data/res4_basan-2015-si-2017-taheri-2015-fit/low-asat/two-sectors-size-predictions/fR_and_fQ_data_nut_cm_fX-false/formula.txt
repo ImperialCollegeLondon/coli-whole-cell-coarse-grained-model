@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.71} \times fQ^{75.21}
+V_{div} \propto fR^{0.71} \times fQ^{75.21}

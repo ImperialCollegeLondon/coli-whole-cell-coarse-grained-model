@@ -1,1 +1,1 @@
-V_{div} \propto a^{-4.41} \times a^{8.7}
+V_{div} \propto fR^{-4.41} \times a^{8.7}

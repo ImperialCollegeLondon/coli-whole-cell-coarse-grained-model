@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.53} \times fQ^{142.41}
+V_{div} \propto ra^{-0.53} \times fQ^{142.41}

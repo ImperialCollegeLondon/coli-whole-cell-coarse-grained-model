@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.31} \times fQ^{26.86}
+V_{div} \propto (r_a/r)^{-0.31} \times fQ^{26.86}

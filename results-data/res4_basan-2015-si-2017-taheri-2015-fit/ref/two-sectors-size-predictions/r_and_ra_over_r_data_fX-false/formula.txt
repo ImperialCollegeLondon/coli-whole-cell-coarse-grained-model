@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.69} \times (r_a/r)^{0.55}
+V_{div} \propto r^{0.69} \times (r_a/r)^{0.55}

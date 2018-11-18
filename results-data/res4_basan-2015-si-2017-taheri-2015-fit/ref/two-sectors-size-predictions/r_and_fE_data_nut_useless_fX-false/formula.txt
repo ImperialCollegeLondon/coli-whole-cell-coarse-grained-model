@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.43} \times fE^{-1.02}
+V_{div} \propto r^{0.43} \times fE^{-1.02}

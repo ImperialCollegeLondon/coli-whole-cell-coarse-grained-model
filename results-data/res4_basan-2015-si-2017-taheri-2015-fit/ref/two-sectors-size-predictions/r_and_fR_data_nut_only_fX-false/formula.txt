@@ -1,1 +1,1 @@
-V_{div} \propto a^{-40.42} \times fR^{40}
+V_{div} \propto r^{-40.42} \times fR^{40}

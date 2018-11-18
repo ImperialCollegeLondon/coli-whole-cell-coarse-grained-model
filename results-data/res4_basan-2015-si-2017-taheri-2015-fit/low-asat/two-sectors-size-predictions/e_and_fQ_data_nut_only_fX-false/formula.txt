@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.01} \times fQ^{121.75}
+V_{div} \propto e^{-0.01} \times fQ^{121.75}

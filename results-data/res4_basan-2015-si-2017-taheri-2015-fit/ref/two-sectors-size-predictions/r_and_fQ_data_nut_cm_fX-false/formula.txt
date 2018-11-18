@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.77} \times fQ^{20.69}
+V_{div} \propto r^{0.77} \times fQ^{20.69}

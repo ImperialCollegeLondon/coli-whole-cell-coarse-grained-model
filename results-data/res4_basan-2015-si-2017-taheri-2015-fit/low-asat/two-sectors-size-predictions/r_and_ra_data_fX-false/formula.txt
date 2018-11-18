@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.16} \times ra^{0.47}
+V_{div} \propto r^{0.16} \times ra^{0.47}

@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.18} \times fE^{-0.72}
+V_{div} \propto r^{-0.18} \times fE^{-0.72}

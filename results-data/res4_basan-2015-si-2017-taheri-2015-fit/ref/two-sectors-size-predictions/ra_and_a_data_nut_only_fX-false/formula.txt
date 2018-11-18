@@ -1,1 +1,1 @@
-V_{div} \propto a^{-7.13} \times a^{11.71}
+V_{div} \propto ra^{-7.13} \times a^{11.71}

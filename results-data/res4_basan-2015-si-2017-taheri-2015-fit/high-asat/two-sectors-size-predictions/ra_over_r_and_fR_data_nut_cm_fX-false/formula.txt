@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.89} \times fR^{1.77}
+V_{div} \propto (r_a/r)^{0.89} \times fR^{1.77}

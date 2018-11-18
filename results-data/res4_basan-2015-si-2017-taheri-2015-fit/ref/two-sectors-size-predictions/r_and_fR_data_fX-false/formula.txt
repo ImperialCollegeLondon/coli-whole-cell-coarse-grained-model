@@ -1,1 +1,1 @@
-V_{div} \propto a^{-18.83} \times fR^{19.01}
+V_{div} \propto r^{-18.83} \times fR^{19.01}

@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.9} \times fE^{-1.11}
+V_{div} \propto (r_a/r)^{0.9} \times fE^{-1.11}

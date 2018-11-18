@@ -1,1 +1,1 @@
-V_{div} \propto a^{-87.19} \times fE^{86.55}
+V_{div} \propto e^{-87.19} \times fE^{86.55}

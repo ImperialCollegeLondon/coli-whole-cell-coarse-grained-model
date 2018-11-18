@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.73} \times fR^{-0.32}
+V_{div} \propto fE^{-0.73} \times fR^{-0.32}

@@ -1,1 +1,1 @@
-V_{div} \propto a^{-29.36} \times fE^{29.26}
+V_{div} \propto e^{-29.36} \times fE^{29.26}

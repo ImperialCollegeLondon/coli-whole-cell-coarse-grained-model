@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.72} \times fR^{-0.23}
+V_{div} \propto fE^{-0.72} \times fR^{-0.23}

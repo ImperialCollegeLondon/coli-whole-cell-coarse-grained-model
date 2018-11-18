@@ -1,1 +1,1 @@
-V_{div} \propto a^{-15.06} \times a^{19.22}
+V_{div} \propto ra^{-15.06} \times a^{19.22}

@@ -1,1 +1,1 @@
-V_{div} \propto a^{-1.12} \times fQ^{207.36}
+V_{div} \propto ra^{-1.12} \times fQ^{207.36}

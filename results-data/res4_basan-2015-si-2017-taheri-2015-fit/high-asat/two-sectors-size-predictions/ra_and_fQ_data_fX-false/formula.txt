@@ -1,1 +1,1 @@
-V_{div} \propto a^{-1.87} \times fQ^{31.89}
+V_{div} \propto ra^{-1.87} \times fQ^{31.89}

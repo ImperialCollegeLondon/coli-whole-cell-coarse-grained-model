@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.77} \times fQ^{21.04}
+V_{div} \propto (r_a/r)^{-0.77} \times fQ^{21.04}

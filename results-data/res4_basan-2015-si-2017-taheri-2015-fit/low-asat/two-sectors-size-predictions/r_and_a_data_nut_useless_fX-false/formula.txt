@@ -1,1 +1,1 @@
-V_{div} \propto a^{-3} \times a^{6.44}
+V_{div} \propto r^{-3} \times a^{6.44}

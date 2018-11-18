@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.76} \times fQ^{24.55}
+V_{div} \propto r^{-0.76} \times fQ^{24.55}

@@ -1,1 +1,1 @@
-V_{div} \propto a^{-45.98} \times fE^{45.1}
+V_{div} \propto e^{-45.98} \times fE^{45.1}

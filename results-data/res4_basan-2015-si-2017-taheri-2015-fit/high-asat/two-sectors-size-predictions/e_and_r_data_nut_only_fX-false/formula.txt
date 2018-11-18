@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.71} \times r^{0.87}
+V_{div} \propto e^{-0.71} \times r^{0.87}

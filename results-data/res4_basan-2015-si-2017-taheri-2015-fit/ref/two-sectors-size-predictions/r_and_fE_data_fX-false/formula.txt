@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.27} \times fE^{-0.74}
+V_{div} \propto r^{-0.27} \times fE^{-0.74}

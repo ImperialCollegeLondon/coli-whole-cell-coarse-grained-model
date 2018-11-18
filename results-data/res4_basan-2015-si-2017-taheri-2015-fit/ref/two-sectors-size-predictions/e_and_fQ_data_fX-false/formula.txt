@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.68} \times fQ^{20.84}
+V_{div} \propto e^{-0.68} \times fQ^{20.84}

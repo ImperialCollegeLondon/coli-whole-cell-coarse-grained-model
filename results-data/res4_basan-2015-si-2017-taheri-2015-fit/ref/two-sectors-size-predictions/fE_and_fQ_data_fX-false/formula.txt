@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.68} \times fQ^{21.52}
+V_{div} \propto fE^{-0.68} \times fQ^{21.52}

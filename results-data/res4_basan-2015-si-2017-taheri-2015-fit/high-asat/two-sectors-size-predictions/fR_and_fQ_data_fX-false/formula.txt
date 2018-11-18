@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.19} \times fQ^{10.4}
+V_{div} \propto fR^{0.19} \times fQ^{10.4}

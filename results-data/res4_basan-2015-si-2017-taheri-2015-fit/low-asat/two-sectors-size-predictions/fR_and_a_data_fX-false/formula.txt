@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.22} \times a^{0.95}
+V_{div} \propto fR^{0.22} \times a^{0.95}

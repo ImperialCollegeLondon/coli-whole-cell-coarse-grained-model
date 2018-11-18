@@ -1,1 +1,1 @@
-V_{div} \propto a^{117.32} \times a^{-0.57}
+V_{div} \propto fQ^{117.32} \times a^{-0.57}
