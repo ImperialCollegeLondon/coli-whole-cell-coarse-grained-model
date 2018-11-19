@@ -3,7 +3,7 @@
 Code for paper in preparation.
 
 The folder `model-code` contains all the model analytics and simulation functions, mostly in `matlab`, except the simulation code for the stochastic model that is written in `c++`.
-For the `c++` code, the source is given, but the binary has been compiled using a `Makefile` generated with `qmake`.
+For the `c++` code, the source is given, together with a binary compiled on mac and a basic `shell` compilation script to adapt to one's needs.
 
 The folder `external-data` contains data from the following studies: `Scott et al., 2010`, `Basan et al., 2015` and `Si et al., 2017`.
 The data has been manually curated into similar style `.csv` tables.
