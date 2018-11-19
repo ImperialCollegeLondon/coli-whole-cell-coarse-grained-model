@@ -22,13 +22,19 @@ for par_set={ref,low_sat,high_sat}
     I_cm = find(data.cm_type > 0);
     I_useless = find(data.useless_type > 0);
     I_nut = find( data.cm_type == 0 & data.useless_type == 0);
-    plot(log(data.real(I_nut)), log(data.prediction(I_nut)), 'go', 'MarkerSize', mk_size, 'MarkerFaceColor', 'g'); hold on;
-    plot(log(data.real(I_useless)), log(data.prediction(I_useless)), 'r^', 'MarkerSize', mk_size, 'MarkerFaceColor', 'r'); hold on;
-    plot(log(data.real(I_cm)), log(data.prediction(I_cm)), 'bs', 'MarkerSize', mk_size, 'MarkerFaceColor', 'b'); hold on;
+    hs(1) = plot(log(data.real(I_nut)), log(data.prediction(I_nut)), 'go', 'MarkerSize', mk_size, 'MarkerFaceColor', 'g'); hold on;
+    hs(2) = plot(log(data.real(I_useless)), log(data.prediction(I_useless)), 'r^', 'MarkerSize', mk_size, 'MarkerFaceColor', 'r'); hold on;
+    hs(3) = plot(log(data.real(I_cm)), log(data.prediction(I_cm)), 'bs', 'MarkerSize', mk_size, 'MarkerFaceColor', 'b'); hold on;
     plot([0 2.5], [0 2.5], 'Color', [1 1 1].*0.6, 'LineWidth', 1.5);
     set(gca,'FontSize',15,'LineWidth',1.5);
     xlabel('log real size');
-    if i==1; ylabel('log predicted size'); end
+    if i==1
+        ylabel('log predicted size'); 
+        hl = legend(hs, ...
+           {'nutrient (Basan, Si and Taheri-Araghi studies)', 'chloramphenicol (Basan and Si studies)', 'useless expression (Basan study)'}, ...
+           'FontSize',10,'LineWidth',1.5,'Location','NorthWest');
+        set(hl,'Color','None');
+    end
     ylim([0 3]); xlim([0 3]);
     title(formula,'FontSize',15);
     axis square;
