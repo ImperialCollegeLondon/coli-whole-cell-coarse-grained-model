@@ -6,6 +6,25 @@ path2cpp = '../model-code/other-models/X-only-model/cpp-simulator/build/simulato
 path2output = '../model-code/other-models/X-only-model/cpp-sim-data';
 
 
+%%%% what to study ?
+
+%%% basic model: X prod scale with size, size grow exponentially
+% no growth rate noise, no size splitting noise
+% same with different growth rate
+% growth rate noise, no size splitting noise
+% no growth rate noise, size splitting noise
+% both noise
+
+%%% other variants
+% linear growth 
+% size independent production term
+% X degradation
+
+
+
+
+
+
 % common pars
 pars.partitioning_type = 'normal';
 pars.GE_model = 'only_protein';
