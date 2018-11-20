@@ -5,7 +5,6 @@ addpath('../utils-code');
 % path to simulator binary and output folder
 pars.out_folder = path2output;
 
-
 % call the cpp code
 call_cpp_program(path2cpp, pars);
 

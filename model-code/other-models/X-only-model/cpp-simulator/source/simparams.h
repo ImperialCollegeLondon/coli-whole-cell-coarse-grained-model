@@ -1,7 +1,7 @@
 #ifndef SIMPARAMS_H
 #define SIMPARAMS_H
 
-#include "nr3.h"
+#include "libs/nr3.h"
 
 struct SimParams
 {
