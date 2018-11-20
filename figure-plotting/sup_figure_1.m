@@ -81,6 +81,7 @@ subplot(1,3,1);
 semilogx(best_fit_pars.a_sat, best_fit_pars.cost_best_local, '-ko', 'MarkerFaceColor', 'k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
 semilogx(best_fit_pars.a_sat(ismember(best_fit_pars.a_sat,a_sat_values_good)), best_fit_pars.cost_best_local(ismember(best_fit_pars.a_sat,a_sat_values_good)), 'g^', 'MarkerFaceColor', 'g', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
 semilogx(best_fit_pars.a_sat(ismember(best_fit_pars.a_sat,a_sat_values_bad)), best_fit_pars.cost_best_local(ismember(best_fit_pars.a_sat,a_sat_values_bad)), 'rd', 'MarkerFaceColor', 'r', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+ylim([-7 -6]);
 ylabel('log mean square error');
 subplot(1,3,2); 
 semilogx(best_fit_pars.a_sat, best_fit_pars.sigma_best_local, '-ko', 'MarkerFaceColor', 'k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
