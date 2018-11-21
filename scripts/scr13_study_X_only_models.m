@@ -26,7 +26,7 @@ model_pars = cell(size(model_names));
 % simulation pars
 pars.random_seed = 1;
 pars.num_lineages = 1;
-pars.sim_duration = 2000;
+pars.sim_duration = 50000;
 pars.update_period = 0.005;
 pars.num_updates_per_output = 1;
 
@@ -59,12 +59,14 @@ model_pars{3} = size_split_destroy_X_pars;
 
 % basic model with size independent X production
 size_ind_X_prod_pars = basic_pars;
-size_ind_X_prod_pars.kp_0 = 5;
+size_ind_X_prod_pars.kp_0 = 10;
+size_ind_X_prod_pars.kp_per_size = 25;
 model_pars{4} = size_ind_X_prod_pars;
 
 % basic model with X degradation 
 X_degrad_pars = basic_pars;
-X_degrad_pars.rp = 0.5;
+X_degrad_pars.rp = 2;
+X_degrad_pars.kp_per_size = basic_pars.kp_per_size * 4;
 model_pars{5} = X_degrad_pars;
 
 
