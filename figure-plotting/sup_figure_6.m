@@ -1,39 +1,39 @@
 
+
 %%%
 
+% load Xdiv x fX simulation data and the best 'fit'
+data = readtable('../results-data/res8_fX-scale-and-Xdiv/Xdiv_fX_impact_on_noise.csv');
+best_fit = readtable('../results-data/res8_fX-scale-and-Xdiv/Xdiv_fX_scale_fit.csv');
 
-%
-two_sec_preds = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions-R2-values_ref.csv','ReadRowNames',true);
-two_sec_preds = two_sec_preds('data_fX-false',:);
-[~,i_best_pred] = max(two_sec_preds{:,:});
-best_pred = two_sec_preds(:,i_best_pred);
-best_pred_name = best_pred.Properties.VariableNames{1};
+% format data
+[fX_mat,Xdiv_mat] = meshgrid(sort(unique(data.fX)),sort(unique(data.X_div)));
+noise.CV_birth_size = zeros(size(fX_mat));
+noise.CV_growth_rate = zeros(size(fX_mat));
+for i=1:size(fX_mat,1)
+    for j=1:size(fX_mat,2)
+        I = find(data.X_div==Xdiv_mat(i,j) & data.fX==fX_mat(i,j));
+        noise.CV_birth_size(i,j) = data.CV_birth_size(I);
+        noise.CV_growth_rate(i,j) = data.CV_growth_rate(I);
+    end
+end
+
+% plot the two noise (size and growth rate) vs the div x fX
+props = {'CV_birth_size', 'CV_growth_rate'};
+ref_values = [0.11, 0.07];
+for i=1:2
+    subplot(1,2,i);
+    imagesc('XData', [min(data.fX) max(data.fX)], 'YData', [min(data.X_div) max(data.X_div)], 'CData', noise.(props{i})); hold on;
+    plot(best_fit.fX, best_fit.X_div, 'ro', 'MarkerSize', 20, 'MarkerFaceColor', 'r');
+    xlabel('f_X'); ylabel('X_{div}');
+    c = colorbar;
+    title(strrep(props{i},'_',' '));
+    set(gca,'YDir','normal','FontSize',20,'LineWidth',2);
+end
 
 
-%
-pred_data = readtable(['../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/' best_pred_name '_data_fX-false/predictions.csv']);
-formula = fileread(['../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/' best_pred_name '_data_fX-false/formula.txt']);
-
-%
-mk_size = 10;
-I_cm = find(pred_data.cm_type > 0);
-I_useless = find(pred_data.useless_type > 0);
-I_nut = find( pred_data.cm_type == 0 & pred_data.useless_type == 0);
-plot(log(pred_data.real(I_nut)), log(pred_data.prediction(I_nut)), 'go', 'MarkerSize', mk_size, 'MarkerFaceColor', 'g'); hold on;
-plot(log(pred_data.real(I_useless)), log(pred_data.prediction(I_useless)), 'r^', 'MarkerSize', mk_size, 'MarkerFaceColor', 'r'); hold on;
-plot(log(pred_data.real(I_cm)), log(pred_data.prediction(I_cm)), 'bs', 'MarkerSize', mk_size, 'MarkerFaceColor', 'b'); hold on;
-plot([0 2.5], [0 2.5], 'Color', [1 1 1].*0.6, 'LineWidth', 1.5);
-set(gca,'FontSize',15,'LineWidth',1.5);
-xlabel('log real size');
-ylabel('log predicted size');
-ylim([0 3]); xlim([0 3]);
-title(formula,'FontSize',15);
-axis square;
-set(gca,'XTick',0:0.5:2.5,'YTick',0:0.5:2.5);
-
-
-%
+% finish and export
 addpath('../utils-code/export_fig');
-set(gcf,'Position',[270 461 694 517],'Color','w');
+set(gcf,'Position',[351 363 1663 599],'Color','w');
 export_fig(gcf,'../figure-assembly/sup-figure-6-components/sup_figure_6_all.pdf');
 close;

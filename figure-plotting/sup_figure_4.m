@@ -1,57 +1,39 @@
 
 %%%
 
-%% load data
-matching_det_model = readtable('../results-data/res7_stoch-model-finding-rib-reactivation-rate/fixed-ri-r-rate_r-ri-rate-variation.csv');
-scale_var = readtable('../results-data/res7_stoch-model-finding-rib-reactivation-rate/scale-ri-r-and-r-ri-rates-variation.csv');
 
-%%
-lw = 1.5;
+%
+two_sec_preds = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions-R2-values_ref.csv','ReadRowNames',true);
+two_sec_preds = two_sec_preds('data_fX-false',:);
+[~,i_best_pred] = max(two_sec_preds{:,:});
+best_pred = two_sec_preds(:,i_best_pred);
+best_pred_name = best_pred.Properties.VariableNames{1};
+
+
+%
+pred_data = readtable(['../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/' best_pred_name '_data_fX-false/predictions.csv']);
+formula = fileread(['../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/two-sectors-size-predictions/' best_pred_name '_data_fX-false/formula.txt']);
+
+%
 mk_size = 10;
-
-%%
-subplot(2,2,1);
-plot(matching_det_model.r_ri_rate, matching_det_model.real_growth_rate_per_hr, '-ro', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-plot([min(matching_det_model.r_ri_rate) max(matching_det_model.r_ri_rate)], [1 1].* matching_det_model.det_ss_growth_rate_per_hr(1), 'k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-plot([1 1].* 207, [0.3 0.7], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-ylim([0.4 0.6]); xlabel('Rate of ribosome inactivation (hr^{-1})'); ylabel('Growth rate (hr^{-1})');
-
-
-%%
-subplot(2,2,2);
-plot(matching_det_model.r_ri_rate, matching_det_model.real_ri, '-ro', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-plot([min(matching_det_model.r_ri_rate) max(matching_det_model.r_ri_rate)], [1 1].* matching_det_model.det_ss_ri(1), 'k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-plot([1 1].* 207, [0 1], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-ylim([0.1 0.4]); xlabel('Rate of ribosome inactivation (hr^{-1})'); ylabel('Mean inactive ribosome conc.');
-
+I_cm = find(pred_data.cm_type > 0);
+I_useless = find(pred_data.useless_type > 0);
+I_nut = find( pred_data.cm_type == 0 & pred_data.useless_type == 0);
+plot(log(pred_data.real(I_nut)), log(pred_data.prediction(I_nut)), 'go', 'MarkerSize', mk_size, 'MarkerFaceColor', 'g'); hold on;
+plot(log(pred_data.real(I_useless)), log(pred_data.prediction(I_useless)), 'r^', 'MarkerSize', mk_size, 'MarkerFaceColor', 'r'); hold on;
+plot(log(pred_data.real(I_cm)), log(pred_data.prediction(I_cm)), 'bs', 'MarkerSize', mk_size, 'MarkerFaceColor', 'b'); hold on;
+plot([0 2.5], [0 2.5], 'Color', [1 1 1].*0.6, 'LineWidth', 1.5);
+set(gca,'FontSize',15,'LineWidth',1.5);
+xlabel('log real size');
+ylabel('log predicted size');
+ylim([0 3]); xlim([0 3]);
+title(formula,'FontSize',15);
+axis square;
+set(gca,'XTick',0:0.5:2.5,'YTick',0:0.5:2.5);
 
 
-%%
-subplot(2,2,3);
-semilogx(scale_var.ri_r_rate, scale_var.real_growth_rate_per_hr,'-bo', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-semilogx([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)], [1 1].* matching_det_model.det_ss_growth_rate_per_hr(1), 'k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-plot([1 1].* 100, [0 1], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-ylim([0.4 0.6]); xlim([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)]);
-xlabel('Rate of ribosome re-activation (hr^{-1})'); ylabel('Growth rate (hr^{-1})');
-
-
-%%
-subplot(2,2,4);
-semilogx(scale_var.ri_r_rate, scale_var.real_ri,'-bo', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-semilogx([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)], [1 1].* matching_det_model.det_ss_ri(1), 'k', 'MarkerSize', mk_size, 'LineWidth', lw);
-ylim([0.1 0.4]); xlim([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)]); hold on;
-plot([1 1].* 100, [0 1], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
-xlabel('Rate of ribosome re-activation (hr^{-1})'); ylabel('Mean inactive ribosome conc.');
-
-
-%%
-for i=1:4
-    subplot(2,2,i);
-    set(gca,'FontSize',18,'LineWidth',2);
-end
-
-%%
+%
 addpath('../utils-code/export_fig');
-set(gcf,'Color','w','Position', [291 213 1013 837]);
+set(gcf,'Position',[270 461 694 517],'Color','w');
 export_fig(gcf,'../figure-assembly/sup-figure-4-components/sup_figure_4_all.pdf');
 close;
