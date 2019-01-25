@@ -1,39 +1,57 @@
 
+%%%
 
-%%% 
+%% load data
+matching_det_model = readtable('../results-data/res7_stoch-model-finding-rib-reactivation-rate/fixed-ri-r-rate_r-ri-rate-variation.csv');
+scale_var = readtable('../results-data/res7_stoch-model-finding-rib-reactivation-rate/scale-ri-r-and-r-ri-rates-variation.csv');
 
-% load Xdiv x fX simulation data and the best 'fit'
-data = readtable('../results-data/res8_fX-scale-and-Xdiv/Xdiv_fX_impact_on_noise.csv');
-best_fit = readtable('../results-data/res8_fX-scale-and-Xdiv/Xdiv_fX_scale_fit.csv');
+%%
+lw = 1.5;
+mk_size = 10;
 
-% format data
-[fX_mat,Xdiv_mat] = meshgrid(sort(unique(data.fX)),sort(unique(data.X_div)));
-noise.CV_birth_size = zeros(size(fX_mat));
-noise.CV_growth_rate = zeros(size(fX_mat));
-for i=1:size(fX_mat,1)
-    for j=1:size(fX_mat,2)
-        I = find(data.X_div==Xdiv_mat(i,j) & data.fX==fX_mat(i,j));
-        noise.CV_birth_size(i,j) = data.CV_birth_size(I);
-        noise.CV_growth_rate(i,j) = data.CV_growth_rate(I);
-    end
+%%
+subplot(2,2,1);
+plot(matching_det_model.r_ri_rate, matching_det_model.real_growth_rate_per_hr, '-ro', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+plot([min(matching_det_model.r_ri_rate) max(matching_det_model.r_ri_rate)], [1 1].* matching_det_model.det_ss_growth_rate_per_hr(1), 'k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+plot([1 1].* 207, [0.3 0.7], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+ylim([0.4 0.6]); xlabel('Rate of ribosome inactivation (hr^{-1})'); ylabel('Growth rate (hr^{-1})');
+
+
+%%
+subplot(2,2,2);
+plot(matching_det_model.r_ri_rate, matching_det_model.real_ri, '-ro', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+plot([min(matching_det_model.r_ri_rate) max(matching_det_model.r_ri_rate)], [1 1].* matching_det_model.det_ss_ri(1), 'k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+plot([1 1].* 207, [0 1], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+ylim([0.1 0.4]); xlabel('Rate of ribosome inactivation (hr^{-1})'); ylabel('Mean inactive ribosome conc.');
+
+
+
+%%
+subplot(2,2,3);
+semilogx(scale_var.ri_r_rate, scale_var.real_growth_rate_per_hr,'-bo', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+semilogx([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)], [1 1].* matching_det_model.det_ss_growth_rate_per_hr(1), 'k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+plot([1 1].* 100, [0 1], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+ylim([0.4 0.6]); xlim([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)]);
+xlabel('Rate of ribosome re-activation (hr^{-1})'); ylabel('Growth rate (hr^{-1})');
+
+
+%%
+subplot(2,2,4);
+semilogx(scale_var.ri_r_rate, scale_var.real_ri,'-bo', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+semilogx([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)], [1 1].* matching_det_model.det_ss_ri(1), 'k', 'MarkerSize', mk_size, 'LineWidth', lw);
+ylim([0.1 0.4]); xlim([min(scale_var.r_ri_rate) max(scale_var.r_ri_rate)]); hold on;
+plot([1 1].* 100, [0 1], '--k', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
+xlabel('Rate of ribosome re-activation (hr^{-1})'); ylabel('Mean inactive ribosome conc.');
+
+
+%%
+for i=1:4
+    subplot(2,2,i);
+    set(gca,'FontSize',18,'LineWidth',2);
 end
 
-% plot the two noise (size and growth rate) vs the div x fX
-props = {'CV_birth_size', 'CV_growth_rate'};
-ref_values = [0.11, 0.07];
-for i=1:2
-    subplot(1,2,i);
-    imagesc('XData', [min(data.fX) max(data.fX)], 'YData', [min(data.X_div) max(data.X_div)], 'CData', noise.(props{i})); hold on;
-    plot(best_fit.fX, best_fit.X_div, 'ro', 'MarkerSize', 20, 'MarkerFaceColor', 'r');
-    xlabel('f_X'); ylabel('X_{div}');
-    c = colorbar;
-    title(strrep(props{i},'_',' '));
-    set(gca,'YDir','normal','FontSize',20,'LineWidth',2);
-end
-
-
-% finish and export
+%%
 addpath('../utils-code/export_fig');
-set(gcf,'Position',[351 363 1663 599],'Color','w');
+set(gcf,'Color','w','Position', [291 213 1013 837]);
 export_fig(gcf,'../figure-assembly/sup-figure-5-components/sup_figure_5_all.pdf');
 close;
