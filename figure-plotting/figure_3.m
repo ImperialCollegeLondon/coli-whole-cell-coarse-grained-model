@@ -68,12 +68,12 @@ plot(0.1,12.4,'ro', 'MarkerSize', mk_size, 'MarkerFaceColor', 'r');
 text(0.2,12.4,'useless expression','FontSize',txt_fsize);
 
 grey = [1 1 1].* 0.5;
-plot(1.5+0.4,2.4,'o', 'MarkerSize', mk_size, 'Color', grey, 'MarkerFaceColor', grey);
-text(1.6+0.4,2.4,'Basan et al. (2015)','FontSize',txt_fsize*0.7);
-plot(1.5+0.4,1.6,'s', 'MarkerSize', mk_size, 'Color', grey, 'MarkerFaceColor', grey);
-text(1.6+0.4,1.6,'Si et al. (2017)','FontSize',txt_fsize*0.7);
-plot(1.5+0.4,0.8,'^', 'MarkerSize', mk_size, 'Color', grey, 'MarkerFaceColor', grey);
-text(1.6+0.4,0.8,'Taheri-Araghi et al. (2015)','FontSize',txt_fsize*0.7);
+plot(1.5+0.4-0.4,2.4,'o', 'MarkerSize', mk_size, 'Color', grey, 'MarkerFaceColor', grey);
+text(1.6+0.4-0.4,2.4,'Basan et al. (2015)','FontSize',txt_fsize);
+plot(1.5+0.4-0.4,1.6,'s', 'MarkerSize', mk_size, 'Color', grey, 'MarkerFaceColor', grey);
+text(1.6+0.4-0.4,1.6,'Si et al. (2017)','FontSize',txt_fsize);
+plot(1.5+0.4-0.4,0.8,'^', 'MarkerSize', mk_size, 'Color', grey, 'MarkerFaceColor', grey);
+text(1.6+0.4-0.4,0.8,'Taheri-Araghi et al. (2015)','FontSize',txt_fsize);
 
 set(gcf,'Color','w','Position',[0 0 600 500]);
 export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_panel_data.pdf');
