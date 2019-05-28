@@ -1,0 +1,1 @@
+V_{div} \propto k^{1.66} \times a^{-1.96}\times (e/r)^{0.65}

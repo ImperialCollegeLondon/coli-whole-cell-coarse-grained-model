@@ -1,0 +1,1 @@
+V_{div} \propto e^{-1.19} \times ptot^{-10.84}\times (e/r)^{0.37}

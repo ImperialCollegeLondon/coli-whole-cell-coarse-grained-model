@@ -1,0 +1,1 @@
+f_X \propto alpha^{-0.34} \times (r_a/r)^{0}

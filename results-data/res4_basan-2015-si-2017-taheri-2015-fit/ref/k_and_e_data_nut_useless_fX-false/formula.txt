@@ -1,0 +1,1 @@
+V_{div} \propto k^{0.33} \times e^{-0.66}

@@ -1,0 +1,1 @@
+f_X \propto a^{1.54} \times ptot^{173.59}

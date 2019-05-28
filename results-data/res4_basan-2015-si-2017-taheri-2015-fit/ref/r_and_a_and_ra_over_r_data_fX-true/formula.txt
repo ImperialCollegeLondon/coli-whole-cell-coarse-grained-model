@@ -1,0 +1,1 @@
+f_X \propto r^{3.56} \times a^{-7.11}\times (r_a/r)^{4.34}

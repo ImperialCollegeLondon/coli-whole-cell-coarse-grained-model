@@ -1,0 +1,1 @@
+f_X \propto k^{-0.63} \times r^{0.73}\times (e/r)^{0.3}

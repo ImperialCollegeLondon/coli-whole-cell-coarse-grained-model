@@ -1,0 +1,1 @@
+f_X \propto ptot^{16.59} \times (r_a/r)^{0}

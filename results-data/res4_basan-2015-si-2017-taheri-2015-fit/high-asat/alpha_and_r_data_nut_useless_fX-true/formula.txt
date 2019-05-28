@@ -1,0 +1,1 @@
+f_X \propto alpha^{-9.15} \times r^{12.33}

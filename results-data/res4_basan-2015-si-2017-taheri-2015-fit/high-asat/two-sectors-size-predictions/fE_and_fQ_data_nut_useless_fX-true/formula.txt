@@ -1,1 +1,0 @@
-f_X \propto fE^{0.87} \times fQ^{-5.38}

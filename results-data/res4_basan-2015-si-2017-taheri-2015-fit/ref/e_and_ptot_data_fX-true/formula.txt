@@ -1,0 +1,1 @@
+f_X \propto e^{0.68} \times ptot^{19.84}

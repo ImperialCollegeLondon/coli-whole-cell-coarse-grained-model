@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{-0.82} \times ptot^{-18.13}\times (e/r_a)^{-0.63}

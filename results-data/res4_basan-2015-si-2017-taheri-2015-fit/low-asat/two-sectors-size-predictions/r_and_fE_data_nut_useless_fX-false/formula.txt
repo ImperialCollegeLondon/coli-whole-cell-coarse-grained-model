@@ -1,1 +1,0 @@
-V_{div} \propto r^{0.38} \times fE^{-1.02}

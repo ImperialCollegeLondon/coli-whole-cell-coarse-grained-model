@@ -1,0 +1,1 @@
+f_X \propto alpha^{-0.57} \times r^{-0.76}

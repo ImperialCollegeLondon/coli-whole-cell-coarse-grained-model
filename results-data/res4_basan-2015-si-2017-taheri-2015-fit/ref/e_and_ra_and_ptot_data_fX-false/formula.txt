@@ -1,0 +1,1 @@
+V_{div} \propto e^{-0.65} \times ra^{-0.41}\times ptot^{-31.25}

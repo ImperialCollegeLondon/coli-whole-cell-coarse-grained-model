@@ -1,1 +1,0 @@
-V_{div} \propto fQ^{29.64} \times a^{-2.33}

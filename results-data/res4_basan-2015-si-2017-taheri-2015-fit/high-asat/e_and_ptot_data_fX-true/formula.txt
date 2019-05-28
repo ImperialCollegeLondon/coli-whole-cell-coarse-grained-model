@@ -1,0 +1,1 @@
+f_X \propto e^{0.67} \times ptot^{10.09}

@@ -1,1 +1,0 @@
-V_{div} \propto e^{-0.65} \times fQ^{86.55}

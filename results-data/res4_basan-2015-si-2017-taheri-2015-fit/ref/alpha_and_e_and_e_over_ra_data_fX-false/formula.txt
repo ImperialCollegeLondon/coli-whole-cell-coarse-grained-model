@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{6.15} \times e^{-7.59}\times (e/r_a)^{6.88}

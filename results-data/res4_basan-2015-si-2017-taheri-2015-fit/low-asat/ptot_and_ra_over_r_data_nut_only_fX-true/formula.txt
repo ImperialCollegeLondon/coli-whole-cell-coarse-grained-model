@@ -1,0 +1,1 @@
+f_X \propto ptot^{121.17} \times (r_a/r)^{0}

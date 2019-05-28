@@ -1,0 +1,1 @@
+f_X \propto alpha^{0.26} \times k^{-0.97}\times r^{0.41}

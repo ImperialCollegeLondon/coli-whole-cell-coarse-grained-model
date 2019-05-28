@@ -1,0 +1,1 @@
+f_X \propto r^{-0.19} \times ptot^{9.59}

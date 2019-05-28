@@ -1,0 +1,1 @@
+V_{div} \propto k^{-19.45} \times (e/r)^{-20.67}

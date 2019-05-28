@@ -1,0 +1,1 @@
+f_X \propto a^{-0.02} \times ptot^{1.96}\times (e/r_a)^{0.69}

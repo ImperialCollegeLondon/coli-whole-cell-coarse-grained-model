@@ -1,0 +1,1 @@
+f_X \propto alpha^{2.4} \times ptot^{48.51}

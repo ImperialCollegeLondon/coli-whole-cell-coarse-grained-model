@@ -1,0 +1,1 @@
+V_{div} \propto ptot^{-20.23} \times (r_a/r)^{0}

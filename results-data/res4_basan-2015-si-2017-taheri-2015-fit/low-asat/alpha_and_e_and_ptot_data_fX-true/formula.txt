@@ -1,0 +1,1 @@
+f_X \propto alpha^{0.12} \times e^{0.68}\times ptot^{98.1}

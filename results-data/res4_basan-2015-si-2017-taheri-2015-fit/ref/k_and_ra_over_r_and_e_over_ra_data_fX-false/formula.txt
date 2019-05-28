@@ -1,0 +1,1 @@
+V_{div} \propto k^{-3.54} \times (r_a/r)^{0.66}\times (e/r_a)^{-4.6}

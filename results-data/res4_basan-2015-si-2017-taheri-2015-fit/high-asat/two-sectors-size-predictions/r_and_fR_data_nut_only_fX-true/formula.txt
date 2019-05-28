@@ -1,1 +1,0 @@
-f_X \propto r^{24.31} \times fR^{-23.55}

@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{5.45} \times k^{0.7}\times ra^{-6.88}

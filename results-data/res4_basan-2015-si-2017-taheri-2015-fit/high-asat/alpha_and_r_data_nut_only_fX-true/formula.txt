@@ -1,0 +1,1 @@
+f_X \propto alpha^{-30.91} \times r^{45.3}

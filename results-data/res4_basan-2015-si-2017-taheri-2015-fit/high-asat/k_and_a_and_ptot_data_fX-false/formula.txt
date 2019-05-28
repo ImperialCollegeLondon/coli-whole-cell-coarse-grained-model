@@ -1,0 +1,1 @@
+V_{div} \propto k^{0.67} \times a^{-0.37}\times ptot^{-2.91}

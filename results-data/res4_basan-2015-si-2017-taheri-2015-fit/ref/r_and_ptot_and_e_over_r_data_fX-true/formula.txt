@@ -1,0 +1,1 @@
+f_X \propto r^{1.17} \times ptot^{20.32}\times (e/r)^{0.83}

@@ -1,1 +1,0 @@
-f_X \propto fR^{-0.75} \times a^{-0.97}

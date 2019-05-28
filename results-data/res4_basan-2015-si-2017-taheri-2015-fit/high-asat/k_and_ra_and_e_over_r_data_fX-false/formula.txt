@@ -1,0 +1,1 @@
+V_{div} \propto k^{1.24} \times ra^{-0.97}\times (e/r)^{0.38}

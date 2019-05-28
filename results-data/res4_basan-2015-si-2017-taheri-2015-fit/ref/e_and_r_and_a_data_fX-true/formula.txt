@@ -1,0 +1,1 @@
+f_X \propto e^{0.85} \times r^{0.3}\times a^{-1.11}

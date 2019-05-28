@@ -1,0 +1,1 @@
+V_{div} \propto k^{1} \times r^{-0.46}\times a^{-0.47}

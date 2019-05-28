@@ -1,0 +1,1 @@
+f_X \propto k^{1.06} \times e^{1.74}\times a^{-2.92}

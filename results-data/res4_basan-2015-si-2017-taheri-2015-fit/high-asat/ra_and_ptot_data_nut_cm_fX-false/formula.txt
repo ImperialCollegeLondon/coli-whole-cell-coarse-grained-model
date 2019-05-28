@@ -1,0 +1,1 @@
+V_{div} \propto ra^{-1.02} \times ptot^{-22.83}

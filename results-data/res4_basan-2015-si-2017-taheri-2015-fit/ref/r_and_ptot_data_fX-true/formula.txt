@@ -1,0 +1,1 @@
+f_X \propto r^{-0.18} \times ptot^{18.01}

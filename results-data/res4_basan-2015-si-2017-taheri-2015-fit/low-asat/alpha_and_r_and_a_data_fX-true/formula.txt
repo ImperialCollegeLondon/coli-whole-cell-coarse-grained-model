@@ -1,0 +1,1 @@
+f_X \propto alpha^{3.88} \times r^{-0.65}\times a^{-7.52}

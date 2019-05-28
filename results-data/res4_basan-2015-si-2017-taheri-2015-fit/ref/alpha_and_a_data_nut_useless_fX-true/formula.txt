@@ -1,0 +1,1 @@
+f_X \propto alpha^{3.18} \times a^{-7.24}

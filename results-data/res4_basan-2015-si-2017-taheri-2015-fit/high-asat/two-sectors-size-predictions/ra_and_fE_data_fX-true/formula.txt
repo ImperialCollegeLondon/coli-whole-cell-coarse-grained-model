@@ -1,1 +1,0 @@
-f_X \propto ra^{-0.81} \times fE^{0.71}

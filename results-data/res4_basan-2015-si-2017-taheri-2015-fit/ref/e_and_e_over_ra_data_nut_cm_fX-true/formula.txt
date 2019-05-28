@@ -1,0 +1,1 @@
+f_X \propto e^{-0.12} \times (e/r_a)^{0.8}

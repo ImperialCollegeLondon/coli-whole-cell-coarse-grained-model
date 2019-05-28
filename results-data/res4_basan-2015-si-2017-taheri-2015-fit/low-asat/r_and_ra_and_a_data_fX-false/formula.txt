@@ -1,0 +1,1 @@
+V_{div} \propto r^{0.67} \times ra^{-3.94}\times a^{7.28}

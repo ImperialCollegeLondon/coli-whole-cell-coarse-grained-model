@@ -1,0 +1,1 @@
+V_{div} \propto a^{-0.57} \times ptot^{-117.32}

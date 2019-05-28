@@ -1,0 +1,1 @@
+f_X \propto k^{2.06} \times (e/r_a)^{2.8}

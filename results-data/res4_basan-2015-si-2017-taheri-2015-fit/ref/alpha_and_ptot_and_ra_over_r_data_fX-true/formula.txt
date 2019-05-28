@@ -1,0 +1,1 @@
+f_X \propto alpha^{1.04} \times ptot^{57.63}\times (r_a/r)^{0.26}

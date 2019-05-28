@@ -1,1 +1,0 @@
-V_{div} \propto r^{-10.4} \times fR^{10.59}

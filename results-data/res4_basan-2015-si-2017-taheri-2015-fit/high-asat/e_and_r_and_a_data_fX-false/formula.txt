@@ -1,0 +1,1 @@
+V_{div} \propto e^{-0.83} \times r^{-0.33}\times a^{1.11}

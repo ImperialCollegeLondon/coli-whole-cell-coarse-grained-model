@@ -1,0 +1,1 @@
+f_X \propto ra^{2.06} \times a^{-2.87}\times ptot^{105.89}

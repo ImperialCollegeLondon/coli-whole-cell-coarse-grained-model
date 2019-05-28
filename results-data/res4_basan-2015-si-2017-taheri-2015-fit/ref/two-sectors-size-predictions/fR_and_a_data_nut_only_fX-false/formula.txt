@@ -1,1 +1,0 @@
-V_{div} \propto fR^{-8.53} \times a^{14.18}

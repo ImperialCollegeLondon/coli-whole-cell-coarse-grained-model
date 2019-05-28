@@ -1,0 +1,1 @@
+f_X \propto alpha^{-17.42} \times r^{20.29}\times (r_a/r)^{21.08}

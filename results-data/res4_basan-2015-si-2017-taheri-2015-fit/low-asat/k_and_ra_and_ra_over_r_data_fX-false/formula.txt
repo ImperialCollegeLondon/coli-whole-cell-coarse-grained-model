@@ -1,0 +1,1 @@
+V_{div} \propto k^{0.96} \times ra^{-0.68}\times (r_a/r)^{0.41}

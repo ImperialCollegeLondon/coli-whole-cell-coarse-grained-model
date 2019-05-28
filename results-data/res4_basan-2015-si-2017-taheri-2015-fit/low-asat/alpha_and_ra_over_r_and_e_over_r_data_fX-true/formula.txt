@@ -1,0 +1,1 @@
+f_X \propto alpha^{0.63} \times (r_a/r)^{-1.4}\times (e/r)^{0.98}

@@ -1,0 +1,1 @@
+f_X \propto k^{-6.08} \times e^{-5.38}\times ra^{6.83}

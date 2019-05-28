@@ -1,0 +1,1 @@
+f_X \propto k^{-0.96} \times r^{0.68}\times (r_a/r)^{0.28}

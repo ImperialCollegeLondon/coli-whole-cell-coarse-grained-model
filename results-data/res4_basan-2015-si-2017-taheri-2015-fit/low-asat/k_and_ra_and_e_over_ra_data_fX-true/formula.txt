@@ -1,0 +1,1 @@
+f_X \propto k^{-20.68} \times ra^{1.22}\times (e/r_a)^{-19.94}

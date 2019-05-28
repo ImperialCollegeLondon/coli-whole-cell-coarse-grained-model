@@ -1,0 +1,1 @@
+V_{div} \propto k^{1.29} \times ptot^{114.23}

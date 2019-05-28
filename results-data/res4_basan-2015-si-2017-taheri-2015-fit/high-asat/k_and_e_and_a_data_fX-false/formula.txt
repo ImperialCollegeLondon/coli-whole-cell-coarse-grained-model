@@ -1,0 +1,1 @@
+V_{div} \propto k^{-1.22} \times e^{-1.87}\times a^{3.39}

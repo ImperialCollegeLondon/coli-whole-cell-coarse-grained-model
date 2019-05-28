@@ -1,0 +1,1 @@
+f_X \propto alpha^{-60.88} \times r^{-0.7}\times ra^{63.81}

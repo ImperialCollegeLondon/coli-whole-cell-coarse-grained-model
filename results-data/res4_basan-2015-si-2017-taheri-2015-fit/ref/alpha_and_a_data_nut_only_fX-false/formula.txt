@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{-5.71} \times a^{11.63}

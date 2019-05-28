@@ -1,1 +1,0 @@
-f_X \propto e^{10.69} \times fE^{-9.81}

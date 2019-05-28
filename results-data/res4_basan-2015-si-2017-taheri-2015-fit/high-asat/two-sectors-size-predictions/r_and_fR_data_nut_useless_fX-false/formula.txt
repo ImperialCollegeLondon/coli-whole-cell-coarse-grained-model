@@ -1,1 +1,0 @@
-V_{div} \propto r^{-46.04} \times fR^{43.16}

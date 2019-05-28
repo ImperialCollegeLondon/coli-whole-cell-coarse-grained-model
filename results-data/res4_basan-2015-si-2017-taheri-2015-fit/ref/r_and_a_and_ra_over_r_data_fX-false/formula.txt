@@ -1,0 +1,1 @@
+V_{div} \propto r^{-3.57} \times a^{7.18}\times (r_a/r)^{-4.35}

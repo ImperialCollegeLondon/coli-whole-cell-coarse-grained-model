@@ -1,1 +1,0 @@
-V_{div} \propto fQ^{79.98}

@@ -1,1 +1,0 @@
-V_{div} \propto e^{-0.77} \times fR^{-0.35}

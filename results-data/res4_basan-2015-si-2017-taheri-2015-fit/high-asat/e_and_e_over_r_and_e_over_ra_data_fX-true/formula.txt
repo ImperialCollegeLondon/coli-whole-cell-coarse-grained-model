@@ -1,0 +1,1 @@
+f_X \propto e^{0.62} \times (e/r)^{-0.52}\times (e/r_a)^{0.82}

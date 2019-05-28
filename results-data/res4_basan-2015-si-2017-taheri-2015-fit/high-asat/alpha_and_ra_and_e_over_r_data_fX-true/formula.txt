@@ -1,0 +1,1 @@
+f_X \propto alpha^{-6.49} \times ra^{9.03}\times (e/r)^{0.41}

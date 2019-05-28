@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{27.08} \times ra^{-28.07}

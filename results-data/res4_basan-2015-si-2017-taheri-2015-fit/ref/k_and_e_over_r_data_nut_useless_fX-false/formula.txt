@@ -1,0 +1,1 @@
+V_{div} \propto k^{-4.21} \times (e/r)^{-5.4}

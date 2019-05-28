@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{60.93} \times ra^{-63.15}\times (r_a/r)^{-0.7}

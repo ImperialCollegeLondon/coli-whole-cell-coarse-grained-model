@@ -1,0 +1,1 @@
+f_X \propto e^{1.73} \times a^{-2.82}\times (e/r_a)^{-1.05}

@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{0.03} \times (e/r)^{-0.71}

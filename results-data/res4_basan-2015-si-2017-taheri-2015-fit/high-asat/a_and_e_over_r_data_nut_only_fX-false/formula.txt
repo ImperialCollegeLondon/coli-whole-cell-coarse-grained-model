@@ -1,0 +1,1 @@
+V_{div} \propto a^{0.25} \times (e/r)^{-0.69}

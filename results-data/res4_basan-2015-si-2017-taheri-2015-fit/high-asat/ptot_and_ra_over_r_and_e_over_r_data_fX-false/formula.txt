@@ -1,0 +1,1 @@
+V_{div} \propto ptot^{6} \times (r_a/r)^{1.46}\times (e/r)^{-0.94}

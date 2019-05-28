@@ -1,0 +1,1 @@
+V_{div} \propto k^{6.15} \times e^{-1.43}\times (e/r_a)^{6.88}

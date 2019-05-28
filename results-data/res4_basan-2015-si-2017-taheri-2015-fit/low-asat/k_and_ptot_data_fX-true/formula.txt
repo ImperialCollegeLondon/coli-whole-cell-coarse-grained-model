@@ -1,0 +1,1 @@
+f_X \propto k^{-0.71} \times ptot^{-4.71}

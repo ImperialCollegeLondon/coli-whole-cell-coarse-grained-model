@@ -15,7 +15,7 @@ mk_size = 20;
 for i_nut=1:length(nutrients)
     % nut x cm panel
     model = model_data(model_data.nutrient_type==nutrients(i_nut) & model_data.useless_type==0, :);
-    plot(model.model_growth_rate, model.model_ra_over_r, 'Color', colors(i_nut,:), 'LineWidth', lw); hold on;
+    plot(model.model_growth_rate, model.model_ra_over_r, '-o', 'Color', colors(i_nut,:), 'LineWidth', lw); hold on;
 end
 
 % styling axes

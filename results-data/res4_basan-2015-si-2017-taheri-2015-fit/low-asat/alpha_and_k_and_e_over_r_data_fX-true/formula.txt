@@ -1,0 +1,1 @@
+f_X \propto alpha^{0.67} \times k^{-1.37}\times (e/r)^{-0.41}

@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{-0.97} \times ptot^{-28.01}\times (e/r)^{-0.31}

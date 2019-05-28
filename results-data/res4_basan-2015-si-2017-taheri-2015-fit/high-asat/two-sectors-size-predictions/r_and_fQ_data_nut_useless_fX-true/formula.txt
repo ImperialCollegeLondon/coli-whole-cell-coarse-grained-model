@@ -1,1 +1,0 @@
-f_X \propto r^{2.87} \times fQ^{-42.16}

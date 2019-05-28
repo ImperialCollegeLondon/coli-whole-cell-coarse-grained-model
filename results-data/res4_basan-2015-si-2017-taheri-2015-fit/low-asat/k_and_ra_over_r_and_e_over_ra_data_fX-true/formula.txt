@@ -1,0 +1,1 @@
+f_X \propto k^{16.54} \times (r_a/r)^{-0.62}\times (e/r_a)^{17.63}

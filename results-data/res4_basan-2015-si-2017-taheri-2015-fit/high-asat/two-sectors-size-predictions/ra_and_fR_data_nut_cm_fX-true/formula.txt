@@ -1,1 +1,0 @@
-f_X \propto ra^{-0.88} \times fR^{-0.88}

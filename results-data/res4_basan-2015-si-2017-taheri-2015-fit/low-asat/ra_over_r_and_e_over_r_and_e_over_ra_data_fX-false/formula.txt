@@ -1,0 +1,1 @@
+V_{div} \propto (r_a/r)^{0.81} \times (e/r)^{-0.71}\times (e/r_a)^{0}

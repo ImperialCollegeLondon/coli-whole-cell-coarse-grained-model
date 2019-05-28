@@ -1,0 +1,1 @@
+V_{div} \propto ptot^{-291.06} \times (e/r)^{0.97}

@@ -1,0 +1,1 @@
+f_X \propto alpha^{0.06} \times k^{-0.66}

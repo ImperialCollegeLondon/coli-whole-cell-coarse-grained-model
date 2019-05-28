@@ -1,1 +1,0 @@
-f_X \propto e^{0.65} \times fQ^{-85.55}

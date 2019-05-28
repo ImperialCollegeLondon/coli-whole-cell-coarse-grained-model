@@ -1,1 +1,0 @@
-V_{div} \propto ra^{-2.07} \times fQ^{299.1}

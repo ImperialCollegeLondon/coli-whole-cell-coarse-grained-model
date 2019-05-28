@@ -1,0 +1,1 @@
+f_X \propto alpha^{-4.43} \times ra^{6.58}\times ptot^{45.45}

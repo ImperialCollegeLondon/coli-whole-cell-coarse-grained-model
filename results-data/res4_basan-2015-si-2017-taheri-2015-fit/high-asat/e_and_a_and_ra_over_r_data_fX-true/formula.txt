@@ -1,0 +1,1 @@
+f_X \propto e^{0.88} \times a^{-0.49}\times (r_a/r)^{-0.43}

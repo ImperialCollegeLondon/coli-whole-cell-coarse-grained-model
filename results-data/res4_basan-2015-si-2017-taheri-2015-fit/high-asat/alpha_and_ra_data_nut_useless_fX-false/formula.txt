@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{9.34} \times ra^{-12.52}

@@ -1,1 +1,0 @@
-f_X \propto fR^{-0.18} \times fQ^{-17.83}

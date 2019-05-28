@@ -1,1 +1,0 @@
-V_{div} \propto fE^{-1.01} \times fR^{0.41}

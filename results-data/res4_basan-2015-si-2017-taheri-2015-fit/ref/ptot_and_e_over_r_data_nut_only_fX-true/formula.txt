@@ -1,0 +1,1 @@
+f_X \propto ptot^{47.78} \times (e/r)^{-0.4}

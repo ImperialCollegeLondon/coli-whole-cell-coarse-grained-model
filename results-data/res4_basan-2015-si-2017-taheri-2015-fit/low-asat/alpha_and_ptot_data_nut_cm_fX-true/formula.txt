@@ -1,0 +1,1 @@
+f_X \propto alpha^{0.5} \times ptot^{140.62}

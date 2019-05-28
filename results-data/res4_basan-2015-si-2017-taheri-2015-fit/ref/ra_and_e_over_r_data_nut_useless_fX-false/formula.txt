@@ -1,0 +1,1 @@
+V_{div} \propto ra^{-0.62} \times (e/r)^{-1.01}

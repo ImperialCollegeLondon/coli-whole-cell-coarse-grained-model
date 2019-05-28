@@ -1,0 +1,1 @@
+f_X \propto k^{-6.08} \times e^{1.45}\times (e/r_a)^{-6.83}

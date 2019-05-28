@@ -1,0 +1,1 @@
+V_{div} \propto r^{-0.61} \times (r_a/r)^{0.82}\times (e/r)^{-0.96}

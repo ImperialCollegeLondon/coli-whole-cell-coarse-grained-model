@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{20.71} \times ra^{-21.92}\times (e/r_a)^{-0.73}

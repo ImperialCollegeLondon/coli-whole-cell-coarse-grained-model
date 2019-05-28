@@ -1,1 +1,0 @@
-f_X \propto ra^{1.12} \times fQ^{-206.36}

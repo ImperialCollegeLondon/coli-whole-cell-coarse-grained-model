@@ -1,1 +1,0 @@
-V_{div} \propto fQ^{31.4} \times a^{-0.68}

@@ -1,0 +1,1 @@
+V_{div} \propto k^{0.94} \times r^{-0.53}\times a^{-0.62}

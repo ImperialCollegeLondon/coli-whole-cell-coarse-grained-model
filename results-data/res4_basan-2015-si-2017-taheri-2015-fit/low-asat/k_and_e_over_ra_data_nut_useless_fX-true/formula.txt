@@ -1,0 +1,1 @@
+f_X \propto k^{19.59} \times (e/r_a)^{20.81}

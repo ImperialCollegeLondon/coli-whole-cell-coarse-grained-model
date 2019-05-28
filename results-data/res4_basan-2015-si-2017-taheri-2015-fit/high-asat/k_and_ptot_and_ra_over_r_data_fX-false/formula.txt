@@ -1,0 +1,1 @@
+V_{div} \propto k^{0.89} \times ptot^{9.52}\times (r_a/r)^{0.43}

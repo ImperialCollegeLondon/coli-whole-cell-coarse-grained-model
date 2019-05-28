@@ -1,0 +1,1 @@
+V_{div} \propto ra^{-2.65} \times a^{4.84}\times (e/r)^{-0.39}

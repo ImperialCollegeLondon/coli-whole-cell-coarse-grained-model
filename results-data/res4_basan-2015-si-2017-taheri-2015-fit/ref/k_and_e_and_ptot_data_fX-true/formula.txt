@@ -1,0 +1,1 @@
+f_X \propto k^{0.21} \times e^{0.88}\times ptot^{26.51}

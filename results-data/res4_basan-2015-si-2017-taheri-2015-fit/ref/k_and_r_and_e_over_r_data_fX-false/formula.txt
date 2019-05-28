@@ -1,0 +1,1 @@
+V_{div} \propto k^{0.66} \times r^{-0.71}\times (e/r)^{-0.28}

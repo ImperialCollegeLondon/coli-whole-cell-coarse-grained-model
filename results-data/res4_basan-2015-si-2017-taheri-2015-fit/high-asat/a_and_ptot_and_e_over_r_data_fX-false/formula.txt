@@ -1,0 +1,1 @@
+V_{div} \propto a^{0.83} \times ptot^{-3.28}\times (e/r)^{-0.35}

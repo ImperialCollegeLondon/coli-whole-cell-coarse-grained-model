@@ -1,0 +1,1 @@
+f_X \propto alpha^{59.04} \times ra^{-63}

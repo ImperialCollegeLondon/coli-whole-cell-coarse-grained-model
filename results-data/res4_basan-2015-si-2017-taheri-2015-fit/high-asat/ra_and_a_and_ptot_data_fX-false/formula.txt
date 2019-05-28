@@ -1,0 +1,1 @@
+V_{div} \propto ra^{-2.3} \times a^{1.46}\times ptot^{-22.97}

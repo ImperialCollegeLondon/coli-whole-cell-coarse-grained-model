@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{-1.43} \times k^{7.59}\times (e/r_a)^{6.88}

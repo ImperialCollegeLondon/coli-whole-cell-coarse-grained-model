@@ -1,0 +1,1 @@
+V_{div} \propto k^{-16.41} \times (r_a/r)^{18.12}\times (e/r)^{-17.5}

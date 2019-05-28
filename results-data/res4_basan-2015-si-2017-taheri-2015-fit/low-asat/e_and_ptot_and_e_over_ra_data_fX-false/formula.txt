@@ -1,0 +1,1 @@
+V_{div} \propto e^{-0.85} \times ptot^{-103.37}\times (e/r_a)^{0.17}

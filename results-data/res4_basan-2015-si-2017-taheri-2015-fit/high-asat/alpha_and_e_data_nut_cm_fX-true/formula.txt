@@ -1,0 +1,1 @@
+f_X \propto alpha^{-0.59} \times e^{0.66}

@@ -1,0 +1,1 @@
+V_{div} \propto k^{0.7} \times ra^{-0.18}

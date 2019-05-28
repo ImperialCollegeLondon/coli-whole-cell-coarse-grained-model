@@ -1,1 +1,0 @@
-V_{div} \propto fQ^{18.11} \times a^{-0.81}

@@ -1,0 +1,1 @@
+f_X \propto k^{4.37} \times (e/r)^{5.55}

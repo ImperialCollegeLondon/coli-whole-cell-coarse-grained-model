@@ -1,0 +1,1 @@
+f_X \propto ptot^{10.95} \times (e/r)^{0.38}

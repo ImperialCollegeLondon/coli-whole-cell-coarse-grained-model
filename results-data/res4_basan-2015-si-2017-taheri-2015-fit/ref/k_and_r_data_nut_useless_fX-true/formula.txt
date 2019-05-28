@@ -1,0 +1,1 @@
+f_X \propto k^{-0.95} \times r^{0.77}

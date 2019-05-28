@@ -1,0 +1,1 @@
+f_X \propto ra^{1.84} \times a^{-2.47}\times (e/r_a)^{0.65}

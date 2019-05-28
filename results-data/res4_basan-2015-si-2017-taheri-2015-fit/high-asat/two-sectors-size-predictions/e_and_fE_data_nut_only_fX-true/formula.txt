@@ -1,1 +1,0 @@
-f_X \propto e^{14.17} \times fE^{-13.97}

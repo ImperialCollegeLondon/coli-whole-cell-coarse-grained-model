@@ -1,0 +1,1 @@
+V_{div} \propto e^{-0.68} \times ra^{-1.05}\times a^{2.83}
