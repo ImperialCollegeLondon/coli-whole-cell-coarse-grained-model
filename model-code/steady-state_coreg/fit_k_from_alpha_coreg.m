@@ -7,6 +7,7 @@ env_pars.k = fminsearch(@(k)cost_fit_k_from_alpha(k,cell_pars,env_pars,alpha_to_
 % test the result of the search, should give the good growth rate (with 1% tolerance)
 ss = give_steady_state_from_Q_constraint_and_fR_a_ratio(cell_pars,env_pars);
 if abs(ss.alpha-alpha_to_fit)/alpha_to_fit > 0.01
+    ss
     k = [];
 else
     k = env_pars.k;
@@ -22,6 +23,10 @@ end
 env_pars.k = k;
 ss = give_steady_state_from_Q_constraint_and_fR_a_ratio(cell_pars,env_pars);
 if isempty(ss)
+    C = 1e300;
+    return;
+end
+if ss.alpha == 0
     C = 1e300;
     return;
 end

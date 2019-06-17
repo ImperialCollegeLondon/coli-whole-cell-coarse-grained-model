@@ -16,9 +16,8 @@ function composition_data = compute_cell_composition_from_growth_modulation_fR_a
 addpath('../model-code/steady-state');
 
 cell_pars.biophysical.sigma = model_pars.sigma;
-cell_pars.biophysical.a_sat = model_pars.a_sat;
 cell_pars.constraint.q = model_pars.q;
-cell_pars.constraint.fR_a_ratio = model_pars.fR_a_ratio;
+cell_pars.constraint.delta = model_pars.delta;
 
 % prepare table columns
 model_k = []; model_ri = []; model_fU = [];
