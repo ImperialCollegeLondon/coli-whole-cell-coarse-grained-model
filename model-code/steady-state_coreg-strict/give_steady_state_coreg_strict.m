@@ -1,5 +1,5 @@
 
-function [steady_state,cell_pars] = give_steady_state_coreg(cell_pars, env_pars)
+function [steady_state,cell_pars] = give_steady_state_coreg_strict(cell_pars, env_pars)
 
 addpath('../steady-state/');
 
@@ -26,8 +26,9 @@ a_over_fR_max = ss2.a/ss2.fR;
 
 % check if compatible with the desired a/fR ratio
 if cell_pars.constraint.delta < a_over_fR_min
-    disp('miminal a/fR ratio higher than delta...');
-    [steady_state,cell_pars] = give_steady_state_from_a_and_Q_constraint(a1,cell_pars,env_pars);
+    disp('miminal a/fR ratio higher than delta... increasing ri to do that...');
+    
+    steady_state.alpha = 0;
     return;
 end
 if cell_pars.constraint.delta > a_over_fR_max
