@@ -1,0 +1,1 @@
+V_{div} \propto r^{0.14} \times (e/r)^{-0.71}

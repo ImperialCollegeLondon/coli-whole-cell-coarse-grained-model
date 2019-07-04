@@ -1,0 +1,1 @@
+V_{div} \propto e^{-1} \times r^{24.69}\times a^{-23.41}

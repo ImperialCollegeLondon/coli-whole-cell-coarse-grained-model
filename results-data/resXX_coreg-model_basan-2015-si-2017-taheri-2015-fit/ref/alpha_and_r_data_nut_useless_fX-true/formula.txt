@@ -1,0 +1,1 @@
+f_X \propto alpha^{24.38} \times r^{-34.26}

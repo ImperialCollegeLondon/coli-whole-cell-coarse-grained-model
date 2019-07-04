@@ -1,0 +1,1 @@
+f_X \propto r^{2.52} \times ptot^{49.54}

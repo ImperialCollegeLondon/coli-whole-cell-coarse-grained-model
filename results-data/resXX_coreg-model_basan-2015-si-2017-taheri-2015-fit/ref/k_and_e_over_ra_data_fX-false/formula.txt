@@ -1,0 +1,1 @@
+V_{div} \propto k^{-0.49} \times (e/r_a)^{-1.3}

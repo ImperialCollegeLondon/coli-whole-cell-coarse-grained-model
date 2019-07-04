@@ -1,0 +1,1 @@
+f_X \propto a^{2.68} \times ptot^{53.9}\times (r_a/r)^{-0.71}

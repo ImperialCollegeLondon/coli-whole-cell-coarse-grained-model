@@ -1,0 +1,1 @@
+V_{div} \propto a^{-0.5} \times (e/r)^{-1}

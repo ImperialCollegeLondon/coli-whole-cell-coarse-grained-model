@@ -1,0 +1,1 @@
+V_{div} \propto r^{0.28} \times ptot^{23.37}\times (e/r)^{-1}

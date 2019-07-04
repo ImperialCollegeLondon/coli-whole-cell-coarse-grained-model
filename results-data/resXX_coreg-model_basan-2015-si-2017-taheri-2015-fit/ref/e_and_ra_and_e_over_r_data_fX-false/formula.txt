@@ -1,0 +1,1 @@
+V_{div} \propto e^{-1.25} \times ra^{0.71}\times (e/r)^{0.3}

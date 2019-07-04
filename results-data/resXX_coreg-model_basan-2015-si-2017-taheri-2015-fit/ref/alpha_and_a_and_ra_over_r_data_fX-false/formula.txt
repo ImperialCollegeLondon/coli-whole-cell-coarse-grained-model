@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{-18.16} \times a^{24.16}\times (r_a/r)^{18.84}

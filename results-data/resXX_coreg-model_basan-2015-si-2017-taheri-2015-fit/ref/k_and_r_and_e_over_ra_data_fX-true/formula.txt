@@ -1,0 +1,1 @@
+f_X \propto k^{7.4} \times r^{-2.49}\times (e/r_a)^{8.17}

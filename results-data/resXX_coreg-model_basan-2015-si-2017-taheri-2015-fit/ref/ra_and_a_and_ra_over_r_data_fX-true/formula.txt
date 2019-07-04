@@ -1,0 +1,1 @@
+f_X \propto ra^{53.92} \times a^{-51.23}\times (r_a/r)^{-54.63}

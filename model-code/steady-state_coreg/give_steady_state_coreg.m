@@ -1,8 +1,6 @@
 
 function [steady_state,cell_pars] = give_steady_state_coreg(cell_pars, env_pars)
 
-addpath('../steady-state/');
-
 % find the maximum a allowing constraints to be respected
 a_max = 1 - (cell_pars.constraint.q + env_pars.ri) / (1 - cell_pars.allocation.fU);
 if a_max < 0
@@ -35,9 +33,19 @@ if cell_pars.constraint.delta > a_over_fR_max
 end
 
 % find the steady-state that respect the ratio
-a_log = fminbnd(@(a_log)(cost_a_fR_good_ratio(a_log, cell_pars, env_pars)), log(a1), log(a2));
+a_log = fminbnd(@(a_log)(cost_a_fR_good_ratio(a_log, cell_pars, env_pars)), log(min([a1,a2])), log(max([a1,a2])));
 C = cost_a_fR_good_ratio(a_log, cell_pars, env_pars);
 if C > 1e-6
+    a1
+    a2
+    a_over_fR_min
+    a_over_fR_max
+    ss1
+    ss2
+    env_pars
+    cell_pars.constraint
+    cell_pars.biophysical
+    cell_pars.allocation
     error('could not find steady state matching a/fR ratio ?');
 end
 a = exp(a_log);

@@ -1,0 +1,1 @@
+V_{div} \propto k^{-6.74} \times a^{2.17}\times (e/r_a)^{-7.51}

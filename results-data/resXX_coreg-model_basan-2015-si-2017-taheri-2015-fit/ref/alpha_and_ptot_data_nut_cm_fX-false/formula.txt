@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{0.59} \times ptot^{-13.86}

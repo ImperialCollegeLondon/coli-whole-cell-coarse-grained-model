@@ -1,0 +1,1 @@
+f_X \propto alpha^{0.22} \times k^{0.74}\times (e/r_a)^{1.67}

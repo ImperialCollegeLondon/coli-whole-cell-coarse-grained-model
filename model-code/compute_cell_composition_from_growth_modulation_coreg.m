@@ -1,6 +1,6 @@
 
 %%%
-% model_pars should have fields sigma, a_sat, q, fR_a_ratio
+% model_pars should have fields sigma, a_sat, q, a_fR_ratio == delta
 %
 % modulation_data should be a table with different growth rates for
 % different modulation
@@ -11,9 +11,9 @@
 %%%
 
 
-function composition_data = compute_cell_composition_from_growth_modulation_fR_a_ratio(model_pars, modulation_data)
+function composition_data = compute_cell_composition_from_growth_modulation_coreg(model_pars, modulation_data)
 
-addpath('../model-code/steady-state');
+addpath('../model-code/steady-state_coreg');
 
 cell_pars.biophysical.sigma = model_pars.sigma;
 cell_pars.constraint.q = model_pars.q;
@@ -35,7 +35,7 @@ for i_cond=1:size(modulation_data)
                                         modulation_data.useless_type == 0 & ...
                                         modulation_data.nutrient_type == this_cond.nutrient_type, :);
     env_pars.ri = 0; cell_pars.allocation.fU = 0;
-    env_pars.k = fit_k_from_alpha_imposed_fR_a_ratio(cell_pars, env_pars, media_only_cond.growth_rate_per_hr);
+    env_pars.k = fit_k_from_alpha_coreg(cell_pars, env_pars, media_only_cond.growth_rate_per_hr);
     if isempty(env_pars.k)
         disp('could not fit k ?');
         disp(cell_pars.biophysical);
@@ -46,11 +46,11 @@ for i_cond=1:size(modulation_data)
     end
     % if also cm but not useless, compute the ri
     if (this_cond.cm_type > 0 && this_cond.useless_type == 0)
-        env_pars.ri = fit_ri_from_alpha_imposed_fR_a_ratio(cell_pars, env_pars, this_cond.growth_rate_per_hr);
+        env_pars.ri = fit_ri_from_alpha_coreg(cell_pars, env_pars, this_cond.growth_rate_per_hr);
     end
     % if also useless but not cm, compute the fU
     if (this_cond.cm_type == 0 && this_cond.useless_type > 0)
-        cell_pars.allocation.fU = fit_fU_from_alpha_imposed_fR_a_ratio(cell_pars, env_pars, this_cond.growth_rate_per_hr);
+        cell_pars.allocation.fU = fit_fU_from_alpha_coreg(cell_pars, env_pars, this_cond.growth_rate_per_hr);
         % if empty value, means incompatibility of growth rate (faster with
         % fU that without)
         % in that case, we say that it is zero
@@ -60,7 +60,7 @@ for i_cond=1:size(modulation_data)
         end
     end
     % compute the steady-state (optimality assumption)
-    ss = give_steady_state_from_Q_constraint_and_fR_a_ratio(cell_pars, env_pars);
+    ss = give_steady_state_coreg(cell_pars, env_pars);
     % form the table
     model_k(end+1,:) = env_pars.k;
     model_ri(end+1,:) = env_pars.ri;

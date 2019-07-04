@@ -1,0 +1,1 @@
+f_X \propto e^{0.38} \times r^{-0.39}

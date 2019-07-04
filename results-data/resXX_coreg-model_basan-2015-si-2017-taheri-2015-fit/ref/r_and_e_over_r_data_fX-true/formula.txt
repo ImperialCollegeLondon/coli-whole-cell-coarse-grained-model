@@ -1,0 +1,1 @@
+f_X \propto r^{0.99} \times (e/r)^{0.71}

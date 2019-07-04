@@ -1,0 +1,1 @@
+f_X \propto r^{-7578.84} \times a^{7580.78}\times ptot^{7611.05}

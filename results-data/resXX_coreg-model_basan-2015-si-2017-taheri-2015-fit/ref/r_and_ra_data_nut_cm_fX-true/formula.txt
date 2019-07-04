@@ -1,0 +1,1 @@
+f_X \propto r^{-1.14} \times ra^{-0.56}

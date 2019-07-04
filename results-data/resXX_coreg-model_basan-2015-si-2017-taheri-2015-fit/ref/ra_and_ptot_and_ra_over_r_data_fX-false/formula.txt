@@ -1,0 +1,1 @@
+V_{div} \propto ra^{-2.68} \times ptot^{-52.22}\times (r_a/r)^{3.4}

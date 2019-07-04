@@ -1,0 +1,1 @@
+V_{div} \propto r^{-12.24} \times a^{11.27}\times (e/r_a)^{-0.77}

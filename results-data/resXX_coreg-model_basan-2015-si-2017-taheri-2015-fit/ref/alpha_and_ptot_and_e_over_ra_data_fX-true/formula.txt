@@ -1,0 +1,1 @@
+f_X \propto alpha^{0.28} \times ptot^{-3.94}\times (e/r_a)^{0.98}

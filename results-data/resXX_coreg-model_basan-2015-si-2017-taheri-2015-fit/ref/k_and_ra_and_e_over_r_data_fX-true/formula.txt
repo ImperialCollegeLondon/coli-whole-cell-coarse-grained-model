@@ -1,0 +1,1 @@
+f_X \propto k^{-2.13} \times ra^{1.43}\times (e/r)^{-1.16}

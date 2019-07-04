@@ -1,0 +1,1 @@
+V_{div} \propto ra^{-0.54} \times (r_a/r)^{1.25}\times (e/r)^{-0.95}

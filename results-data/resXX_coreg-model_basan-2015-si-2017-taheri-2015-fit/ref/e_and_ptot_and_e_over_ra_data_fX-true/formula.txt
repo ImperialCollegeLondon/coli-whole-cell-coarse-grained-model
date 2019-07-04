@@ -1,0 +1,1 @@
+f_X \propto e^{0.3} \times ptot^{-5.5}\times (e/r_a)^{0.7}

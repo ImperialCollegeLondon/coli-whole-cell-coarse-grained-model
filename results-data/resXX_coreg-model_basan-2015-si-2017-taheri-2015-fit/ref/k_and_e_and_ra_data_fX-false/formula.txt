@@ -1,0 +1,1 @@
+V_{div} \propto k^{-0.79} \times e^{-1.73}\times ra^{1.5}

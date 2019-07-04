@@ -1,0 +1,1 @@
+f_X \propto a^{2.02} \times ptot^{33.03}

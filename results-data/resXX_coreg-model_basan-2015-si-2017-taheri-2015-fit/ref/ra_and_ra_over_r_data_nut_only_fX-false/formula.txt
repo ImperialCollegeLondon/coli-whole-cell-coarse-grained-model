@@ -1,0 +1,1 @@
+V_{div} \propto ra^{1.63} \times (r_a/r)^{0}

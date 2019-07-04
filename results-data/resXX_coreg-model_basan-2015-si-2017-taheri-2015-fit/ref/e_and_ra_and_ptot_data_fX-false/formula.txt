@@ -1,0 +1,1 @@
+V_{div} \propto e^{-1} \times ra^{0.7}\times ptot^{4.5}

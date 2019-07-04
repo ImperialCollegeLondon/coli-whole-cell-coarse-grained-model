@@ -1,0 +1,1 @@
+V_{div} \propto ra^{-28.5} \times a^{28.24}

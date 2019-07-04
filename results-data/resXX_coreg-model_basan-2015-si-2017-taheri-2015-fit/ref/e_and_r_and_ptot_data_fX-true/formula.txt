@@ -1,0 +1,1 @@
+f_X \propto e^{1} \times r^{-1.28}\times ptot^{-24.37}

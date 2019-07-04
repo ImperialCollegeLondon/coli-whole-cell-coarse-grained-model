@@ -1,0 +1,1 @@
+V_{div} \propto a^{-0.27} \times ptot^{-28.51}

@@ -1,0 +1,1 @@
+V_{div} \propto alpha^{-3.18} \times ra^{3.89}\times (e/r)^{-0.91}

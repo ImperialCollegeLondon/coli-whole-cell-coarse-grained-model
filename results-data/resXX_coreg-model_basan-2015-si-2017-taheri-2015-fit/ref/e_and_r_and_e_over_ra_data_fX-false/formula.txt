@@ -1,0 +1,1 @@
+V_{div} \propto e^{-0.25} \times r^{-0.3}\times (e/r_a)^{-0.71}

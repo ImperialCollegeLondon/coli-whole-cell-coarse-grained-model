@@ -1,0 +1,1 @@
+f_X \propto e^{1} \times r^{-25.69}\times a^{24.41}

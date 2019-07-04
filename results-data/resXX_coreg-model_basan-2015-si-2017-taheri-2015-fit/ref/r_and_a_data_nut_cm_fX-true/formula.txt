@@ -1,0 +1,1 @@
+f_X \propto r^{15.69} \times a^{-15.45}

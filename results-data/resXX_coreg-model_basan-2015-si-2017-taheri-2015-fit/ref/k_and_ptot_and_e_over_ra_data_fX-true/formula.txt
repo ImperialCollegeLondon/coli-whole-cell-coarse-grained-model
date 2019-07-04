@@ -1,0 +1,1 @@
+f_X \propto k^{2.14} \times ptot^{7.74}\times (e/r_a)^{2.91}
