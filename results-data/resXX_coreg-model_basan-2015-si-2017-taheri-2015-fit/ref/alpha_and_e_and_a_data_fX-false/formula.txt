@@ -1,1 +1,1 @@
-V_{div} \propto alpha^{0.7} \times e^{-0.97}\times a^{-0.53}
+V_{div} \propto alpha^{0.72} \times e^{-0.98}\times a^{-0.53}

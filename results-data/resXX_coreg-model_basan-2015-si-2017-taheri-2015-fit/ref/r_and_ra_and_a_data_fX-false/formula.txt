@@ -1,1 +1,1 @@
-V_{div} \propto r^{-55.63} \times ra^{0.71}\times a^{52.23}
+V_{div} \propto r^{-33.5} \times ra^{0.73}\times a^{30.3}

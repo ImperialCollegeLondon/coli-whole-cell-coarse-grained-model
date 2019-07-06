@@ -1,1 +1,1 @@
-f_X \propto a^{2.52} \times ptot^{52.06}
+f_X \propto a^{2.41} \times ptot^{31.82}

@@ -1,1 +1,1 @@
-V_{div} \propto r^{-0.53} \times (e/r)^{-1}
+V_{div} \propto r^{-0.51} \times (e/r)^{-1.02}

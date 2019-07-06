@@ -1,1 +1,1 @@
-V_{div} \propto alpha^{0.71} \times e^{-1.53}\times (e/r)^{0.56}
+V_{div} \propto alpha^{0.72} \times e^{-1.55}\times (e/r)^{0.58}

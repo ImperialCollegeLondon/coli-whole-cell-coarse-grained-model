@@ -1,1 +1,1 @@
-f_X \propto ptot^{12.68}
+f_X \propto ptot^{7.38}

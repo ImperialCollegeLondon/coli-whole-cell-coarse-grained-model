@@ -1,1 +1,1 @@
-f_X \propto e^{-0.13} \times (e/r_a)^{0.82}
+f_X \propto e^{0.03} \times (e/r_a)^{0.74}

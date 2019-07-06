@@ -1,1 +1,1 @@
-f_X \propto a^{-0.01} \times (e/r)^{0.38}
+f_X \propto a^{-0.05} \times (e/r)^{0.35}

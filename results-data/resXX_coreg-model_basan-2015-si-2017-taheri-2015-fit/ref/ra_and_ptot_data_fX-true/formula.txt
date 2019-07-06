@@ -1,1 +1,1 @@
-f_X \propto ra^{-0.51} \times ptot^{7.38}
+f_X \propto ra^{-0.52} \times ptot^{4.53}

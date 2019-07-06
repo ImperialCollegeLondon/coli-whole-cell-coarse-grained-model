@@ -1,1 +1,1 @@
-f_X \propto alpha^{0.7} \times k^{-1}
+f_X \propto alpha^{0.72} \times k^{-1.01}

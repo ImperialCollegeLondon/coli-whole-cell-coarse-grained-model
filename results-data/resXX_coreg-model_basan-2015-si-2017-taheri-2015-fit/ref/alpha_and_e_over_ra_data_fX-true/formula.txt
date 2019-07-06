@@ -1,1 +1,1 @@
-f_X \propto alpha^{0.2} \times (e/r_a)^{0.86}
+f_X \propto alpha^{0.2} \times (e/r_a)^{0.88}

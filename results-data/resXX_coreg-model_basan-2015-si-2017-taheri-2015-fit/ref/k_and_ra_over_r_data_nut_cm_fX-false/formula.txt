@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.68} \times (r_a/r)^{0.02}
+V_{div} \propto k^{0.69} \times (r_a/r)^{0.02}

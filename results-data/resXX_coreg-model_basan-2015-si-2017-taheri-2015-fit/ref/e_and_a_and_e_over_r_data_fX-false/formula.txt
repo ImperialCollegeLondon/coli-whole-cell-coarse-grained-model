@@ -1,1 +1,1 @@
-V_{div} \propto e^{23.69} \times a^{-23.41}\times (e/r)^{-24.69}
+V_{div} \propto e^{14.33} \times a^{-14.08}\times (e/r)^{-15.34}

@@ -1,1 +1,1 @@
-f_X \propto e^{1} \times ra^{-0.7}\times ptot^{-5.5}
+f_X \propto e^{1.02} \times ra^{-0.71}\times ptot^{-3.51}

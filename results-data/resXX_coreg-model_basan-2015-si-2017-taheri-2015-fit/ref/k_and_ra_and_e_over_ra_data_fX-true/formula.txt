@@ -1,1 +1,1 @@
-f_X \propto k^{0.96} \times ra^{0.22}\times (e/r_a)^{1.89}
+f_X \propto k^{0.88} \times ra^{0.23}\times (e/r_a)^{1.83}

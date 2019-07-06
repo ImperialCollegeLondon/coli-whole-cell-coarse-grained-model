@@ -1,1 +1,1 @@
-f_X \propto r^{-0.51} \times ra^{0}
+f_X \propto r^{-0.49} \times ra^{0}

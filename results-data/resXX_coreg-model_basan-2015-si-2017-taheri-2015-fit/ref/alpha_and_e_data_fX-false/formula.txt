@@ -1,1 +1,1 @@
-V_{div} \propto alpha^{0.61} \times e^{-0.75}
+V_{div} \propto alpha^{0.62} \times e^{-0.75}

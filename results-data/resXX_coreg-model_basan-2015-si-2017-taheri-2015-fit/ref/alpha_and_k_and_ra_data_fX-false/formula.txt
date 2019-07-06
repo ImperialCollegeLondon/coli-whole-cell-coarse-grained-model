@@ -1,1 +1,1 @@
-V_{div} \propto alpha^{-1.73} \times k^{0.94}\times ra^{1.5}
+V_{div} \propto alpha^{-1.61} \times k^{0.97}\times ra^{1.36}

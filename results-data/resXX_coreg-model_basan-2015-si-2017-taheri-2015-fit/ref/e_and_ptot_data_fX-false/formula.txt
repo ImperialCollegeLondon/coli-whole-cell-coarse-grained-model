@@ -1,1 +1,1 @@
-V_{div} \propto e^{-0.79} \times ptot^{4.22}
+V_{div} \propto e^{-0.79} \times ptot^{2.65}

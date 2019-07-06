@@ -1,1 +1,1 @@
-f_X \propto k^{-0.71} \times e^{0.87}\times (e/r)^{-0.63}
+f_X \propto k^{-0.72} \times e^{0.92}\times (e/r)^{-0.69}

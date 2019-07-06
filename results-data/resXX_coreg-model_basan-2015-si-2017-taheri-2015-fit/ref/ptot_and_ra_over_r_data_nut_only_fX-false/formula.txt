@@ -1,1 +1,1 @@
-V_{div} \propto ptot^{-24.48} \times (r_a/r)^{0}
+V_{div} \propto ptot^{-15.62} \times (r_a/r)^{0}

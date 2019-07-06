@@ -1,1 +1,1 @@
-V_{div} \propto r^{-28.5} \times a^{28.24}
+V_{div} \propto r^{-17.54} \times a^{17.34}

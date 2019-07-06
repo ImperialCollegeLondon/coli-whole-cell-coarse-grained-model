@@ -1,1 +1,1 @@
-f_X \propto alpha^{-0.7} \times a^{1.5}\times (e/r)^{0.97}
+f_X \propto alpha^{-0.72} \times a^{1.51}\times (e/r)^{0.98}

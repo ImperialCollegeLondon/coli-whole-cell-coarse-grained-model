@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.65}
+V_{div} \propto k^{0.67}

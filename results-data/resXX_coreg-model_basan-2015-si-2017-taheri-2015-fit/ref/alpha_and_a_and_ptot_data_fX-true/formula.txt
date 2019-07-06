@@ -1,1 +1,1 @@
-f_X \propto alpha^{-0.71} \times a^{3.73}\times ptot^{55.9}
+f_X \propto alpha^{-0.73} \times a^{3.53}\times ptot^{32.99}

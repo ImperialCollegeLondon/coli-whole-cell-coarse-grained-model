@@ -1,1 +1,1 @@
-f_X \propto e^{-24.69} \times a^{24.41}\times (e/r)^{25.69}
+f_X \propto e^{-15.33} \times a^{15.08}\times (e/r)^{16.34}

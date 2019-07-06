@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.28} \times ptot^{23.64}\times (e/r)^{-1}
+V_{div} \propto a^{0.24} \times ptot^{14.33}\times (e/r)^{-1.02}

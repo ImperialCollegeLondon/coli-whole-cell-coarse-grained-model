@@ -29,7 +29,20 @@ if cell_pars.constraint.delta < a_over_fR_min
     return;
 end
 if cell_pars.constraint.delta > a_over_fR_max
-    error('maximal a/fR ratio lower than delta ?');
+%     a1
+%     a2
+%     a_over_fR_min
+%     a_over_fR_max
+%     ss1
+%     ss2
+%     env_pars
+%     cell_pars.constraint
+%     cell_pars.biophysical
+%     cell_pars.allocation    
+%     error('maximal a/fR ratio lower than delta ?');
+    disp('maximal a/fR ratio lower than delta...');
+    [steady_state,cell_pars] = give_steady_state_from_a_and_Q_constraint(a2,cell_pars,env_pars);
+    return;
 end
 
 % find the steady-state that respect the ratio

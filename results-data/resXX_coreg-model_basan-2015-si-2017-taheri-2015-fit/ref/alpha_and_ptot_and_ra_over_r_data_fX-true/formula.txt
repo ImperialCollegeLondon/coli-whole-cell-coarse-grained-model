@@ -1,1 +1,1 @@
-f_X \propto alpha^{1.83} \times ptot^{48.71}\times (r_a/r)^{-2.54}
+f_X \propto alpha^{1.7} \times ptot^{28.89}\times (r_a/r)^{-2.42}

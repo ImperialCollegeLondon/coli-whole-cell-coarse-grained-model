@@ -1,1 +1,1 @@
-f_X \propto r^{-0.28} \times ptot^{-24.37}\times (e/r)^{1}
+f_X \propto r^{-0.24} \times ptot^{-15.08}\times (e/r)^{1.02}

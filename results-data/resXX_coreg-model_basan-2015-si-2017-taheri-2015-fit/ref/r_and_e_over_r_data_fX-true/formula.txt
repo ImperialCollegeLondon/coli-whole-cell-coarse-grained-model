@@ -1,1 +1,1 @@
-f_X \propto r^{0.99} \times (e/r)^{0.71}
+f_X \propto r^{1.02} \times (e/r)^{0.69}

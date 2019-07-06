@@ -1,1 +1,1 @@
-f_X \propto k^{-1} \times ra^{0.98}
+f_X \propto k^{-1.02} \times ra^{1.04}

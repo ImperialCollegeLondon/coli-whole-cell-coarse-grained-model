@@ -1,1 +1,1 @@
-f_X \propto r^{-0.51} \times (r_a/r)^{0}
+f_X \propto r^{-0.49} \times (r_a/r)^{0}

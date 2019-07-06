@@ -1,1 +1,1 @@
-V_{div} \propto r^{-2.68} \times ptot^{-52.22}\times (r_a/r)^{0.71}
+V_{div} \propto r^{-2.47} \times ptot^{-30.3}\times (r_a/r)^{0.73}

@@ -1,1 +1,1 @@
-f_X \propto r^{0.97} \times ptot^{10.26}\times (e/r_a)^{0.77}
+f_X \propto r^{0.93} \times ptot^{5.76}\times (e/r_a)^{0.78}

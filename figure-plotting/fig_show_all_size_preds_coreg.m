@@ -1,6 +1,6 @@
 
 %%
-data_type = '';
+data_type = '_nut_useless';
 
 
 
@@ -28,13 +28,14 @@ addpath('../utils-code/export_fig');
 
 
 %%
-mk_size = 7;
+mk_size = 4;
 n_rows = 3;
 n_cols = 4;
-figsize = [0 0 800 600].*2.5;
-titlesize = 10;
-labelsize = 12;
-axsize = 12;
+figsize = [0 0 800 600];
+titlesize = 6.5;
+labelsize = 7;
+axsize = 7;
+axlw = 0.8;
 n_plots_per_fig = n_rows * n_cols;
 
 for i_V_fX = 1:2
@@ -83,7 +84,7 @@ for i_V_fX = 1:2
         plot(log(pred_data.real(I_cm_si)), log(pred_data.prediction(I_cm_si)), 'bs', 'MarkerSize', mk_size, 'MarkerFaceColor', 'b'); hold on;
         
         plot([-1 3], [-1 3], 'Color', [1 1 1].*0.6, 'LineWidth', 1.5);
-        set(gca,'FontSize',axsize,'LineWidth',1.5);
+        set(gca,'FontSize',axsize,'LineWidth',axlw);
         xlabel('log measured size', 'FontSize', labelsize);
         ylabel('log predicted size', 'FontSize', labelsize);
         ylim([-0.1 3.5]); xlim([-0.1 3.5]);

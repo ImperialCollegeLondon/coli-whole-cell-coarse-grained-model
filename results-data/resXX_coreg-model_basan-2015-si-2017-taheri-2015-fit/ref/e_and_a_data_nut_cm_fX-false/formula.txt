@@ -1,1 +1,1 @@
-V_{div} \propto e^{-0.39} \times a^{0.42}
+V_{div} \propto e^{-0.37} \times a^{0.45}

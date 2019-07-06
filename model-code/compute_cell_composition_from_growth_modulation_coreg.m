@@ -25,6 +25,7 @@ model_fE = []; model_fR = []; model_fQ = [];
 model_a = []; model_e = []; model_r = []; model_ra = []; model_q = []; model_u = [];
 model_ra_over_r = [];
 model_growth_rate = [];
+model_asat = [];
 
 % iterate on modulations (rows of table)
 for i_cond=1:size(modulation_data)
@@ -60,7 +61,7 @@ for i_cond=1:size(modulation_data)
         end
     end
     % compute the steady-state (optimality assumption)
-    ss = give_steady_state_coreg(cell_pars, env_pars);
+    [ss,cp] = give_steady_state_coreg(cell_pars, env_pars);
     % form the table
     model_k(end+1,:) = env_pars.k;
     model_ri(end+1,:) = env_pars.ri;
@@ -76,10 +77,11 @@ for i_cond=1:size(modulation_data)
     model_u(end+1,:) = ss.u;
     model_ra_over_r(end+1,:) = ss.ra / ss.r;
     model_growth_rate(end+1,:) = ss.alpha;
+    model_asat(end+1,:) = cp.biophysical.a_sat;
 end
 
 % make the table
-composition_data = table(model_k, model_ri, model_fU, model_fE, model_fR, model_fQ, model_a, model_e, model_r, model_ra, model_q, model_u, model_ra_over_r, model_growth_rate);
+composition_data = table(model_k, model_ri, model_fU, model_fE, model_fR, model_fQ, model_a, model_e, model_r, model_ra, model_q, model_u, model_ra_over_r, model_growth_rate, model_asat);
 composition_data = [modulation_data, composition_data];
 
 end

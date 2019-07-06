@@ -1,1 +1,1 @@
-V_{div} \propto a^{-2.02} \times ptot^{-34.03}
+V_{div} \propto a^{-1.83} \times ptot^{-19.63}

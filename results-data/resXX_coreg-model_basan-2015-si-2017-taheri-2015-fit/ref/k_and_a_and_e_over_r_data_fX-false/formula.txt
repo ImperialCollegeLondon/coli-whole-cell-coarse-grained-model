@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.7} \times a^{-0.78}\times (e/r)^{-0.27}
+V_{div} \propto k^{0.71} \times a^{-0.77}\times (e/r)^{-0.27}

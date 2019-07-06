@@ -1,1 +1,1 @@
-V_{div} \propto k^{-2.14} \times ptot^{-8.74}\times (e/r_a)^{-2.91}
+V_{div} \propto k^{-2.09} \times ptot^{-6.47}\times (e/r_a)^{-2.87}

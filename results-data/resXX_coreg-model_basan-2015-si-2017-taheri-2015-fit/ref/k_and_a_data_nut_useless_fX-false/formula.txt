@@ -1,1 +1,1 @@
-V_{div} \propto k^{1.01} \times a^{-0.88}
+V_{div} \propto k^{1.04} \times a^{-0.88}

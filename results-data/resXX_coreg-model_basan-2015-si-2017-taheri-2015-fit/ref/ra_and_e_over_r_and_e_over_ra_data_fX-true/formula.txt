@@ -1,1 +1,1 @@
-f_X \propto ra^{0.59} \times (e/r)^{-0.36}\times (e/r_a)^{1.3}
+f_X \propto ra^{0.61} \times (e/r)^{-0.38}\times (e/r_a)^{1.33}

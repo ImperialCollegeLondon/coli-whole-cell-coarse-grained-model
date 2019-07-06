@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.97} \times r^{-0.66}\times ra^{-0.26}
+V_{div} \propto k^{0.97} \times r^{-0.69}\times ra^{-0.26}

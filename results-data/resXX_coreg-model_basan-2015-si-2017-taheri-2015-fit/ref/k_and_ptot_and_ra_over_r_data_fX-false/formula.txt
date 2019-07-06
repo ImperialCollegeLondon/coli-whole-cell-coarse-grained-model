@@ -1,1 +1,1 @@
-V_{div} \propto k^{1.11} \times ptot^{16.34}\times (r_a/r)^{-0.42}
+V_{div} \propto k^{1.12} \times ptot^{10.29}\times (r_a/r)^{-0.43}

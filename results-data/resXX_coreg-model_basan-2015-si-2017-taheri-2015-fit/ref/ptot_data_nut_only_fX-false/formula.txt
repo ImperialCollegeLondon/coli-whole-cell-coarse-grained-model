@@ -1,1 +1,1 @@
-V_{div} \propto ptot^{-24.48}
+V_{div} \propto ptot^{-15.62}

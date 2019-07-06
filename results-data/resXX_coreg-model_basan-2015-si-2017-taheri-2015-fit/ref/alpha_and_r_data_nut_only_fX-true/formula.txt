@@ -1,1 +1,1 @@
-f_X \propto alpha^{17.56} \times r^{-25.64}
+f_X \propto alpha^{24.97} \times r^{-37.21}

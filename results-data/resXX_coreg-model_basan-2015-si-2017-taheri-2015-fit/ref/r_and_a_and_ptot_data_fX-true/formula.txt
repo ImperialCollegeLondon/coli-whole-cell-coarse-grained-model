@@ -1,1 +1,1 @@
-f_X \propto r^{-7578.84} \times a^{7580.78}\times ptot^{7611.05}
+f_X \propto r^{455.4} \times a^{-453.58}\times ptot^{-436.76}

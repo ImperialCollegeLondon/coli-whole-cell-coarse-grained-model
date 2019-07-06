@@ -1,1 +1,1 @@
-f_X \propto e^{0.11} \times (e/r_a)^{0.7}
+f_X \propto e^{0.1} \times (e/r_a)^{0.71}

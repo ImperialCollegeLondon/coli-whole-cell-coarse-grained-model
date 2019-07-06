@@ -1,1 +1,1 @@
-V_{div} \propto e^{-0.54} \times (e/r)^{0.3}\times (e/r_a)^{-0.71}
+V_{div} \propto e^{-0.52} \times (e/r)^{0.27}\times (e/r_a)^{-0.72}

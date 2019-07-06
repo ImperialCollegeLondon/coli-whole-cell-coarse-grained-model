@@ -1,1 +1,1 @@
-V_{div} \propto alpha^{0.71} \times r^{-56.92}\times a^{53.19}
+V_{div} \propto alpha^{0.73} \times r^{-34}\times a^{30.47}

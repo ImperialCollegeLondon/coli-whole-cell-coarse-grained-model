@@ -1,1 +1,1 @@
-f_X \propto alpha^{-0.57} \times e^{0.71}
+f_X \propto alpha^{-0.51} \times e^{0.79}

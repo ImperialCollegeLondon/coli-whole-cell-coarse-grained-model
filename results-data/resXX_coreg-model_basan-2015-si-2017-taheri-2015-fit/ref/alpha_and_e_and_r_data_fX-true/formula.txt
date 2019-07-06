@@ -1,1 +1,1 @@
-f_X \propto alpha^{-0.71} \times e^{0.95}\times r^{0.63}
+f_X \propto alpha^{-0.72} \times e^{0.95}\times r^{0.69}

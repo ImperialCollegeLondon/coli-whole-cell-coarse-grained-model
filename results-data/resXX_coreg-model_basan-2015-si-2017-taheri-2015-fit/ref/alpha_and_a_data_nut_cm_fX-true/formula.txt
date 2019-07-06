@@ -1,1 +1,1 @@
-f_X \propto alpha^{-0.55} \times a^{-0.88}
+f_X \propto alpha^{-0.56} \times a^{-0.83}

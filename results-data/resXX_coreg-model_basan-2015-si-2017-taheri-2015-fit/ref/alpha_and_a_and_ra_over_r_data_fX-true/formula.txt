@@ -1,1 +1,1 @@
-f_X \propto alpha^{17.83} \times a^{-23.67}\times (r_a/r)^{-18.51}
+f_X \propto alpha^{17.38} \times a^{-23.08}\times (r_a/r)^{-18.07}

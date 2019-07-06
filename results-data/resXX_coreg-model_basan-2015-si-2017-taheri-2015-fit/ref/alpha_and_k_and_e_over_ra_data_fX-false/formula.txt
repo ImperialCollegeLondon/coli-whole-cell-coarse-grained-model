@@ -1,1 +1,1 @@
-V_{div} \propto alpha^{-0.23} \times k^{-0.56}\times (e/r_a)^{-1.5}
+V_{div} \propto alpha^{-0.25} \times k^{-0.39}\times (e/r_a)^{-1.36}

@@ -1,1 +1,1 @@
-f_X \propto alpha^{0.11} \times k^{-0.71}
+f_X \propto alpha^{0.09} \times k^{-0.69}

@@ -1,1 +1,1 @@
-f_X \propto k^{-0.25} \times e^{0.69}\times (r_a/r)^{-0.46}
+f_X \propto k^{-0.24} \times e^{0.71}\times (r_a/r)^{-0.48}

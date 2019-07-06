@@ -1,1 +1,1 @@
-f_X \propto alpha^{-0.46} \times ptot^{5.08}
+f_X \propto alpha^{-0.46} \times ptot^{2.87}

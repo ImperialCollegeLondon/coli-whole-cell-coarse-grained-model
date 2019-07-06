@@ -1,1 +1,1 @@
-f_X \propto k^{-0.57} \times e^{0.14}
+f_X \propto k^{-0.51} \times e^{0.28}

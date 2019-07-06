@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.77} \times r^{-13.63}\times a^{12.3}
+V_{div} \propto k^{0.78} \times r^{-8.23}\times a^{6.94}

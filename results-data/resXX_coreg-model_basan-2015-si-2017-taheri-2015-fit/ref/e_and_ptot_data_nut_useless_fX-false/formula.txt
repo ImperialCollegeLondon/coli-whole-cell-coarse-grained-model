@@ -1,1 +1,1 @@
-V_{div} \propto e^{-0.94} \times ptot^{-7.77}
+V_{div} \propto e^{-0.96} \times ptot^{-5.27}

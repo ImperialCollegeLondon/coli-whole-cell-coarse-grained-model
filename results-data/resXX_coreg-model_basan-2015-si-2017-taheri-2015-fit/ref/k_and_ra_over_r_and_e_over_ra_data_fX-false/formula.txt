@@ -1,1 +1,1 @@
-V_{div} \propto k^{-1.38} \times (r_a/r)^{-0.22}\times (e/r_a)^{-2.32}
+V_{div} \propto k^{-1.22} \times (r_a/r)^{-0.25}\times (e/r_a)^{-2.19}

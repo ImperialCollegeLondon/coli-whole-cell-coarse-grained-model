@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.73} \times r^{-0.16}
+V_{div} \propto k^{0.83} \times r^{-0.38}

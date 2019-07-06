@@ -1,1 +1,1 @@
-f_X \propto (e/r)^{0.34}
+f_X \propto (e/r)^{0.32}

@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.81} \times a^{-0.43}
+V_{div} \propto k^{0.82} \times a^{-0.42}

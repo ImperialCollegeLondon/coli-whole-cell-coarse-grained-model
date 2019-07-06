@@ -1,1 +1,1 @@
-V_{div} \propto r^{-0.24} \times ptot^{-16.47}
+V_{div} \propto r^{-0.08} \times ptot^{-8.95}

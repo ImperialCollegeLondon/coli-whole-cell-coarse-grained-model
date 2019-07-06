@@ -1,1 +1,1 @@
-V_{div} \propto a^{0.04} \times (e/r)^{-0.4}
+V_{div} \propto a^{0.09} \times (e/r)^{-0.38}

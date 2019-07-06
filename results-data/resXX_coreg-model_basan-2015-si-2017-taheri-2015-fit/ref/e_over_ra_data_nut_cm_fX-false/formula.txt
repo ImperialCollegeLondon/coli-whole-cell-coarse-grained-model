@@ -1,1 +1,1 @@
-V_{div} \propto (e/r_a)^{-0.76}
+V_{div} \propto (e/r_a)^{-0.78}

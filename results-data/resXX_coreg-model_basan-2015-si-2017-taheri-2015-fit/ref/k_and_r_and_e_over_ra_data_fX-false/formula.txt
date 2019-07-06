@@ -1,1 +1,1 @@
-V_{div} \propto k^{-7.98} \times r^{2.78}\times (e/r_a)^{-8.75}
+V_{div} \propto k^{-10.82} \times r^{4.52}\times (e/r_a)^{-11.63}

@@ -1,1 +1,1 @@
-f_X \propto a^{-1.47} \times (r_a/r)^{0}
+f_X \propto a^{-1.44} \times (r_a/r)^{0}

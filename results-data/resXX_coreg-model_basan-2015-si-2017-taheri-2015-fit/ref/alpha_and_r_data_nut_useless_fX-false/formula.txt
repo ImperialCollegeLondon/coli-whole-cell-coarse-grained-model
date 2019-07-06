@@ -1,1 +1,1 @@
-V_{div} \propto alpha^{-24.84} \times r^{34.96}
+V_{div} \propto alpha^{-34.96} \times r^{50.78}

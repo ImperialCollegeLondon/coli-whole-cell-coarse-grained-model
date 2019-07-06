@@ -1,1 +1,1 @@
-V_{div} \propto e^{-0.95} \times ra^{0.41}\times (r_a/r)^{0.3}
+V_{div} \propto e^{-0.97} \times ra^{0.45}\times (r_a/r)^{0.27}

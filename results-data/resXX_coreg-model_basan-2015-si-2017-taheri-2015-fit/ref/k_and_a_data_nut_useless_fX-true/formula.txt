@@ -1,1 +1,1 @@
-f_X \propto k^{-1.01} \times a^{0.93}
+f_X \propto k^{-1.03} \times a^{0.96}

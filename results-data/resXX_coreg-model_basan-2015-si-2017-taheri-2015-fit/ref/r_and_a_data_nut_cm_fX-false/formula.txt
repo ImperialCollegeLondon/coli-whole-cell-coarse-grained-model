@@ -1,1 +1,1 @@
-V_{div} \propto r^{-16.69} \times a^{16.45}
+V_{div} \propto r^{-9.03} \times a^{8.95}

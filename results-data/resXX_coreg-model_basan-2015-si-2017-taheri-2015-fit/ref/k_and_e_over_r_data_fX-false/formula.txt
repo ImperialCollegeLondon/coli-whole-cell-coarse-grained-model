@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.73} \times (e/r)^{0.06}
+V_{div} \propto k^{0.74} \times (e/r)^{0.06}

@@ -1,1 +1,1 @@
-V_{div} \propto e^{-1} \times ra^{0.7}\times ptot^{4.5}
+V_{div} \propto e^{-1.02} \times ra^{0.71}\times ptot^{2.51}

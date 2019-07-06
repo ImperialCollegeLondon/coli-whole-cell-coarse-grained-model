@@ -1,1 +1,1 @@
-V_{div} \propto alpha^{-30.05} \times ra^{42.14}\times (r_a/r)^{-11.46}
+V_{div} \propto alpha^{-28.75} \times ra^{42.03}\times (r_a/r)^{-12.79}

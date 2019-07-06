@@ -1,1 +1,1 @@
-f_X \propto ptot^{23.31} \times (r_a/r)^{-0.65}
+f_X \propto ptot^{14.28} \times (r_a/r)^{-0.67}

@@ -1,1 +1,1 @@
-f_X \propto k^{-0.65} \times (r_a/r)^{-0.12}
+f_X \propto k^{-0.64} \times (r_a/r)^{-0.13}

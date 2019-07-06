@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.67} \times e^{-0.01}
+V_{div} \propto k^{0.68} \times e^{-0.01}

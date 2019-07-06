@@ -1,1 +1,1 @@
-f_X \propto ptot^{-9.33} \times (e/r)^{1.03}
+f_X \propto ptot^{-5.72} \times (e/r)^{1.05}

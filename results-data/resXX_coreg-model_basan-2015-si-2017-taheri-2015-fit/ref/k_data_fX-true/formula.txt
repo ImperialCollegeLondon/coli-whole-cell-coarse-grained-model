@@ -1,1 +1,1 @@
-f_X \propto k^{-0.66}
+f_X \propto k^{-0.65}

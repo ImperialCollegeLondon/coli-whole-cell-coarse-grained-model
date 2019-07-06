@@ -1,1 +1,1 @@
-f_X \propto r^{27.5} \times a^{-27.24}
+f_X \propto r^{16.54} \times a^{-16.34}

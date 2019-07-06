@@ -1,1 +1,1 @@
-f_X \propto alpha^{29.47} \times r^{-11.17}\times ra^{-30.1}
+f_X \propto alpha^{27.83} \times r^{-12.28}\times ra^{-28.33}

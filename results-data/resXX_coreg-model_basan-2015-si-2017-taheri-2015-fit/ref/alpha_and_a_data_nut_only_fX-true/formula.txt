@@ -1,1 +1,1 @@
-f_X \propto alpha^{9.49} \times a^{-13.65}
+f_X \propto alpha^{9.27} \times a^{-13.36}

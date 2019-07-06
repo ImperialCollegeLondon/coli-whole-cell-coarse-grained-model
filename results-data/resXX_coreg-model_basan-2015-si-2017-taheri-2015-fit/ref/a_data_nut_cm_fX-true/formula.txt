@@ -1,1 +1,1 @@
-f_X \propto a^{-0.93}
+f_X \propto a^{-0.87}

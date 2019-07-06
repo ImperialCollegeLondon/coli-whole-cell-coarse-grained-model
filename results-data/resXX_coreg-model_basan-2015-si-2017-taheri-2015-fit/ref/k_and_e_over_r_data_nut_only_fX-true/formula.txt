@@ -1,1 +1,1 @@
-f_X \propto k^{-0.06} \times (e/r)^{0.67}
+f_X \propto k^{0.24} \times (e/r)^{1.05}

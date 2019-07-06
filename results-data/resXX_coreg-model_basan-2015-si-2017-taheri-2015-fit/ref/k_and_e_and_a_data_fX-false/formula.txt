@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.7} \times e^{-0.26}\times a^{-0.53}
+V_{div} \propto k^{0.72} \times e^{-0.27}\times a^{-0.53}

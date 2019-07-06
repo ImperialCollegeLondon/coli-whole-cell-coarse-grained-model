@@ -1,1 +1,1 @@
-V_{div} \propto ra^{0.66} \times (e/r)^{-0.52}
+V_{div} \propto ra^{0.67} \times (e/r)^{-0.54}

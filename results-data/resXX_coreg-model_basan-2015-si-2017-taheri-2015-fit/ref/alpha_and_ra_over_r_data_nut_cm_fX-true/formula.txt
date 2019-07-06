@@ -1,1 +1,1 @@
-f_X \propto alpha^{-1.24} \times (r_a/r)^{0.69}
+f_X \propto alpha^{-1.21} \times (r_a/r)^{0.65}

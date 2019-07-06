@@ -1,1 +1,1 @@
-V_{div} \propto ptot^{-39.84} \times (e/r)^{0.49}
+V_{div} \propto ptot^{-30.97} \times (e/r)^{0.81}

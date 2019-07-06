@@ -1,1 +1,1 @@
-f_X \propto k^{-0.73} \times r^{0.25}
+f_X \propto k^{-0.74} \times r^{0.32}

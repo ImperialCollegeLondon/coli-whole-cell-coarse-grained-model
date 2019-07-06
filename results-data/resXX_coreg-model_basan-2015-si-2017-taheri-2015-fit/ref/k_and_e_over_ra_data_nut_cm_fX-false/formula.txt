@@ -1,1 +1,1 @@
-V_{div} \propto k^{0.22} \times (e/r_a)^{-0.51}
+V_{div} \propto k^{0.3} \times (e/r_a)^{-0.45}

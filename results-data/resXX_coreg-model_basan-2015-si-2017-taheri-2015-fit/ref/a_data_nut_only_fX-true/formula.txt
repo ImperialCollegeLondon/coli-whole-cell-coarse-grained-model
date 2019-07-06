@@ -1,1 +1,1 @@
-f_X \propto a^{-1.47}
+f_X \propto a^{-1.44}

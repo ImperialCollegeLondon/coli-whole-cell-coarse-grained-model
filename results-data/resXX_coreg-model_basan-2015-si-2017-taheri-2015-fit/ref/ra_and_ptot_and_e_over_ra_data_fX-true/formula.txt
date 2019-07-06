@@ -1,1 +1,1 @@
-f_X \propto ra^{0.3} \times ptot^{-5.5}\times (e/r_a)^{1}
+f_X \propto ra^{0.31} \times ptot^{-3.51}\times (e/r_a)^{1.02}

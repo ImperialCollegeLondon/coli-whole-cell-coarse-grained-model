@@ -1,1 +1,1 @@
-f_X \propto alpha^{-0.03} \times k^{-0.64}
+f_X \propto alpha^{-0.05} \times k^{-0.62}

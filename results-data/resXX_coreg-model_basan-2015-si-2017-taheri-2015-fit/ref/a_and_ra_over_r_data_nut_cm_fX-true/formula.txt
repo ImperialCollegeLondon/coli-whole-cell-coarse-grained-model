@@ -1,1 +1,1 @@
-f_X \propto a^{-1.59} \times (r_a/r)^{-0.57}
+f_X \propto a^{-1.55} \times (r_a/r)^{-0.57}

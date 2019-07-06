@@ -1,1 +1,1 @@
-f_X \propto k^{-0.71} \times ptot^{-2.36}
+f_X \propto k^{-0.72} \times ptot^{-1.83}

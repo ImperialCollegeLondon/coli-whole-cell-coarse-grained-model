@@ -1,1 +1,1 @@
-f_X \propto alpha^{0.96} \times e^{0.93}\times ra^{-1.67}
+f_X \propto alpha^{0.88} \times e^{0.95}\times ra^{-1.6}

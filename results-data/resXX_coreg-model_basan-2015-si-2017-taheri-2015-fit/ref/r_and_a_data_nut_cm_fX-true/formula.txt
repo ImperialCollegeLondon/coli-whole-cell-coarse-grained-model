@@ -1,1 +1,1 @@
-f_X \propto r^{15.69} \times a^{-15.45}
+f_X \propto r^{8.03} \times a^{-7.95}

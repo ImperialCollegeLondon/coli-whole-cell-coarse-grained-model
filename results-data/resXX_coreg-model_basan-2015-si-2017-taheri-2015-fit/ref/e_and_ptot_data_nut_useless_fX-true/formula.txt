@@ -1,1 +1,1 @@
-f_X \propto e^{0.94} \times ptot^{6.77}
+f_X \propto e^{0.96} \times ptot^{4.27}

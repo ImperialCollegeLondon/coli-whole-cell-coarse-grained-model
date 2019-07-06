@@ -1,1 +1,1 @@
-V_{div} \propto a^{-0.5} \times (e/r_a)^{-1}
+V_{div} \propto a^{-0.46} \times (e/r_a)^{-1.03}
