@@ -1,1 +1,0 @@
-f_X \propto alpha^{-0.73} \times a^{3.53}\times ptot^{32.99}

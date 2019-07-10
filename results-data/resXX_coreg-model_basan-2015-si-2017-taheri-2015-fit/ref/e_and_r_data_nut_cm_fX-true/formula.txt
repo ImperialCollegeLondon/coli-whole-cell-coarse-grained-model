@@ -1,1 +1,1 @@
-f_X \propto e^{0.35} \times r^{-0.41}
+f_X \propto e^{0.21} \times r^{-0.48}

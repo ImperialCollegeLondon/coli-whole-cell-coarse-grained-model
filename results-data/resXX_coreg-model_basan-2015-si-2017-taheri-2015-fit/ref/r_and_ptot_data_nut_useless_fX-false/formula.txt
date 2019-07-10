@@ -1,1 +1,0 @@
-V_{div} \propto r^{-2.41} \times ptot^{-30.41}

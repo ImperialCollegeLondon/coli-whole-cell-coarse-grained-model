@@ -1,1 +1,0 @@
-f_X \propto k^{1.4} \times (r_a/r)^{0.22}\times (e/r_a)^{2.35}

@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-28.75} \times r^{42.03}\times (r_a/r)^{29.24}

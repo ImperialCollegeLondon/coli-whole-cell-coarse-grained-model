@@ -1,1 +1,0 @@
-V_{div} \propto k^{-1.17} \times (e/r)^{-2.19}

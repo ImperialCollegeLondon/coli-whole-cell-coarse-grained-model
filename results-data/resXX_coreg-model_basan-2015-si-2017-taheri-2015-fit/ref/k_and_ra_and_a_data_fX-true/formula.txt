@@ -1,1 +1,0 @@
-f_X \propto k^{-0.97} \times ra^{0.25}\times a^{0.72}

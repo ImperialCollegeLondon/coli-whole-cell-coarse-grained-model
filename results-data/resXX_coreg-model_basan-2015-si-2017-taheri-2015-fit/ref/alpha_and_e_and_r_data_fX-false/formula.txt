@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{0.72} \times e^{-0.97}\times r^{-0.58}

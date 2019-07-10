@@ -1,1 +1,0 @@
-f_X \propto (e/r)^{-0.02} \times (e/r_a)^{0.78}

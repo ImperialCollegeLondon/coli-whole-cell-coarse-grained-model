@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{0.68} \times e^{-0.69}

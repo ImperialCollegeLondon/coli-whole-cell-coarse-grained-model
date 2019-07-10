@@ -1,1 +1,1 @@
-V_{div} \propto ra^{0.44}
+V_{div} \propto ra^{0.48}

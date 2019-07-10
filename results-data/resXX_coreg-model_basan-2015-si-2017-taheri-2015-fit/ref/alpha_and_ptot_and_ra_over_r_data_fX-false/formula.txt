@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-1.7} \times ptot^{-29.89}\times (r_a/r)^{2.42}

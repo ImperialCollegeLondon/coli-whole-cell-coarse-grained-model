@@ -1,1 +1,0 @@
-V_{div} \propto ra^{-17.54} \times a^{17.34}

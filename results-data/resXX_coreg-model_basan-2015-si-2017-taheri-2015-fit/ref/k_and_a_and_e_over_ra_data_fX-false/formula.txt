@@ -1,1 +1,0 @@
-V_{div} \propto k^{-9.45} \times a^{3.51}\times (e/r_a)^{-10.23}

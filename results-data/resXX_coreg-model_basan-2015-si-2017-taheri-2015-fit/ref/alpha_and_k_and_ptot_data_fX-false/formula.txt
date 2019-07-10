@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-0.37} \times k^{1.07}\times ptot^{5.22}

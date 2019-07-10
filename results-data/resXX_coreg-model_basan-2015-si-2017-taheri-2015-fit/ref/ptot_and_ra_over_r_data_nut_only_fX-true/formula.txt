@@ -1,1 +1,0 @@
-f_X \propto ptot^{14.62} \times (r_a/r)^{0}

@@ -1,1 +1,1 @@
-V_{div} \propto r^{0.46} \times ra^{0.45}\times (r_a/r)^{0}
+V_{div} \propto r^{0.33} \times ra^{0.5}\times (r_a/r)^{0}

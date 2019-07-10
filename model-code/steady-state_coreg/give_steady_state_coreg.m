@@ -9,7 +9,7 @@ if a_max < 0
 end
 
 % compute the equivalent a_sat
-delta_to_asat = 0.0836; % from dai et al. MM elong vs R/P Km and the R/P vs fR ratio from Scott et al.
+delta_to_asat = 0.11/2.11; % from dai et al. MM elong vs R/P Km and the R/P vs fR ratio from Dai et al. (2.1 theoric, 2.4 measured)
 cell_pars.biophysical.a_sat = cell_pars.constraint.delta * delta_to_asat;
 
 % first, find the minimal a/fR ratio over possible steady-state

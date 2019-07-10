@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{0.45} \times a^{0.26}

@@ -1,1 +1,1 @@
-f_X \propto (r_a/r)^{-0.12}
+f_X \propto (r_a/r)^{-0.09}

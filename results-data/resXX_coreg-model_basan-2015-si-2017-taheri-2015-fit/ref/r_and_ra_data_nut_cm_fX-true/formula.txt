@@ -1,1 +1,1 @@
-f_X \propto r^{-1.16} \times ra^{-0.56}
+f_X \propto r^{-0.99} \times ra^{-0.66}

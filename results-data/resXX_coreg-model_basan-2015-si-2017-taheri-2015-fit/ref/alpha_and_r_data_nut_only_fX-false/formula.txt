@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-26.29} \times r^{39.21}

@@ -1,1 +1,0 @@
-f_X \propto e^{1.02} \times a^{-1.26}\times ptot^{-16.34}

@@ -1,1 +1,0 @@
-f_X \propto k^{8.47} \times a^{-3.03}\times (e/r_a)^{9.25}

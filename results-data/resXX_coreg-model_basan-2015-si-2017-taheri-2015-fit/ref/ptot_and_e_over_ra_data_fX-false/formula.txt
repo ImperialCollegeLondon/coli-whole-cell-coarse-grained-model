@@ -1,1 +1,0 @@
-V_{div} \propto ptot^{0.45} \times (e/r_a)^{-0.81}

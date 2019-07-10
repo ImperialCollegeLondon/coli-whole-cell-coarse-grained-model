@@ -1,1 +1,0 @@
-f_X \propto alpha^{-0.73} \times r^{33}\times a^{-29.47}

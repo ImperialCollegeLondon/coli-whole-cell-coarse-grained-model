@@ -1,1 +1,0 @@
-V_{div} \propto k^{-0.64} \times e^{-1.61}\times ra^{1.36}

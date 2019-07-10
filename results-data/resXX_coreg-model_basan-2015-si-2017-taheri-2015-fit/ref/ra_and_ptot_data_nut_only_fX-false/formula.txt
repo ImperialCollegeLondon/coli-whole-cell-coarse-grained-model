@@ -1,1 +1,0 @@
-V_{div} \propto ra^{-0.2} \times ptot^{-17.33}

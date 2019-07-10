@@ -1,1 +1,0 @@
-f_X \propto ra^{0.2} \times ptot^{16.33}

@@ -1,1 +1,0 @@
-V_{div} \propto k^{0.69} \times ptot^{8.83}\times (e/r)^{-0.43}

@@ -1,1 +1,0 @@
-V_{div} \propto r^{0.24} \times ptot^{14.08}\times (e/r)^{-1.02}

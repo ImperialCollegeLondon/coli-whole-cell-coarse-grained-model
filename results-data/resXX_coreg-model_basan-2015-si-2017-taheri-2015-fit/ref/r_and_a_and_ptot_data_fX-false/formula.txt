@@ -1,1 +1,0 @@
-V_{div} \propto r^{-455.4} \times a^{453.58}\times ptot^{435.76}

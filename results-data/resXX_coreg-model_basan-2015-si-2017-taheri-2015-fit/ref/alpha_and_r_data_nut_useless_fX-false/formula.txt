@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-34.96} \times r^{50.78}

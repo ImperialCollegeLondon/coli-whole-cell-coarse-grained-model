@@ -20,7 +20,8 @@ data_nut_useless = data(data.cm_type == 0, :);
 %%% compute goodness of prediction for all single cell composition variables (for the different
 %%% data groups, first fX, then size directly)
 %
-single_sectors = {'alpha', 'k', 'e', 'r', 'ra', 'a', 'ptot', 'ra_over_r', 'e_over_r', 'e_over_ra'};
+% single_sectors = {'alpha', 'k', 'e', 'r', 'ra', 'a', 'ptot', 'ra_over_r', 'e_over_r', 'e_over_ra'};
+single_sectors = {'e', 'r', 'ra', 'ra_over_r'};
 % for automatic table creation...
 table_str = 'results = table(';
 table_row_str = '''RowNames'',{';

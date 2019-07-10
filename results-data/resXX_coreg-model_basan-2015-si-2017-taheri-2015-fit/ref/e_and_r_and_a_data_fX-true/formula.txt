@@ -1,1 +1,0 @@
-f_X \propto e^{1.02} \times r^{-16.34}\times a^{15.08}

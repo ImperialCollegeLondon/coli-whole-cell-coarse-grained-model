@@ -1,1 +1,0 @@
-f_X \propto ra^{16.54} \times a^{-16.34}

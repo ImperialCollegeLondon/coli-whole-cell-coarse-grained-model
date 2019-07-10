@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{3.05} \times ra^{-2.49}

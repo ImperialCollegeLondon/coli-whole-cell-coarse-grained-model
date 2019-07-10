@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-0.27} \times k^{0.98}\times a^{-0.53}

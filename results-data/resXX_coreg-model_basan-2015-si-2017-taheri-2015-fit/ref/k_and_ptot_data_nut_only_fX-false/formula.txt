@@ -1,1 +1,0 @@
-V_{div} \propto k^{-0.55} \times ptot^{-28.16}

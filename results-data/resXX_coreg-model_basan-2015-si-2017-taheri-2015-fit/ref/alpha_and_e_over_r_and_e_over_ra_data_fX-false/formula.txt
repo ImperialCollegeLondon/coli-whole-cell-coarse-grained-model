@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-0.37} \times (e/r)^{0.12}\times (e/r_a)^{-1.08}

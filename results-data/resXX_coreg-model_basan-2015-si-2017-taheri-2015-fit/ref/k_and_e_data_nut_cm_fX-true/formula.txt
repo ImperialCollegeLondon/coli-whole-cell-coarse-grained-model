@@ -1,1 +1,0 @@
-f_X \propto k^{-0.68} \times e^{-0.05}

@@ -1,1 +1,0 @@
-f_X \propto k^{-0.74} \times (e/r)^{-0.11}

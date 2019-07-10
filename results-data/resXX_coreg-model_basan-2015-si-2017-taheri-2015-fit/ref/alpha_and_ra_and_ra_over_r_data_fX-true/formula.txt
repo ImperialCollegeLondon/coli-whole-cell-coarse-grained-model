@@ -1,1 +1,0 @@
-f_X \propto alpha^{27.83} \times ra^{-40.61}\times (r_a/r)^{12.28}

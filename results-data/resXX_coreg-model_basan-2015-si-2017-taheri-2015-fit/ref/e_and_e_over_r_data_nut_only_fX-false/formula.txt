@@ -1,1 +1,0 @@
-V_{div} \propto e^{-0.03} \times (e/r)^{-0.79}

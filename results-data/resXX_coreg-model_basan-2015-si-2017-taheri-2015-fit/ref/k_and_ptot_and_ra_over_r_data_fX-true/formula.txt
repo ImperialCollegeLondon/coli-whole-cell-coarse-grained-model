@@ -1,1 +1,0 @@
-f_X \propto k^{-1.12} \times ptot^{-11.29}\times (r_a/r)^{0.43}

@@ -1,1 +1,0 @@
-f_X \propto alpha^{-1.11} \times (r_a/r)^{0}
