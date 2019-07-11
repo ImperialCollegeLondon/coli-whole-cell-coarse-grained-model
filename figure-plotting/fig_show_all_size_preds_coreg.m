@@ -1,6 +1,6 @@
 
 %%
-data_type = '';
+data_type = '_nut_cm';
 
 
 
@@ -96,7 +96,7 @@ for i_V_fX = 1:2
         
         if i_pred == height(data)
             set(gcf,'Position',figsize,'Color','w');
-            export_fig(gcf,['../figure-assembly/sup-figure-XX-coreg-components/all-size-pred_' pred_type '_panel-' num2str(i_panel) '.pdf']);
+            export_fig(gcf,['../figure-assembly/sup-figure-XX-coreg-components/' data_type '-pred_' pred_type '_panel-' num2str(i_panel) '.pdf']);
             close;
         end
         
