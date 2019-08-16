@@ -1,0 +1,1 @@
+V_{div} \propto (fRA/fR)^{3.98} \times kt^{0.45}

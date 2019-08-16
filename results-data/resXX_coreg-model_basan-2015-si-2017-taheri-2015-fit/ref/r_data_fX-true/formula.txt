@@ -1,1 +1,1 @@
-f_X \propto r^{-0.2}
+f_X \propto r^{-0.3}

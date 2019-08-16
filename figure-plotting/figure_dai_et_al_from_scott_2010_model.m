@@ -19,7 +19,7 @@ colors = hsv(length(nutrients)+1);
 kns = [4.44, 3.45, 2.54, 1.86, 1.32, 0.85];
 
 
-%% compute kt and phi_r for each nut x cm point
+%% compute phi_r for each nut x cm point
 scott_model = model_data(:,{'growth_rate_per_hr','nutrient_type','cm_type'});
 scott_model.phi_R = zeros(height(scott_model),1);
 scott_model.ra_over_r = zeros(height(scott_model),1);

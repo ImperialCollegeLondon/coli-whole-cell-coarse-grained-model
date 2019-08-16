@@ -5,8 +5,8 @@ addpath('../model-code/steady-state_coreg');
 %%% load fitted model parameters
 fitted_pars = readtable('../results-data/resXX_scott-2010-fit_coreg/summary-best-pars.csv');
 [~,i_min] = min(fitted_pars.cost_best);
-fitted_pars = fitted_pars(2,:);
-fitted_pars.sigma = 10.8 % because 22 aa / s and 7336 aas per ribosomes (Dai et al)
+fitted_pars = fitted_pars(i_min,:);
+fitted_pars.sigma = 6.45 % because 22 aa / s and 7336 aas per ribosomes (Dai et al) / 1.67 (extended ribosome factor)
 
 %%% first, the scott data
 % load data

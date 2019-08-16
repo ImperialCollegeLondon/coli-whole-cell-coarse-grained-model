@@ -1,1 +1,1 @@
-V_{div} \propto e^{-2.5}
+V_{div} \propto e^{-1.36}

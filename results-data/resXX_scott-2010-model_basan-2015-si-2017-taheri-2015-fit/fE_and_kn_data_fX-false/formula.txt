@@ -1,0 +1,1 @@
+V_{div} \propto fE^{-0.13} \times kn^{0.66}

@@ -1,1 +1,1 @@
-f_X \propto ra^{-0.54}
+f_X \propto ra^{-0.53}

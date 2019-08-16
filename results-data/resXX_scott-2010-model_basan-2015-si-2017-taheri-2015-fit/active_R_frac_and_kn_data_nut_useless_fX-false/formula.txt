@@ -1,0 +1,1 @@
+V_{div} \propto (fRA/fR)^{-1.76} \times kn^{1}

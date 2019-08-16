@@ -23,8 +23,8 @@ addpath('../model-code');
 addpath('../model-code/steady-state');
 addpath('../model-code/steady-state_coreg');
 
-sigma = 10.8; % because 22 aa / s and 7336 aas per ribosomes (Dai et al)
-x_best = fminsearch(@(x)simulate_scott_and_compute_cost_coreg(x,sigma), [0.01, 0.6]);
+sigma = 6.45; % because 22 aa / s and 7336 aas per ribosomes (Dai et al) / 1.67 (extended ribosome)
+x_best = fminsearch(@(x)simulate_scott_and_compute_cost_coreg(x,sigma), [0.1, 0.4]);
 cost_best = simulate_scott_and_compute_cost_coreg(x_best, sigma);
 comp_data = simulate_scott_coreg(x_best, sigma);
 
@@ -65,7 +65,7 @@ if isempty(comp_data)
     return;
 end
 comp_data_nut_cm = comp_data(comp_data.useless_type==0 & ~isnan(comp_data.measured_R_P_ratio),:);
-delta_fR_vec = comp_data_nut_cm.estim_ribosomal_fraction_dai - comp_data_nut_cm.model_fR;
+delta_fR_vec = comp_data_nut_cm.estim_ribosomal_fraction_scott - comp_data_nut_cm.model_fR;
 cost = mean(delta_fR_vec.^2);
 comp_data_useless = comp_data(comp_data.useless_type>0,:);
 delta_fU_vec = comp_data_useless.estim_useless_fraction - comp_data_useless.model_fU;

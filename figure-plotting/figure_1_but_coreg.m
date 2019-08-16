@@ -20,8 +20,8 @@ for i_nut=1:length(nutrients)
     figure(1);
     data = scott_data(scott_data.nutrient_type==nutrients(i_nut) & scott_data.useless_type==0, :);
     model = model_data(model_data.nutrient_type==nutrients(i_nut) & scott_data.useless_type==0, :);
-    plot(data.growth_rate_per_hr, data.estim_ribosomal_fraction_dai, 'o', 'MarkerFaceColor', colors(i_nut,:), 'Color', colors(i_nut,:), 'MarkerSize', mk_size); hold on;
-    plot(model.model_growth_rate, model.model_r ./ (1-model.model_a), 'Color', colors(i_nut,:), 'LineWidth', lw); hold on;
+    plot(data.growth_rate_per_hr, data.estim_ribosomal_fraction_scott, 'o', 'MarkerFaceColor', colors(i_nut,:), 'Color', colors(i_nut,:), 'MarkerSize', mk_size); hold on;
+    plot(model.model_growth_rate, model.model_fR, 'Color', colors(i_nut,:), 'LineWidth', lw); hold on;
     
     % nut x useless panel
     figure(2);
@@ -29,7 +29,7 @@ for i_nut=1:length(nutrients)
     model = model_data(model_data.nutrient_type==nutrients(i_nut) & scott_data.useless_type>0, :);
     if ~isempty(data)
         plot(data.growth_rate_per_hr, data.estim_useless_fraction, 'o', 'MarkerFaceColor', colors(i_nut,:), 'Color', colors(i_nut,:), 'MarkerSize', mk_size); hold on;
-        plot(model.model_growth_rate, model.model_u ./ (1-model.model_a), 'Color', colors(i_nut,:), 'LineWidth', lw); hold on;
+        plot(model.model_growth_rate, model.model_fU, 'Color', colors(i_nut,:), 'LineWidth', lw); hold on;
     end
 
     
@@ -37,7 +37,7 @@ end
 
 % styling axes
 figure(1);
-ylim([0 0.5]); xlim([0 2]);
+ylim([0 0.6]); xlim([0 2]);
 ylabel('ribosomal proteome fraction'); xlabel('growth rate (hr^{-1})');
 figure(2);
 ylim([0 0.5]); xlim([0 2]);

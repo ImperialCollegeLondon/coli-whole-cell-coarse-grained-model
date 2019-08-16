@@ -1,0 +1,1 @@
+V_{div} \propto kn^{0.72} \times kt^{0.02}

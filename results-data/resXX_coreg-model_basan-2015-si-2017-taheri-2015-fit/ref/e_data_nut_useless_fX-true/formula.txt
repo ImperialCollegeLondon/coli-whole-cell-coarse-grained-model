@@ -1,1 +1,1 @@
-f_X \propto e^{1.08}
+f_X \propto e^{1.04}

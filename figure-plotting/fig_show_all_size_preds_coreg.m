@@ -1,6 +1,6 @@
 
 %%
-data_type = '_nut_cm';
+data_type = '';
 
 
 

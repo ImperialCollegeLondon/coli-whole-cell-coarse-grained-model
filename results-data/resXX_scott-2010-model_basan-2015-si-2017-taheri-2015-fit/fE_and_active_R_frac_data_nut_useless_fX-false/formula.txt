@@ -1,0 +1,1 @@
+V_{div} \propto fE^{-1.12} \times (fRA/fR)^{1.11}
