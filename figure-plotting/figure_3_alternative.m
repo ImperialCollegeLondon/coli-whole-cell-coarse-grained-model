@@ -23,10 +23,11 @@ e_and_ra_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2
 e_and_ra_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_and_ra_data_fX-true/formula.txt');
 
 %% make the size vs growth rate plot data
-mk_size = 12;
+mk_size = 9.5;
+lw = 2;
 
 I_cm_basan = find(best_pred_data.cm_type > 0 & best_pred_data.nutrient_type <= 6);
-I_cm_si = find(best_pred_data.cm_type > 0 & best_pred_data.nutrient_type > 6 & best_pred_data.nutrient_type <= 11);
+I_cm_si = best_pred_data.cm_type > 0 & best_pred_data.nutrient_type > 6 & best_pred_data.nutrient_type <= 11;
 
 I_useless_basan = find(best_pred_data.useless_type > 0 & best_pred_data.nutrient_type <= 6);
 
@@ -43,9 +44,31 @@ figure;
 plot(best_pred_data.growth_rate_per_hr(I_nut_basan), best_pred_data.real(I_nut_basan), 'go', 'MarkerSize', mk_size, 'MarkerFaceColor', 'g'); hold on;
 plot(best_pred_data.growth_rate_per_hr(I_nut_si), best_pred_data.real(I_nut_si), 'gs', 'MarkerSize', mk_size, 'MarkerFaceColor', 'g'); hold on;
 plot(best_pred_data.growth_rate_per_hr(I_nut_taheri), best_pred_data.real(I_nut_taheri), 'g^', 'MarkerSize', mk_size, 'MarkerFaceColor', 'g'); hold on;
-plot(best_pred_data.growth_rate_per_hr(I_cm_basan), best_pred_data.real(I_cm_basan), 'bo', 'MarkerSize', mk_size, 'MarkerFaceColor', 'b'); hold on;
+
+
 plot(best_pred_data.growth_rate_per_hr(I_cm_si), best_pred_data.real(I_cm_si), 'bs', 'MarkerSize', mk_size, 'MarkerFaceColor', 'b'); hold on;
+cm_si_nutrient_types = unique(best_pred_data.nutrient_type(I_cm_si));
+for i_cm_si_nut_type=1:length(cm_si_nutrient_types)
+    cm_si_nut_type = cm_si_nutrient_types(i_cm_si_nut_type);
+    I_si_all_nut = best_pred_data.nutrient_type == cm_si_nut_type;
+    plot(best_pred_data.growth_rate_per_hr(I_si_all_nut), best_pred_data.real(I_si_all_nut), 'b', 'LineWidth', lw); hold on;
+end
+
+plot(best_pred_data.growth_rate_per_hr(I_cm_basan), best_pred_data.real(I_cm_basan), 'bo', 'MarkerSize', mk_size, 'MarkerFaceColor', 'b'); hold on;
+cm_basan_nutrient_types = unique(best_pred_data.nutrient_type(I_cm_basan));
+for i_cm_basan_nut_type=1:length(cm_basan_nutrient_types)
+    cm_basan_nut_type = cm_basan_nutrient_types(i_cm_basan_nut_type);
+    I_basan_all_nut_no_useless = best_pred_data.nutrient_type == cm_basan_nut_type & best_pred_data.useless_type == 0;
+    plot(best_pred_data.growth_rate_per_hr(I_basan_all_nut_no_useless), best_pred_data.real(I_basan_all_nut_no_useless), 'b', 'LineWidth', lw); hold on;
+end
+
 plot(best_pred_data.growth_rate_per_hr(I_useless_basan), best_pred_data.real(I_useless_basan), 'ro', 'MarkerSize', mk_size, 'MarkerFaceColor', 'r'); hold on;
+useless_basan_nutrient_types = unique(best_pred_data.nutrient_type(I_useless_basan));
+for i_useless_basan_nut_type=1:length(useless_basan_nutrient_types)
+    useless_basan_nut_type = useless_basan_nutrient_types(i_useless_basan_nut_type);
+    I_basan_all_nut_no_cm = best_pred_data.nutrient_type == useless_basan_nut_type & best_pred_data.cm_type == 0;
+    plot(best_pred_data.growth_rate_per_hr(I_basan_all_nut_no_cm), best_pred_data.real(I_basan_all_nut_no_cm), 'r', 'LineWidth', lw); hold on;
+end
 
 title('Data');
 xlabel('Growth rate (hr^{-1})');
@@ -54,7 +77,7 @@ ylim([0 15]); xlim([0 3]);
 set(gca,'FontSize',30,'LineWidth',2.5);
 
 
-txt_fsize = 18;
+txt_fsize = 17;
 plot(0.1,14,'go', 'MarkerSize', mk_size, 'MarkerFaceColor', 'g');
 plot(0.22,14,'gs', 'MarkerSize', mk_size, 'MarkerFaceColor', 'g');
 plot(0.34,14,'g^', 'MarkerSize', mk_size, 'MarkerFaceColor', 'g');
@@ -75,8 +98,8 @@ text(1.6+0.4-0.4,1.6,'Si et al. (2017)','FontSize',txt_fsize);
 plot(1.5+0.4-0.4,0.8,'^', 'MarkerSize', mk_size, 'Color', grey, 'MarkerFaceColor', grey);
 text(1.6+0.4-0.4,0.8,'Taheri-Araghi et al. (2015)','FontSize',txt_fsize);
 
-set(gcf,'Color','w','Position',[0 0 600 500]);
-export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_panel_data.pdf');
+set(gcf,'Color','w','Position',[0 0 600 500].*1.3);
+export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_panel_data.bmp');
 
 
 %% make the prediction size vs growth plot with solid line
@@ -112,9 +135,9 @@ xlabel('Growth rate (hr^{-1})');
 ylabel('Size');
 ylim([0 15]); xlim([0 3]);
 set(gca,'FontSize',30,'LineWidth',2.5);
-set(gcf,'Color','w','Position',[0 0 600 500]);
+set(gcf,'Color','w','Position',[0 0 600 500].*1.3);
 title('Prediction');
-export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_panel_prediction_solid.pdf');
+export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_panel_prediction_solid.bmp');
 
 
 
@@ -152,7 +175,7 @@ for i=1:2
     axis square;
     set(gca,'XTick',0:0.5:2.5,'YTick',0:0.5:2.5);
     set(gcf,'Position',[0 0 400 400],'Color','w');
-    export_fig(gcf,['../figure-assembly/figure-3-components/figure_3_' fig_labels{i} '.pdf']);
+    %export_fig(gcf,['../figure-assembly/figure-3-components/figure_3_' fig_labels{i} '.pdf']);
 end
 
 %%
@@ -172,7 +195,7 @@ ylim([-0.1 3]); xlim([-0.1 3]);
 axis square;
 set(gca,'XTick',0:0.5:2.5,'YTick',0:0.5:2.5);
 set(gcf,'Position',[0 0 400 400],'Color','w');
-export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_C_plus_D_pred.pdf');
+%export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_C_plus_D_pred.pdf');
 
 %%
 data = readtable('../results-data/res14_study-C-plus-D/C_plus_D_predictions.csv');
@@ -191,7 +214,7 @@ ylim([0 15]); xlim([0 15]);
 axis square;
 set(gca,'XTick',0:2:15,'YTick',0:2:15);
 set(gcf,'Position',[0 0 400 400],'Color','w');
-export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_C_plus_D_pred_nolog.pdf');
+%export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_C_plus_D_pred_nolog.pdf');
 
 %%
 close all; clear;
