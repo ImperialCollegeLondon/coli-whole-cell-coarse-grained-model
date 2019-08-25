@@ -9,7 +9,7 @@ if a_max < 0
 end
 
 % compute the equivalent a_sat
-delta_to_asat = 0.11/2.11; % from dai et al. MM elong vs R/P Km and the R/P vs fR ratio from Dai et al. (2.1 theoric, 2.4 measured)
+delta_to_asat = 0.11 * 0.76; % from dai et al. MM elong vs R/P Km and the R/P vs fR ratio from Scott (extended ribosome) 
 cell_pars.biophysical.a_sat = cell_pars.constraint.delta * delta_to_asat;
 
 % first, find the minimal a/fR ratio over possible steady-state
@@ -38,7 +38,7 @@ if cell_pars.constraint.delta > a_over_fR_max
 %     env_pars
 %     cell_pars.constraint
 %     cell_pars.biophysical
-%     cell_pars.allocation    
+%     cell_pars.allocation
 %     error('maximal a/fR ratio lower than delta ?');
     disp('maximal a/fR ratio lower than delta...');
     [steady_state,cell_pars] = give_steady_state_from_a_and_Q_constraint(a2,cell_pars,env_pars);
@@ -84,4 +84,3 @@ a = exp(a_log);
 ss = give_steady_state_from_a_and_Q_constraint(a, cell_pars, env_pars);
 C = (ss.a/ss.fR - cell_pars.constraint.delta)^2;
 end
-
