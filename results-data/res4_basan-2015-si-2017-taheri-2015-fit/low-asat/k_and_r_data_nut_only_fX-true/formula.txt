@@ -1,1 +1,0 @@
-f_X \propto k^{-0.71} \times r^{0.08}

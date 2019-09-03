@@ -1,1 +1,0 @@
-f_X \propto k^{-1.22} \times ra^{1.02}\times (e/r)^{-0.37}

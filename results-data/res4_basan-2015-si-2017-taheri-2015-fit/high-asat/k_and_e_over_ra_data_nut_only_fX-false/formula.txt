@@ -1,1 +1,0 @@
-V_{div} \propto k^{0.28} \times (e/r_a)^{-0.44}

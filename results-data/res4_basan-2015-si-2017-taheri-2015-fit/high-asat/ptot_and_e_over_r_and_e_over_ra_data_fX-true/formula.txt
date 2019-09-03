@@ -1,1 +1,0 @@
-f_X \propto ptot^{-7} \times (e/r)^{-0.52}\times (e/r_a)^{1.46}

@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-0.67} \times k^{1.38}\times (e/r)^{0.41}

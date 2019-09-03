@@ -1,1 +1,0 @@
-V_{div} \propto a^{0.23} \times (e/r_a)^{-0.68}

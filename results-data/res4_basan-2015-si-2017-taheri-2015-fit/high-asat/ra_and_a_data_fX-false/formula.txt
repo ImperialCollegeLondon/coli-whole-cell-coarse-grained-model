@@ -1,1 +1,0 @@
-V_{div} \propto ra^{-2.09} \times a^{3.52}

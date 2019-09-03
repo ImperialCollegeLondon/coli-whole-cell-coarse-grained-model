@@ -1,1 +1,0 @@
-V_{div} \propto r^{-3.15} \times a^{6.23}

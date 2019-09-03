@@ -1,1 +1,0 @@
-f_X \propto ptot^{104.51} \times (r_a/r)^{0.28}

@@ -1,1 +1,0 @@
-V_{div} \propto k^{-1.07} \times a^{0.55}\times (e/r_a)^{-1.76}

@@ -1,1 +1,0 @@
-V_{div} \propto k^{0.78} \times r^{-0.34}

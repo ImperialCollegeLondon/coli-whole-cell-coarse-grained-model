@@ -1,1 +1,0 @@
-f_X \propto alpha^{0.66} \times k^{-0.97}\times (r_a/r)^{-0.41}

@@ -1,1 +1,0 @@
-V_{div} \propto e^{-1.33} \times ptot^{-19.26}\times (e/r_a)^{0.71}

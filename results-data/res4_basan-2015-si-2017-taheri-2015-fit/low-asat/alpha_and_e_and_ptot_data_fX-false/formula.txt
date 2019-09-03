@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-0.12} \times e^{-0.68}\times ptot^{-99.1}

@@ -1,1 +1,0 @@
-f_X \propto r^{-0.13} \times (e/r)^{0.68}

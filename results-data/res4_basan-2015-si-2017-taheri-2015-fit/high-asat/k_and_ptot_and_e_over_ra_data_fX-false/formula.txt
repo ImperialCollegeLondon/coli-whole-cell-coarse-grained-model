@@ -1,1 +1,0 @@
-V_{div} \propto k^{0.18} \times ptot^{-2.34}\times (e/r_a)^{-0.49}

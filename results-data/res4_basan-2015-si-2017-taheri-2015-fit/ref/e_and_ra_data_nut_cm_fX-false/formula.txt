@@ -1,1 +1,0 @@
-V_{div} \propto e^{-0.68} \times ra^{0.84}

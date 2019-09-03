@@ -1,1 +1,0 @@
-V_{div} \propto a^{1.04} \times (e/r)^{-0.33}

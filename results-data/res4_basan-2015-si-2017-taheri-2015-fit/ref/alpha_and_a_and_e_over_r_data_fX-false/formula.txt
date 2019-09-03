@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-2.66} \times a^{5.78}\times (e/r)^{-0.38}

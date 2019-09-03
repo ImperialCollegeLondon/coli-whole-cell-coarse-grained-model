@@ -1,1 +1,0 @@
-V_{div} \propto k^{6.15} \times ra^{-1.43}\times (e/r_a)^{5.45}

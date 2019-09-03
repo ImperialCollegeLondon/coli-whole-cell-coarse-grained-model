@@ -1,1 +1,0 @@
-f_X \propto alpha^{-10.03} \times r^{13.55}\times (r_a/r)^{14.43}

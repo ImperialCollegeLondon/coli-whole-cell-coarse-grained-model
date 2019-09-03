@@ -1,1 +1,0 @@
-f_X \propto alpha^{2.18} \times ptot^{81.69}

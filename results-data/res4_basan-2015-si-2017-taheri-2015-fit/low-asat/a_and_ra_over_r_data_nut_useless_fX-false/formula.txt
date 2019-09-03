@@ -1,1 +1,0 @@
-V_{div} \propto a^{1.21} \times (r_a/r)^{0}

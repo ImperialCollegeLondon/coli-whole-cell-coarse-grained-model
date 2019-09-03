@@ -1,1 +1,0 @@
-f_X \propto alpha^{13} \times ra^{-10.81}\times a^{-8.59}

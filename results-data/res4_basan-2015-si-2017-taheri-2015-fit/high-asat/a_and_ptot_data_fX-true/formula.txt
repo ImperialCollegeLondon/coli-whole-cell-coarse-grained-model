@@ -1,1 +1,0 @@
-f_X \propto a^{0.81} \times ptot^{17.11}

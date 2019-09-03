@@ -1,1 +1,0 @@
-f_X \propto k^{-1.62} \times a^{1.72}\times (e/r)^{-0.59}

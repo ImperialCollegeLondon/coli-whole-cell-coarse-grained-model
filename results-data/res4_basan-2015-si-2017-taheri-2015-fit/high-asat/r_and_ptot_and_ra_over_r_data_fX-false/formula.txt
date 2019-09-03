@@ -1,1 +1,0 @@
-V_{div} \propto r^{-1.99} \times ptot^{-38.15}\times (r_a/r)^{-2.38}

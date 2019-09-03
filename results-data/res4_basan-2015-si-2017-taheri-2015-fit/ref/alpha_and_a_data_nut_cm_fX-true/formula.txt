@@ -1,1 +1,0 @@
-f_X \propto alpha^{5.84} \times a^{-11.31}

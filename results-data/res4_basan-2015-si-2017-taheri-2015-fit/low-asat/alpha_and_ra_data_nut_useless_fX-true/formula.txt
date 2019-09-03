@@ -1,1 +1,0 @@
-f_X \propto alpha^{-67.53} \times ra^{70.02}

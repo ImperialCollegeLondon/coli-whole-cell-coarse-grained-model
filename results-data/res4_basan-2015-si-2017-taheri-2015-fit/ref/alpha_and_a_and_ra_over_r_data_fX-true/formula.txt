@@ -1,1 +1,0 @@
-f_X \propto alpha^{3.53} \times a^{-8.27}\times (r_a/r)^{0.75}

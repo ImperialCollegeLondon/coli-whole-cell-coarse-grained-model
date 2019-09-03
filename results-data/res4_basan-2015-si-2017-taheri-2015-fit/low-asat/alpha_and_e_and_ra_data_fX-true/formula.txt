@@ -1,1 +1,0 @@
-f_X \propto alpha^{-20.68} \times e^{0.73}\times ra^{21.16}

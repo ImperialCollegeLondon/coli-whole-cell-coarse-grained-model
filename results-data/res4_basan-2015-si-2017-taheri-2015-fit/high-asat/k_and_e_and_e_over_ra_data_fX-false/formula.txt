@@ -1,1 +1,0 @@
-V_{div} \propto k^{3.71} \times e^{-1.68}\times (e/r_a)^{4.72}

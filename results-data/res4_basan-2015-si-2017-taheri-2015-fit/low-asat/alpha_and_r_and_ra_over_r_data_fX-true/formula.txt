@@ -1,1 +1,0 @@
-f_X \propto alpha^{-60.88} \times r^{63.11}\times (r_a/r)^{63.81}

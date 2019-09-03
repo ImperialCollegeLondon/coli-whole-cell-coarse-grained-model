@@ -1,1 +1,0 @@
-f_X \propto k^{-3.6} \times ra^{1.7}\times (e/r_a)^{-2.93}

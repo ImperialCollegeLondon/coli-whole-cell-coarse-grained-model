@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{6.15} \times e^{-0.7}\times ra^{-6.88}

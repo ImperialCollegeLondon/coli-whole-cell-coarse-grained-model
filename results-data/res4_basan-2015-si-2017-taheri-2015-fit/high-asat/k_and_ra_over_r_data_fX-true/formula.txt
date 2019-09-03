@@ -1,1 +1,0 @@
-f_X \propto k^{-0.62} \times (r_a/r)^{-0.08}

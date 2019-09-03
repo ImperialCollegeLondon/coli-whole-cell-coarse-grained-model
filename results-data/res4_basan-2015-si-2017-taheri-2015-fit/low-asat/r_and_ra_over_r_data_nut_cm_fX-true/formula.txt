@@ -1,1 +1,0 @@
-f_X \propto r^{-1.36} \times (r_a/r)^{-0.6}

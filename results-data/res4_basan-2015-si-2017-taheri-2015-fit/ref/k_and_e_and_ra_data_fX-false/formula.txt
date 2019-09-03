@@ -1,1 +1,0 @@
-V_{div} \propto k^{6.15} \times e^{5.45}\times ra^{-6.88}

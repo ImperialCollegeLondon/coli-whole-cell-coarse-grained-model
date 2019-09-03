@@ -1,1 +1,0 @@
-V_{div} \propto a^{-1.15} \times (r_a/r)^{1.65}\times (e/r)^{-1.04}

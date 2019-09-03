@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-2.18} \times a^{4.82}

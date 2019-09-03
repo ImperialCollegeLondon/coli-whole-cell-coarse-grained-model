@@ -1,1 +1,0 @@
-V_{div} \propto a^{-1.7} \times (e/r_a)^{-1.28}

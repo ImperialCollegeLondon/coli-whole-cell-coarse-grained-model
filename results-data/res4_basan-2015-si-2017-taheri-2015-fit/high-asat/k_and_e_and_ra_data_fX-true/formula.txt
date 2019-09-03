@@ -1,1 +1,0 @@
-f_X \propto k^{-3.6} \times e^{-2.93}\times ra^{4.63}

@@ -1,1 +1,0 @@
-V_{div} \propto ra^{1.37} \times (r_a/r)^{-0.76}

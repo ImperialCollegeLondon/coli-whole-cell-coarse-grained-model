@@ -1,1 +1,0 @@
-V_{div} \propto (e/r_a)^{-0.75}

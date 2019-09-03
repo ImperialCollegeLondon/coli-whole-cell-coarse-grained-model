@@ -1,1 +1,0 @@
-f_X \propto k^{-1.3} \times ra^{0.83}\times (e/r)^{-0.39}

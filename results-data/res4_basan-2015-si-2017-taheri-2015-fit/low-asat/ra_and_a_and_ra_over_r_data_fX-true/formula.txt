@@ -1,1 +1,0 @@
-f_X \propto ra^{3.27} \times a^{-7.27}\times (r_a/r)^{0.67}

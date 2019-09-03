@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{11.85} \times ra^{-14.03}\times (e/r)^{-0.41}

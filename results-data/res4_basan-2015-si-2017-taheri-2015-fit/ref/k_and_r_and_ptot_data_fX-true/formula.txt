@@ -1,1 +1,0 @@
-f_X \propto k^{-0.93} \times r^{0.44}\times ptot^{-8.75}

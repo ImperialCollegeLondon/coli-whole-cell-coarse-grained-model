@@ -1,1 +1,0 @@
-f_X \propto k^{-1.2} \times ptot^{-59.83}\times (e/r)^{-0.3}

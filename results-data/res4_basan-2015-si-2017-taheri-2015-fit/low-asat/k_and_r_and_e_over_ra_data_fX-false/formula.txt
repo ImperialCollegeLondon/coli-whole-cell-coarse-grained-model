@@ -1,1 +1,0 @@
-V_{div} \propto k^{-4.52} \times r^{-0.48}\times (e/r_a)^{-5.53}

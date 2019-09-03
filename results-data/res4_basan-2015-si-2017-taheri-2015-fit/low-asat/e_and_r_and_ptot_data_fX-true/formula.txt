@@ -1,1 +1,0 @@
-f_X \propto e^{0.85} \times r^{0.31}\times ptot^{87.71}

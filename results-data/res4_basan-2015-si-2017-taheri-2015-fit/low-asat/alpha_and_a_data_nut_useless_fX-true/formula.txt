@@ -1,1 +1,0 @@
-f_X \propto alpha^{3.01} \times a^{-6.67}

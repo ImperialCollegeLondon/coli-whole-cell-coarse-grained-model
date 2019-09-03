@@ -1,1 +1,0 @@
-f_X \propto alpha^{0.73} \times k^{-1.36}\times (e/r)^{-0.43}

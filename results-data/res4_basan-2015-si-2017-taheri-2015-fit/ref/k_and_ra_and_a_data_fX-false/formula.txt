@@ -1,1 +1,0 @@
-V_{div} \propto k^{0.67} \times ra^{-1.77}\times a^{2.46}

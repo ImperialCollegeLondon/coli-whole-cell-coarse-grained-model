@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-24.12} \times ra^{22.03}\times a^{6.52}

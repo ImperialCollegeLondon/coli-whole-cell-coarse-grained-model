@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-2.18} \times ptot^{-82.69}

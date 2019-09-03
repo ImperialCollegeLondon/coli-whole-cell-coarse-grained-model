@@ -1,1 +1,0 @@
-V_{div} \propto a^{0.4} \times (e/r_a)^{-0.66}

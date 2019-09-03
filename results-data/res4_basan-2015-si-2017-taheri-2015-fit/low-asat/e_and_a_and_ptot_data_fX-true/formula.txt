@@ -1,1 +1,0 @@
-f_X \propto e^{0.73} \times a^{-1.08}\times ptot^{4.68}

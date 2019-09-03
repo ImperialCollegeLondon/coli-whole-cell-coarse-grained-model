@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-0.08} \times k^{0.72}

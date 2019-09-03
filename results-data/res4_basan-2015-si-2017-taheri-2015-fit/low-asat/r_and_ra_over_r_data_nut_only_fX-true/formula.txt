@@ -1,1 +1,0 @@
-f_X \propto r^{-1.24} \times (r_a/r)^{0}

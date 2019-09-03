@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-3.83} \times a^{9.24}\times (r_a/r)^{-0.86}

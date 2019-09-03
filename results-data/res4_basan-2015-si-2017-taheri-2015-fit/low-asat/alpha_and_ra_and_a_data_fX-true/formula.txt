@@ -1,1 +1,0 @@
-f_X \propto alpha^{23.89} \times ra^{-21.8}\times a^{-6.49}

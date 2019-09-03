@@ -1,1 +1,0 @@
-f_X \propto e^{1.84} \times a^{-2.47}\times (e/r_a)^{-1.19}

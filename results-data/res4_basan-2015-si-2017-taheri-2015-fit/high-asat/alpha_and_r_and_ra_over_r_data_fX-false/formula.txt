@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{10.17} \times r^{-13.67}\times (r_a/r)^{-14.56}

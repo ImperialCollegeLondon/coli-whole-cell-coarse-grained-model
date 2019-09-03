@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-1.22} \times e^{-0.65}\times a^{3.39}

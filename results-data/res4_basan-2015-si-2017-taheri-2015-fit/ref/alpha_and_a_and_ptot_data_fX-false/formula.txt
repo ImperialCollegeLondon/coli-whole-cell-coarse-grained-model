@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-2.17} \times a^{3.17}\times ptot^{-30.7}

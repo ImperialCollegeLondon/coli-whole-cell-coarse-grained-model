@@ -1,1 +1,0 @@
-f_X \propto alpha^{1.25} \times r^{-0.24}\times ptot^{57.61}

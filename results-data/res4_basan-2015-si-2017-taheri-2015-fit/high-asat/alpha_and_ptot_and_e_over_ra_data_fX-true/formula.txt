@@ -1,1 +1,0 @@
-f_X \propto alpha^{0.82} \times ptot^{17.13}\times (e/r_a)^{0.63}

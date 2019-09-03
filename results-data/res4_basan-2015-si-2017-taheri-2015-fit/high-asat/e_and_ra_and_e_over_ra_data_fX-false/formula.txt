@@ -1,1 +1,0 @@
-V_{div} \propto e^{-0.72} \times ra^{0.83}\times (e/r_a)^{0}

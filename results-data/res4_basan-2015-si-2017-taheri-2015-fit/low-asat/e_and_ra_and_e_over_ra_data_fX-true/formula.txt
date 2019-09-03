@@ -1,1 +1,0 @@
-f_X \propto e^{0.76} \times ra^{-0.65}\times (e/r_a)^{0}

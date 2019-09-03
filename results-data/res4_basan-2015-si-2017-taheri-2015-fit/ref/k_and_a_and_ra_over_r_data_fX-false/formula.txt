@@ -1,1 +1,0 @@
-V_{div} \propto k^{1.03} \times a^{-1.48}\times (r_a/r)^{0.6}

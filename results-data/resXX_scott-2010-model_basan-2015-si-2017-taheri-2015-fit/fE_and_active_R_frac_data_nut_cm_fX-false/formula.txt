@@ -1,1 +1,0 @@
-V_{div} \propto fE^{-0.44} \times (fRA/fR)^{0.97}

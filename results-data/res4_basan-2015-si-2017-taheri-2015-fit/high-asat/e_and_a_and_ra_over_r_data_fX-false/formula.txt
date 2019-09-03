@@ -1,1 +1,0 @@
-V_{div} \propto e^{-0.88} \times a^{0.6}\times (r_a/r)^{0.43}

@@ -1,1 +1,0 @@
-V_{div} \propto k^{20.71} \times ra^{-1.21}\times (e/r_a)^{19.98}

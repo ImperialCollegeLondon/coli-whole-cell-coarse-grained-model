@@ -1,1 +1,0 @@
-V_{div} \propto ptot^{56.51} \times (r_a/r)^{1.25}\times (e/r)^{-0.92}

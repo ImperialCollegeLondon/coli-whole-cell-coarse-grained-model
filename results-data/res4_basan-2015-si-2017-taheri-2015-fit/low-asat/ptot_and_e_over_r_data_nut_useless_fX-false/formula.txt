@@ -1,1 +1,0 @@
-V_{div} \propto ptot^{108.88} \times (e/r)^{-1.3}

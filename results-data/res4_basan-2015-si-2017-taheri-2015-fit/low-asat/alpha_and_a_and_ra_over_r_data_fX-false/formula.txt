@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-3.23} \times a^{7.5}\times (r_a/r)^{-0.65}

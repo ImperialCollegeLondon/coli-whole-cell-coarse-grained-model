@@ -1,1 +1,0 @@
-f_X \propto alpha^{-0.54} \times e^{0.89}\times r^{0.45}

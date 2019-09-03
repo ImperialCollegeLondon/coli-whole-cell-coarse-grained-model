@@ -1,1 +1,0 @@
-V_{div} \propto e^{-0.01} \times ptot^{-121.75}

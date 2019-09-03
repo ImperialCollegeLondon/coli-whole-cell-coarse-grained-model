@@ -1,1 +1,0 @@
-V_{div} \propto r^{0.19} \times ptot^{-10.59}

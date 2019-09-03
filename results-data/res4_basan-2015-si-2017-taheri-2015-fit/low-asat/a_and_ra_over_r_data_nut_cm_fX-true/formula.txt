@@ -1,1 +1,0 @@
-f_X \propto a^{-2.18} \times (r_a/r)^{0.75}

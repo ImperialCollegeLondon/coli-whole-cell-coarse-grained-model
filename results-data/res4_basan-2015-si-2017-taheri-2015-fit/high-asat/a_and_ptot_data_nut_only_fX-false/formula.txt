@@ -1,1 +1,0 @@
-V_{div} \propto a^{-1.09} \times ptot^{-26.15}

@@ -1,1 +1,0 @@
-f_X \propto r^{0.52} \times ptot^{-0.8}\times (e/r_a)^{0.92}

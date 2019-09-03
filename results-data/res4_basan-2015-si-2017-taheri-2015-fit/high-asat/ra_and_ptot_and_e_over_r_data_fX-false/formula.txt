@@ -1,1 +1,0 @@
-V_{div} \propto ra^{-1.7} \times ptot^{-30.56}\times (e/r)^{-0.32}

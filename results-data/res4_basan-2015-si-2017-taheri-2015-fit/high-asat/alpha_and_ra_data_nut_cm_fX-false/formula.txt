@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{-19.13} \times ra^{30.1}

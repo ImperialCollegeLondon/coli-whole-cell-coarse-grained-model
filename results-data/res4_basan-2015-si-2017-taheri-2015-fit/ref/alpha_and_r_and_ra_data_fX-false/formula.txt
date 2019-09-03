@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{17.51} \times r^{0.79}\times ra^{-21.16}

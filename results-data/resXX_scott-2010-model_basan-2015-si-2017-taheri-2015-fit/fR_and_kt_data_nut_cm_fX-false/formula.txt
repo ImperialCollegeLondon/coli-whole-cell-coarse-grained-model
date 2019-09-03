@@ -1,1 +1,0 @@
-V_{div} \propto fR^{1.86} \times kt^{0.61}

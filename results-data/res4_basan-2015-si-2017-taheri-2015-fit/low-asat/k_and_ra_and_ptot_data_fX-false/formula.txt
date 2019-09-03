@@ -1,1 +1,0 @@
-V_{div} \propto k^{0.68} \times ra^{-0.88}\times ptot^{-102.18}

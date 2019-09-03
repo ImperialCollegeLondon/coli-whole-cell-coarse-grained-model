@@ -1,1 +1,0 @@
-V_{div} \propto r^{-0.32} \times (e/r_a)^{-0.85}

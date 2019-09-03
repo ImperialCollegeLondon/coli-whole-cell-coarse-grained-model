@@ -1,1 +1,0 @@
-V_{div} \propto fE^{-0.01} \times kn^{0.72}

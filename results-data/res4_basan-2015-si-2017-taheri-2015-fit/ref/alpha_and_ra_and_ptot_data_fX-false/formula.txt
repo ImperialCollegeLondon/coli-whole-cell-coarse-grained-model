@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{4.43} \times ra^{-6.58}\times ptot^{-46.45}

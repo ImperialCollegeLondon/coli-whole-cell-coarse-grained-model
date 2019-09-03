@@ -1,1 +1,0 @@
-f_X \propto alpha^{-0.27} \times e^{0.94}\times (r_a/r)^{-0.45}

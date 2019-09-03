@@ -1,1 +1,0 @@
-V_{div} \propto alpha^{67.68} \times r^{-70.17}

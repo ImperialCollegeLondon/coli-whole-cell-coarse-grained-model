@@ -1,1 +1,0 @@
-V_{div} \propto r^{1.54} \times (r_a/r)^{0.55}

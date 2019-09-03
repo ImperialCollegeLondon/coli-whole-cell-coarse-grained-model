@@ -1,1 +1,0 @@
-f_X \propto alpha^{-6.08} \times e^{7.53}\times (e/r_a)^{-6.83}

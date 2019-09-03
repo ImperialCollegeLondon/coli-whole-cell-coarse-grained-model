@@ -1,1 +1,0 @@
-f_X \propto a^{1.04} \times (r_a/r)^{-0.68}\times (e/r_a)^{1.01}
