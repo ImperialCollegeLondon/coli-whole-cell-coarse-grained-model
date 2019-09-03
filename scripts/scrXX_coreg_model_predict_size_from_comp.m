@@ -58,6 +58,7 @@ for sector=single_sectors
             formula_str = strrep(formula_str,'ra_over_r','(r_a/r)');
             formula_str = strrep(formula_str,'e_over_ra','(e/r_a)');
             formula_str = strrep(formula_str,'e_over_r','(e/r)');
+            formula_str = strrep(formula_str,'active_rib_frac','(fRA/fR)');
             fileID = fopen([out_dir '/formula.txt'],'w');
             fprintf(fileID,formula_str);
             fclose(fileID);

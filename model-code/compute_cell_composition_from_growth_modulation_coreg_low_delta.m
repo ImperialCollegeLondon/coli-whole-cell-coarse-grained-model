@@ -37,7 +37,9 @@ for i_cond=1:size(modulation_data)
     env_pars.k = fit_k_from_alpha_coreg_low_delta(cell_pars, env_pars, media_only_cond.growth_rate_per_hr);
     if isempty(env_pars.k)
         disp('could not fit k ?');
-        error('r');
+        composition_data = [];
+        return;
+        %error('r');
     end
     % if also cm but not useless, compute the ri
     if (this_cond.cm_type > 0 && this_cond.useless_type == 0)

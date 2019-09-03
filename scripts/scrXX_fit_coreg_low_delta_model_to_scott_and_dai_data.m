@@ -83,10 +83,10 @@ env_pars.fRI = 0;
 env_pars.k = 1e12;
 ss_k_inf = give_steady_state_coreg_low_delta(cell_pars,env_pars);
 cost_max_growth_rate = 0;
-if ss_k_inf.alpha < 2.4
-    disp('max growth rate too low...')
-    cost_max_growth_rate = 100 * (2.4 - ss_k_inf.alpha)^2;
-end
+% if ss_k_inf.alpha < 2.4
+%     disp('max growth rate too low...')
+%     cost_max_growth_rate = 100 * (2.4 - ss_k_inf.alpha)^2;
+% end
 cost = cost_fR + cost_useless + cost_elong + cost_active_rib_frac + cost_max_growth_rate;
 log(cost)
 end

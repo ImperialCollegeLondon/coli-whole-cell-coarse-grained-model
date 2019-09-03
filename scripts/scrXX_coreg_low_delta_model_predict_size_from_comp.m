@@ -23,7 +23,7 @@ table_row_str = '''RowNames'',{';
 for sector=single_sectors
     eval([sector{1} ' = [];']); % for automatic table creation...
     for data_str={'data_nut_cm','data_nut_useless','data_nut_only','data'}
-        for fX_str={'true','false'}
+        for fX_str={'false'}
             % compute the size regression for this sector / data group / fX
             % or direct volume
             eval(['[R2, scale_factor, exponents, prediction] = explain_size_from_composition(' data_str{1} ', ''cell_size'', {''' sector{1} '''}, ' fX_str{1} ');']);
@@ -34,7 +34,7 @@ for sector=single_sectors
             end
             % make and write tables with the regression parameters and the
             % predictions
-            out_dir = ['../results-data/resXX_coreg-model_basan-2015-si-2017-taheri-2015-fit/' model_names{i_m} '/' sector{1} '_' data_str{1} '_fX-' fX_str{1}];
+            out_dir = ['../results-data/resXX_coreg-low-delta-model_basan-2015-si-2017-taheri-2015-fit/' model_names{i_m} '/' sector{1} '_' data_str{1} '_fX-' fX_str{1}];
             mkdir(out_dir);
             writetable(table(scale_factor),[out_dir '/scale_factor.csv']);
             writetable(table(exponents),[out_dir '/exponents.csv']);
@@ -52,6 +52,7 @@ for sector=single_sectors
             formula_str = strrep(formula_str,'ra_over_r','(r_a/r)');
             formula_str = strrep(formula_str,'e_over_ra','(e/r_a)');
             formula_str = strrep(formula_str,'e_over_r','(e/r)');
+            formula_str = strrep(formula_str,'active_rib_frac','(fRA/fR)');
             fileID = fopen([out_dir '/formula.txt'],'w');
             fprintf(fileID,formula_str);
             fclose(fileID);
@@ -63,7 +64,7 @@ end
 table_row_str = [table_row_str(1:end-1) '});'];
 table_creation_str = [table_str table_row_str];
 eval(table_creation_str);
-writetable(results,['../results-data/resXX_coreg-model_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions-R2-values_' model_names{i_m}  '.csv'],'WriteRowNames',true);
+writetable(results,['../results-data/resXX_coreg-low-delta-model_basan-2015-si-2017-taheri-2015-fit/single-sector-size-predictions-R2-values_' model_names{i_m}  '.csv'],'WriteRowNames',true);
 
 
 %%% do two sectors prediction
@@ -75,7 +76,7 @@ for i_sector_1=1:length(single_sectors)
         sector_2 = {single_sectors{i_sector_2}};
         eval([sector_1{1} '_and_' sector_2{1} ' = [];']);
         for data_str={'data_nut_cm','data_nut_useless','data_nut_only','data'}
-            for fX_str={'true','false'}
+            for fX_str={'false'}
                 eval(['[R2, scale_factor, exponents, prediction] = explain_size_from_composition(' data_str{1} ', ''cell_size'', {''' sector_1{1} ''',''' sector_2{1} '''}, ' fX_str{1} ');']);
                 eval([sector_1{1} '_and_' sector_2{1} '(end+1,1) = R2;']);
                 if strcmp([sector_1{1} '_and_' sector_2{1}],[single_sectors{1} '_and_' single_sectors{2}])
@@ -83,7 +84,7 @@ for i_sector_1=1:length(single_sectors)
                 end
                 % make and write tables with the regression parameters and the
                 % predictions
-                out_dir = ['../results-data/resXX_coreg-model_basan-2015-si-2017-taheri-2015-fit/' model_names{i_m} '/' sector_1{1} '_and_' sector_2{1} '_' data_str{1} '_fX-' fX_str{1}];
+                out_dir = ['../results-data/resXX_coreg-low-delta-model_basan-2015-si-2017-taheri-2015-fit/' model_names{i_m} '/' sector_1{1} '_and_' sector_2{1} '_' data_str{1} '_fX-' fX_str{1}];
                 mkdir(out_dir);
                 writetable(table(scale_factor),[out_dir '/scale_factor.csv']);
                 writetable(table(exponents),[out_dir '/exponents.csv']);
@@ -101,6 +102,7 @@ for i_sector_1=1:length(single_sectors)
                 formula_str = strrep(formula_str,'ra_over_r','(r_a/r)');
                 formula_str = strrep(formula_str,'e_over_ra','(e/r_a)');
                 formula_str = strrep(formula_str,'e_over_r','(e/r)');
+                formula_str = strrep(formula_str,'active_rib_frac','(fRA/fR)');
                 fileID = fopen([out_dir '/formula.txt'],'w');
                 fprintf(fileID,formula_str);
                 fclose(fileID);
@@ -112,7 +114,7 @@ end
 table_row_str = [table_row_str(1:end-1) '});'];
 table_creation_str = [table_str table_row_str];
 eval(table_creation_str);
-writetable(results,['../results-data/resXX_coreg-model_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions-R2-values_' model_names{i_m} '.csv'],'WriteRowNames',true);
+writetable(results,['../results-data/resXX_coreg-low-delta-model_basan-2015-si-2017-taheri-2015-fit/two-sectors-size-predictions-R2-values_' model_names{i_m} '.csv'],'WriteRowNames',true);
 
 %%% do three sectors prediction
 table_str = 'results = table(';
@@ -125,7 +127,7 @@ for i_sector_1=1:length(single_sectors)
             sector_3 = {single_sectors{i_sector_3}};
             eval([sector_1{1} '_and_' sector_2{1} '_and_' sector_3{1} ' = [];']);
             for data_str={'data'}
-                for fX_str={'true','false'}
+                for fX_str={'false'}
                     eval(['[R2, scale_factor, exponents, prediction] = explain_size_from_composition(' data_str{1} ', ''cell_size'', {''' sector_1{1} ''',''' sector_2{1} ''',''' sector_3{1} '''}, ' fX_str{1} ');']);
                     eval([sector_1{1} '_and_' sector_2{1} '_and_' sector_3{1} '(end+1,1) = R2;']);
                     if strcmp([sector_1{1} '_and_' sector_2{1} '_and_' sector_3{1}],[single_sectors{1} '_and_' single_sectors{2} '_and_' single_sectors{3}])
@@ -133,7 +135,7 @@ for i_sector_1=1:length(single_sectors)
                     end
                     % make and write tables with the regression parameters and the
                     % predictions
-                    out_dir = ['../results-data/resXX_coreg-model_basan-2015-si-2017-taheri-2015-fit/' model_names{i_m} '/' sector_1{1} '_and_' sector_2{1} '_and_' sector_3{1} '_' data_str{1} '_fX-' fX_str{1}];
+                    out_dir = ['../results-data/resXX_coreg-low-delta-model_basan-2015-si-2017-taheri-2015-fit/' model_names{i_m} '/' sector_1{1} '_and_' sector_2{1} '_and_' sector_3{1} '_' data_str{1} '_fX-' fX_str{1}];
                     mkdir(out_dir);
                     writetable(table(scale_factor),[out_dir '/scale_factor.csv']);
                     writetable(table(exponents),[out_dir '/exponents.csv']);
@@ -151,6 +153,7 @@ for i_sector_1=1:length(single_sectors)
                     formula_str = strrep(formula_str,'ra_over_r','(r_a/r)');
                     formula_str = strrep(formula_str,'e_over_ra','(e/r_a)');
                     formula_str = strrep(formula_str,'e_over_r','(e/r)');
+                    formula_str = strrep(formula_str,'active_rib_frac','(fRA/fR)');
                     fileID = fopen([out_dir '/formula.txt'],'w');
                     fprintf(fileID,formula_str);
                     fclose(fileID);
@@ -163,5 +166,5 @@ end
 table_row_str = [table_row_str(1:end-1) '});'];
 table_creation_str = [table_str table_row_str];
 eval(table_creation_str);
-writetable(results,['../results-data/resXX_coreg-model_basan-2015-si-2017-taheri-2015-fit/three-sectors-size-predictions-R2-values_' model_names{i_m} '.csv'],'WriteRowNames',true);
+writetable(results,['../results-data/resXX_coreg-low-delta-model_basan-2015-si-2017-taheri-2015-fit/three-sectors-size-predictions-R2-values_' model_names{i_m} '.csv'],'WriteRowNames',true);
 

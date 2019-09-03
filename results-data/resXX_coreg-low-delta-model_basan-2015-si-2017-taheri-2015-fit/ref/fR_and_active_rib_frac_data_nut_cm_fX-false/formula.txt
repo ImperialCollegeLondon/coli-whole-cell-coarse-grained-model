@@ -1,0 +1,1 @@
+V_{div} \propto fR^{1.68} \times (fRA/fR)^{0.57}

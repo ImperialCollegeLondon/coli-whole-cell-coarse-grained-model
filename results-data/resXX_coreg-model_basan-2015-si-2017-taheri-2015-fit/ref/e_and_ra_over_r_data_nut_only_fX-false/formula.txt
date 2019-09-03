@@ -1,1 +1,1 @@
-V_{div} \propto e^{-1.36} \times (r_a/r)^{0}
+V_{div} \propto e^{-1.85} \times (r_a/r)^{0}

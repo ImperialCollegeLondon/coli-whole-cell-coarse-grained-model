@@ -1,1 +1,1 @@
-f_X \propto e^{0.67} \times ra^{-0.83}
+f_X \propto e^{1.66} \times ra^{-0.15}

@@ -1,1 +1,1 @@
-f_X \propto r^{-0.33} \times ra^{-0.47}\times (r_a/r)^{0}
+f_X \propto r^{0} \times ra^{-0.73}\times (r_a/r)^{0.3}

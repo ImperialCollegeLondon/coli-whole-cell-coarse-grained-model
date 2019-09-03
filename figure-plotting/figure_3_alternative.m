@@ -4,23 +4,13 @@ addpath('../utils-code/export_fig');
 
 %% load prediction data
 %
-best_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_and_ra_over_r_data_fX-true/predictions.csv');
-best_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_and_ra_over_r_data_fX-true/formula.txt');
+best_pred_data = readtable('../results-data/resXX_coreg-low-delta-model_basan-2015-si-2017-taheri-2015-fit/ref/fE_and_active_rib_frac_data_fX-false/predictions.csv');
+best_pred_formula = fileread('../results-data/resXX_coreg-low-delta-model_basan-2015-si-2017-taheri-2015-fit/ref/fE_and_active_rib_frac_data_fX-false/formula.txt');
+
 %
-r_nut_useless_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/r_data_nut_useless_fX-true/predictions.csv');
-r_nut_useless_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/r_data_nut_useless_fX-true/formula.txt');
-%
-e_nut_useless_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_data_nut_useless_fX-true/predictions.csv');
-e_nut_useless_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_data_nut_useless_fX-true/formula.txt');
-%
-e_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_data_fX-true/predictions.csv');
-e_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_data_fX-true/formula.txt');
-%
-e_and_r_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_and_r_data_fX-true/predictions.csv');
-e_and_r_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_and_r_data_fX-true/formula.txt');
-%
-e_and_ra_pred_data = readtable('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_and_ra_data_fX-true/predictions.csv');
-e_and_ra_pred_formula = fileread('../results-data/res4_basan-2015-si-2017-taheri-2015-fit/ref/e_and_ra_data_fX-true/formula.txt');
+fE_nut_useless_pred_data = readtable('../results-data/resXX_coreg-low-delta-model_basan-2015-si-2017-taheri-2015-fit/ref/fE_data_nut_useless_fX-false/predictions.csv');
+fE_nut_useless_pred_formula = fileread('../results-data/resXX_coreg-low-delta-model_basan-2015-si-2017-taheri-2015-fit/ref/fE_data_nut_useless_fX-false/formula.txt');
+
 
 %% make the size vs growth rate plot data
 mk_size = 9.5;
@@ -142,9 +132,9 @@ export_fig(gcf,'../figure-assembly/figure-3-components/figure_3_panel_prediction
 
 
 %%
-datas = {e_nut_useless_pred_data, best_pred_data};
-formulas = {e_nut_useless_pred_formula, best_pred_formula};
-fig_labels = {'e_alone_nut_useless', 'e_ra_over_r_all'};
+datas = {fE_nut_useless_pred_data, best_pred_data};
+formulas = {fE_nut_useless_pred_formula, best_pred_formula};
+fig_labels = {'fE_alone_nut_useless', 'fE_active_rib_frac_all'};
 mk_size = 10;
 for i=1:2
     figure;
@@ -175,7 +165,7 @@ for i=1:2
     axis square;
     set(gca,'XTick',0:0.5:2.5,'YTick',0:0.5:2.5);
     set(gcf,'Position',[0 0 400 400],'Color','w');
-    %export_fig(gcf,['../figure-assembly/figure-3-components/figure_3_' fig_labels{i} '.pdf']);
+    export_fig(gcf,['../figure-assembly/figure-3-components/figure_3_' fig_labels{i} '.bmp']);
 end
 
 %%

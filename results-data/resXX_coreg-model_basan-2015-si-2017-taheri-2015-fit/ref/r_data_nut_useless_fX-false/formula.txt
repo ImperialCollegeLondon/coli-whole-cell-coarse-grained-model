@@ -1,1 +1,1 @@
-V_{div} \propto r^{0.53}
+V_{div} \propto r^{0.37}

@@ -1,1 +1,1 @@
-V_{div} \propto e^{-0.4} \times r^{0.39}
+V_{div} \propto e^{-0.32} \times r^{0.44}

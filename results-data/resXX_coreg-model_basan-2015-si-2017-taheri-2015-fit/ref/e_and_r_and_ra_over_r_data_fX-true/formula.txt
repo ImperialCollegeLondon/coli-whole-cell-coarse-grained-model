@@ -1,1 +1,1 @@
-f_X \propto e^{0.96} \times r^{-0.39}\times (r_a/r)^{-0.72}
+f_X \propto e^{0.98} \times r^{-0.41}\times (r_a/r)^{-0.74}
