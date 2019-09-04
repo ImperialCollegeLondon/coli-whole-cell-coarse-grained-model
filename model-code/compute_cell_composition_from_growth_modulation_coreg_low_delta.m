@@ -1,23 +1,14 @@
 
-%%%
-% model_pars should have fields sigma, a_sat, q, a_fR_ratio == delta
-%
-% modulation_data should be a table with different growth rates for
-% different modulation
-%
-% type of modulation indicated by nutrient_type (different number for each growth media), cm_type (0 or 1),
-% useless_type (0 or 1)
-%
-%%%
 
 
-function composition_data = compute_cell_composition_from_growth_modulation_coreg_low_delta(model_pars, modulation_data)
+
+function composition_data = compute_cell_composition_from_growth_modulation_coreg_low_delta(modulation_data)
 
 addpath('../model-code/steady-state_coreg-low-delta');
 
-cell_pars.sigma = model_pars.sigma;
-cell_pars.fQ = model_pars.fQ;
-cell_pars.K = model_pars.K;
+cell_pars.sigma = 1 / (7336 * 1.67 / 22) * 3600; % in hr-1. set from Dai et al max elong rate (22 aa/s), and extended ribosome AA number (7336 * 1.67)
+cell_pars.fQ = 0.5;
+cell_pars.K = 0.11 * 0.76; % in units of extended ribosome mass fraction. from Dai et al. Km in R/P unit converted to Scott extended ribosome unit
 
 % prepare table columns
 model_k = []; model_fRI = []; model_fU = [];

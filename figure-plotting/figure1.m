@@ -1,24 +1,31 @@
 
 
 %% load data
-scott_data = readtable('../results-data/resXX_coreg-low-delta-model_cell-compositions/scott_2010_modulations.csv');
+all_comp_folder = '../results-data/mod1_1_all-compositions/';
+scott_data = readtable([all_comp_folder 'scott_2010_modulations.csv']);
 scott_data.source(:,1) = string('Scott 2010');
-dai_data = readtable('../results-data/resXX_coreg-low-delta-model_cell-compositions/dai_2016_modulations.csv');
+dai_data = readtable([all_comp_folder 'dai_2016_modulations.csv']);
 dai_data.source(:,1) = string('Dai 2016');
 data = [scott_data; dai_data];
 
-%%
+%% output folder
+output_folder = '../figure-assembly/figure-1-components/';
+if ~exist(output_folder, 'dir')
+    mkdir(output_folder);
+end
 
-% %%
+%% style parameters
+lw = 2;
+mk_size = 15;
+fig_size = [0 0 800 800];
+ax_font_size = 25;
+ax_lw = 2;
 
+%% plotting per se
 data_nut_only = data(data.useless_type==0 & data.cm_type==0,:);
 data_nut_only = sortrows(data_nut_only, 'growth_rate_per_hr');
 nutrients = data_nut_only.nutrient_type;
 colors = hsv(length(nutrients)+1);
-
-% style parameters
-lw = 2;
-mk_size = 15;
 
 %%% iterate on nutrients
 for i_nut=1:length(nutrients)
@@ -55,7 +62,6 @@ for i_nut=1:length(nutrients)
     
 end
 
-
 % styling axes
 figure(1);
 ylim([0 0.6]); xlim([0 2]);
@@ -64,25 +70,23 @@ figure(2);
 ylim([0 0.5]); xlim([0 2]);
 ylabel('useless proteome fraction'); xlabel('growth rate (hr^{-1})');
 figure(3);
-ylim([0 1.2]); xlim([0 2]);
+ylim([0.4 1.2]); xlim([0 2]);
 ylabel('ribosome elongation efficiency'); xlabel('growth rate (hr^{-1})');
 figure(4);
 ylim([0 1.2]); xlim([0 2]);
 ylabel('active ribosome fraction'); xlabel('growth rate (hr^{-1})');
 for i=1:4
     figure(i);
-    set(gca,'FontSize',25,'LineWidth',2);
-    set(gcf,'Color','w','Position',[0 0 800 800]);
+    set(gca,'FontSize',ax_font_size,'LineWidth',ax_lw);
+    set(gcf,'Color','w','Position',fig_size);
 end
 
-addpath('../utils-code/export_fig');
-
 figure(1);
-export_fig(gcf,'../figure-assembly/sup-figure-XX-coreg-low-delta-components/panel_nut_cm.bmp');
+saveas(gcf,[output_folder 'panel_nut_cm.pdf']);
 figure(2);
-export_fig(gcf,'../figure-assembly/sup-figure-XX-coreg-low-delta-components/panel_useless.bmp');
+saveas(gcf,[output_folder 'panel_useless.pdf']);
 figure(3);
-export_fig(gcf,'../figure-assembly/sup-figure-XX-coreg-low-delta-components/panel_elong_rate.bmp');
+saveas(gcf,[output_folder 'panel_elong_rate.pdf']);
 figure(4);
-export_fig(gcf,'../figure-assembly/sup-figure-XX-coreg-low-delta-components/panel_active_rib_frac.bmp');
+saveas(gcf,[output_folder 'panel_active_rib_frac.pdf']);
 close all;

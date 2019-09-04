@@ -15,15 +15,15 @@ if min(y_0) < 0
 end
 
 % check validity of parameters
-if (sum(cell_pars.allocation.fE+cell_pars.allocation.fR+cell_pars.allocation.fQ+cell_pars.allocation.fU+cell_pars.allocation.fX) - 1) > 1e-12
-    error('sum of allocation fractions must be one');
+if (sum(cell_pars.fQ+cell_pars.fU+cell_pars.fX) >= 1)
+    error('sum of allocation fractions for Q/U/X must be less than one');
 end
-if cell_pars.allocation.fE < 0 || cell_pars.allocation.fR < 0 || cell_pars.allocation.fQ < 0 || cell_pars.allocation.fU || cell_pars.allocation.fX < 0
+if cell_pars.fQ < 0 || cell_pars.fU || cell_pars.fX < 0
     error('allocation fractions must be positive');
 end
 
 % solver options: set division event
-options = odeset('Events',@(t,y)division_event(t,y,cell_pars.division.X_div));
+options = odeset('Events',@(t,y)division_event(t,y,cell_pars.X_div));
 
 % trajectory data
 t_tot = 0;
@@ -50,6 +50,7 @@ traj.Q = y_tot(:,4);
 traj.U = y_tot(:,5);
 traj.X = y_tot(:,6);
 traj.M_or_V = sum(y_tot,2);
+traj.total_prot = sum(y_tot(:,2:end),2);
 
 end
 
