@@ -35,8 +35,7 @@ int main(int argc, char *argv[])
     // parsing synthesis parameters
     modelParameters->sigma = sim_params.get_double_param("sigma");
     modelParameters->a_sat = sim_params.get_double_param("a_sat");
-    modelParameters->fR = sim_params.get_double_param("f_R");
-    modelParameters->fE = sim_params.get_double_param("f_E");
+    modelParameters->delta = sim_params.get_double_param("delta");
     modelParameters->fQ = sim_params.get_double_param("f_Q");
     modelParameters->fU = sim_params.get_double_param("f_U");
     modelParameters->fX = sim_params.get_double_param("f_X");
@@ -44,19 +43,12 @@ int main(int argc, char *argv[])
     // parsing X degradation rate
     modelParameters->X_degrad_rate = sim_params.get_double_param("X_degrad_rate");
 
-    // check allocation sums to 1
-    Doub sum_allocation = modelParameters->fR + modelParameters->fE + modelParameters->fQ + modelParameters->fU + modelParameters->fX;
-    Doub error_allocation = fabs(1.0 - sum_allocation);
-    if (error_allocation > 0.00005) { // more than rounding error?
-      cout << "allocation parameters are wrong (" << error_allocation <<  ")" << endl;
+    // check allocation sums to less 1
+    Doub sum_allocation = modelParameters->fQ + modelParameters->fU + modelParameters->fX;
+    if (sum_allocation > 1) {
+      cout << "allocation parameters are wrong (" << sum_allocation <<  ")" << endl;
       sim_params.display_params();
       exit(1);
-    }
-    else { // correct the small rounding error
-      cout << "error_allocation = " << error_allocation << endl;
-      modelParameters->fQ = 1 - (modelParameters->fR + modelParameters->fE + modelParameters->fU + modelParameters->fX);
-      sum_allocation = modelParameters->fR + modelParameters->fE + modelParameters->fQ + modelParameters->fU + modelParameters->fX;
-      // if (sum_allocation != 1) { cout << "WTF ? sum is : " << sum_allocation << endl; exit(1); }
     }
 
     // parsing division parameters

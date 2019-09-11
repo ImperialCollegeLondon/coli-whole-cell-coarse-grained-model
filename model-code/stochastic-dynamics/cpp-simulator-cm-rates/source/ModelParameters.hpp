@@ -26,8 +26,7 @@ struct ModelParameters
     // for synthesis
     Doub sigma;
     Doub a_sat;
-    Doub fR;
-    Doub fE;
+    Doub delta;
     Doub fQ;
     Doub fU;
     Doub fX;
