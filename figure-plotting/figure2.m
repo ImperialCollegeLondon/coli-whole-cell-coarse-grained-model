@@ -45,7 +45,7 @@ ylim([0 0.6]);
 for i=[1,2,3]
     subplot(3,1,i);
     set(gca,'FontSize',ax_font_size,'LineWidth',ax_lw);
-    xlim([0 7.5]);
+    xlim([0 10]);
 end
 set(gcf,'Position',fig_size,'Color','w');
 

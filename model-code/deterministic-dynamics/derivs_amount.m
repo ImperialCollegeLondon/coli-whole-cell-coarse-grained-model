@@ -23,7 +23,7 @@ end
 
 % allocation of fR based on a
 a = cell_state.A / cell_vol_mass;
-fR = a / cell_pars.delta;
+fR = cell_pars.delta * a;
 if (fR > 1 - cell_pars.fQ - cell_pars.fU - cell_pars.fX)
     fR = 1 - cell_pars.fQ - cell_pars.fU - cell_pars.fX;
 end
@@ -31,7 +31,7 @@ end
 fE = 1 - fR - cell_pars.fQ - cell_pars.fU - cell_pars.fX; 
 
 % total synthesis rate
-total_synthesis = cell_pars.sigma * active_rib * a / (a + cell_pars.K * cell_pars.delta);
+total_synthesis = cell_pars.sigma * active_rib * a / (a + cell_pars.a_sat);
 
 % A
 dy_dt(1) = env_pars.k * cell_state.E - total_synthesis;
