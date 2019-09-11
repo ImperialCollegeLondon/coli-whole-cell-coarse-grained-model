@@ -14,9 +14,10 @@ cell_pars.delta = 0.01; % does not matter for SS as long as small enough !
 env_pars.ri = 0;
 cell_pars.fU = 0;
 cell_pars.fX = 0.1;
+cell_pars.fQ = cell_pars.fQ - cell_pars.fX; % guarantee fX + fQ det = 'fQ' ss
 cell_pars.X_div = 70;
 
-env_pars.k = 5.4;
+env_pars.k = 3.53;
 
 % initial state
 init_cell_state.A = 0;
