@@ -1,0 +1,89 @@
+# depslib dependency file v1.0
+1562231941 source:c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\cellstate.cpp
+	"CellState.hpp"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\cellstate.hpp
+	"libs/nr3.h"
+	"ModelParameters.hpp"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\nr3.h
+	<fstream>
+	<cmath>
+	<complex>
+	<iostream>
+	<iomanip>
+	<vector>
+	<limits>
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<fcntl.h>
+	<string.h>
+	<ctype.h>
+	<map>
+	<algorithm>
+	<cstdarg>
+	<sstream>
+
+1568210413 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\modelparameters.hpp
+	"libs/nr3.h"
+
+1562231941 source:c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\common.cpp
+	"common.h"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\common.h
+	"nr3.h"
+
+1562231941 source:c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\ludcmp.cpp
+	"ludcmp.h"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\ludcmp.h
+	"nr3.h"
+
+1562231941 source:c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\sparse.cpp
+	"sparse.h"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\sparse.h
+	"sort.h"
+	"nr3.h"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\sort.h
+	"nr3.h"
+
+1562231941 source:c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\stepperdopr853.cpp
+	"stepperdopr853.h"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\stepperdopr853.h
+	"stepper.h"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\stepper.h
+	"nr3.h"
+
+1568303800 source:c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\main.cpp
+	"StochSimulator.hpp"
+	"libs/common.h"
+	"simparams.h"
+	"partitioningfunctions.hpp"
+
+1568304062 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\stochsimulator.hpp
+	"CellState.hpp"
+	"libs/ran.h"
+	"libs/sparse.h"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\libs\ran.h
+	"nr3.h"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\simparams.h
+	"libs/nr3.h"
+
+1562231941 c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\partitioningfunctions.hpp
+
+1562231941 source:c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\modelparameters.cpp
+	"ModelParameters.hpp"
+
+1568212658 source:c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\simparams.cpp
+	"simparams.h"
+
+1562231941 source:c:\users\inbio\work\qge\qge-github-repositories\coli-whole-cell-coarse-grained-model\model-code\stochastic-dynamics\cpp-simulator-cm-rates\source\stochsimulator.cpp
+	"StochSimulator.hpp"
+

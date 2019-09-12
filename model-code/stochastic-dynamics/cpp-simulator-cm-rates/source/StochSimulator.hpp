@@ -41,7 +41,7 @@ struct StochSimulator
     // rate functions
     inline Doub get_size(VecDoub &s) {return s[0]+s[1]+s[2]+s[3]+s[4]+s[5]+s[6];}
     inline Doub get_tot_synth(VecDoub &s) {return mf_ModelParameters->sigma * s[2] * s[1] / (s[1] + mf_ModelParameters->a_sat*get_size(s));}
-    inline Doub get_fR(VecDoub &s) {return mf_ModelParameters->delta * s[1] < 1. - (mf_ModelParameters->fQ + mf_ModelParameters->fX + mf_ModelParameters->fU) ? mf_ModelParameters->delta * s[1]mf_ModelParameters->delta * s[1] : 1 - (mf_ModelParameters->fQ + mf_ModelParameters->fX + mf_ModelParameters->fU);}
+    inline Doub get_fR(VecDoub &s) {return mf_ModelParameters->delta * s[1] / get_size(s) < 1. - (mf_ModelParameters->fQ + mf_ModelParameters->fX + mf_ModelParameters->fU) ? mf_ModelParameters->delta * s[1] / get_size(s) : 1 - (mf_ModelParameters->fQ + mf_ModelParameters->fX + mf_ModelParameters->fU);}
     inline Doub get_fE(VecDoub &s) {return 1. - (mf_ModelParameters->fQ + mf_ModelParameters->fX + mf_ModelParameters->fU) - get_fR(s);}
     Doub rate0(VecDoub &s){return mf_ModelParameters->k_media * s[0]; } // metabolism
   	Doub rate1(VecDoub &s){return get_fR(s) * get_tot_synth(s);} // R_synth

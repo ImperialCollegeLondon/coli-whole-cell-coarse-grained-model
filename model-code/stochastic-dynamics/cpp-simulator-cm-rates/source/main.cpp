@@ -92,7 +92,8 @@ int main(int argc, char *argv[])
         // construction of a cell(look constructor for init state)
         CellState *cell = new CellState(modelParameters);
         cell->set_P_R_Level(100);
-        cell->set_P_E_Level(10);
+        cell->set_P_E_Level(100);
+        cell->set_A_Level(10);
 
         // timers(all in absolute time)
         Doub t_birth = 0;
@@ -103,7 +104,7 @@ int main(int argc, char *argv[])
 
         while(t < sim_duration)
         {
-            if(verbose) cout << endl << "__ t = " << t << ", t_birth = " << t_birth << " __" << endl;
+            if(verbose) cout << endl << "__ t = " << t << ", t_birth = " << t_birth << ", X = " << cell->get_P_X_Level() << " __" << endl;
 
             // if division should occur
             if(cell->get_P_X_Level() >= modelParameters->X_div)

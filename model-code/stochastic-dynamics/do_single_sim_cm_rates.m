@@ -1,12 +1,13 @@
-function sim_data = do_single_sim_cm_rates(pars, path2cpp, path2output)
+function sim_data = do_single_sim_cm_rates(pars, path2bin, path2output)
 
 addpath('../utils-code');
 
 % path to simulator binary and output folder
 pars.out_folder = path2output;
+mkdir(pars.out_folder);
 
 % call the cpp code
-call_cpp_program(path2cpp, pars);
+call_cpp_program(path2bin, pars);
 
 % read results
 sim_data = read_sim_data(pars.out_folder);
@@ -48,5 +49,5 @@ sim_data.traj_time = traj_time_data;
 % load the lineage data
 sim_data.lineage_data = readtable([folder '/lineage_data.dat']);
 % delete it to avoid problems with next calls
-system(['rm ' folder '/*' ]);
+rmdir(folder, 's');
 end
