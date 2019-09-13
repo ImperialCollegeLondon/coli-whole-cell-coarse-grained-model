@@ -1,5 +1,5 @@
 
-function [steady_state,cell_pars] = give_steady_state_coreg_low_delta(cell_pars, env_pars)
+function [steady_state,cell_pars] = give_steady_state_coreg_high_delta(cell_pars, env_pars)
 
 fR_min = env_pars.fRI;
 fR_max = 1 - cell_pars.fQ - cell_pars.fU;

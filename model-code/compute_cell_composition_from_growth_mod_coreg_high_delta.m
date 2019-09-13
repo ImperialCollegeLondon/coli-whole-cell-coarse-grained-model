@@ -2,9 +2,9 @@
 
 
 
-function composition_data = compute_cell_composition_from_growth_modulation_coreg_low_delta(modulation_data)
+function composition_data = compute_cell_composition_from_growth_mod_coreg_high_delta(modulation_data)
 
-addpath('../model-code/steady-state_coreg-low-delta');
+addpath('../model-code/steady-state_coreg-high-delta');
 
 cell_pars.sigma = 1 / (7336 * 1.67 / 22) * 3600; % in hr-1. set from Dai et al max elong rate (22 aa/s), and extended ribosome AA number (7336 * 1.67)
 cell_pars.fQ = 0.5;
@@ -25,7 +25,7 @@ for i_cond=1:size(modulation_data)
                                         modulation_data.useless_type == 0 & ...
                                         modulation_data.nutrient_type == this_cond.nutrient_type, :);
     env_pars.fRI = 0; cell_pars.fU = 0;
-    env_pars.k = fit_k_from_alpha_coreg_low_delta(cell_pars, env_pars, media_only_cond.growth_rate_per_hr);
+    env_pars.k = fit_k_from_alpha_coreg_high_delta(cell_pars, env_pars, media_only_cond.growth_rate_per_hr);
     if isempty(env_pars.k)
         disp('could not fit k ?');
         composition_data = [];
@@ -34,11 +34,11 @@ for i_cond=1:size(modulation_data)
     end
     % if also cm but not useless, compute the ri
     if (this_cond.cm_type > 0 && this_cond.useless_type == 0)
-        env_pars.fRI = fit_fRI_from_alpha_coreg_low_delta(cell_pars, env_pars, this_cond.growth_rate_per_hr);
+        env_pars.fRI = fit_fRI_from_alpha_coreg_high_delta(cell_pars, env_pars, this_cond.growth_rate_per_hr);
     end
     % if also useless but not cm, compute the fU
     if (this_cond.cm_type == 0 && this_cond.useless_type > 0)
-        cell_pars.fU = fit_fU_from_alpha_coreg_low_delta(cell_pars, env_pars, this_cond.growth_rate_per_hr);
+        cell_pars.fU = fit_fU_from_alpha_coreg_high_delta(cell_pars, env_pars, this_cond.growth_rate_per_hr);
         % if empty value, means incompatibility of growth rate (faster with
         % fU that without)
         % in that case, we say that it is zero
@@ -48,7 +48,7 @@ for i_cond=1:size(modulation_data)
         end
     end
     % compute the steady-state
-    ss = give_steady_state_coreg_low_delta(cell_pars, env_pars);
+    ss = give_steady_state_coreg_high_delta(cell_pars, env_pars);
     % form the table
     model_k(end+1,:) = env_pars.k;
     model_fRI(end+1,:) = env_pars.fRI;

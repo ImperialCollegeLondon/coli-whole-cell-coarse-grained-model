@@ -9,9 +9,9 @@
 %
 %%%%%
 
-function prep1_basan_si_taheri_size_scaling()
+function scr1_basan_si_taheri_size_scaling()
 
-output_folder = '../results-data/prep1_size-normalization/';
+output_folder = '../results-data/res1_size-normalization/';
 if ~exist(output_folder,'dir')
     mkdir(output_folder);
 end

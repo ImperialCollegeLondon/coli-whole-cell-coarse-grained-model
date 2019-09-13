@@ -18,7 +18,7 @@ end
 if (sum(cell_pars.fQ+cell_pars.fU+cell_pars.fX) >= 1)
     error('sum of allocation fractions for Q/U/X must be less than one');
 end
-if cell_pars.fQ < 0 || cell_pars.fU || cell_pars.fX < 0
+if (cell_pars.fQ < 0 || cell_pars.fU < 0 || cell_pars.fX < 0)
     error('allocation fractions must be positive');
 end
 

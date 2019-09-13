@@ -1,7 +1,7 @@
 
 addpath('../model-code/deterministic-dynamics/');
 
-output_folder = '../results-data/mod1_1_det-dynamics/';
+output_folder = '../results-data/res3_det-dy/';
 if ~exist(output_folder, 'dir')
     mkdir(output_folder);
 end

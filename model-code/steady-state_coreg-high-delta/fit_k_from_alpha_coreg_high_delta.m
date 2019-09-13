@@ -1,11 +1,11 @@
-function k = fit_k_from_alpha_coreg_low_delta(cell_pars,env_pars,alpha_to_fit)
+function k = fit_k_from_alpha_coreg_high_delta(cell_pars,env_pars,alpha_to_fit)
 
 % returns [] when not possible
 % suppressed lack of convergence warnings
 options = optimset('Display','off');
 env_pars.k = exp(fminsearch(@(k_log)cost_fit_k_from_alpha(k_log,cell_pars,env_pars,alpha_to_fit),log(cell_pars.sigma),options));
 % test the result of the search, should give the good growth rate (with 1% tolerance)
-ss = give_steady_state_coreg_low_delta(cell_pars,env_pars);
+ss = give_steady_state_coreg_high_delta(cell_pars,env_pars);
 if abs(ss.alpha-alpha_to_fit)/alpha_to_fit > 0.01
     ss
     k = [];
@@ -21,7 +21,7 @@ function C = cost_fit_k_from_alpha(k_log,cell_pars,env_pars,alpha_to_fit)
 %     return;
 % end
 env_pars.k = exp(k_log);
-ss = give_steady_state_coreg_low_delta(cell_pars,env_pars);
+ss = give_steady_state_coreg_high_delta(cell_pars,env_pars);
 if env_pars.k < 1e-10
     env_pars.k
     ss

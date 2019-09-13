@@ -10,7 +10,7 @@ cell_pars.fU = 0.1;
 env_pars.k = 12;
 env_pars.fRI = 0.15;
 
-ss = give_steady_state_coreg_low_delta(cell_pars, env_pars)
+ss = give_steady_state_coreg_high_delta(cell_pars, env_pars)
 
 %%
 % k_vec = logspace(-6,4,100);
