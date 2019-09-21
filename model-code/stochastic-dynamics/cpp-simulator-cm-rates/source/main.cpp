@@ -60,6 +60,7 @@ int main(int argc, char *argv[])
     Doub update_period = sim_params.get_double_param("update_period");
     Int num_updates_per_output = sim_params.get_double_param("num_updates_per_output");
     Int num_timepoints =(Int)(sim_duration / update_period /(Doub) num_updates_per_output ) + 1;
+    cout << "computed timepoints number = " << num_timepoints << endl;
     string out_folder = sim_params.get_string_param("out_folder");
     sim_params.display_params();
     sim_params.write_params();
@@ -102,7 +103,7 @@ int main(int argc, char *argv[])
         num_timepoints_done = 0;
         Int num_updates_since_last_output = 0;
 
-        while(t < sim_duration)
+        while (t < sim_duration)
         {
             if(verbose) cout << endl << "__ t = " << t << ", t_birth = " << t_birth << ", X = " << cell->get_P_X_Level() << " __" << endl;
 
@@ -136,21 +137,28 @@ int main(int argc, char *argv[])
             }
 
             // if output needed, do output
-            if((num_updates_since_last_output == num_updates_per_output) ||(t == 0)  )
+            if((num_updates_since_last_output == num_updates_per_output) || (t == 0))
             {
-                if(num_timepoints_done == num_timepoints) { cout << "error output table" << endl; exit(5); }
-                lineage_traj_R_data[num_timepoints_done][c] = cell->get_P_R_Level();
-                lineage_traj_E_data[num_timepoints_done][c] = cell->get_P_E_Level();
-                lineage_traj_Q_data[num_timepoints_done][c] = cell->get_P_Q_Level();
-                lineage_traj_U_data[num_timepoints_done][c] = cell->get_P_U_Level();
-                lineage_traj_X_data[num_timepoints_done][c] = cell->get_P_X_Level();
-                lineage_traj_A_data[num_timepoints_done][c] = cell->get_A_Level();
-                lineage_traj_RI_data[num_timepoints_done][c] = cell->get_P_RI_Level();
-                lineage_traj_size_data[num_timepoints_done][c] = cell->get_size();
-                lineage_traj_time_data[num_timepoints_done][c] = t;
-                num_timepoints_done++;
-                num_updates_since_last_output = 0;
-                if(verbose) cout << "outputs done = " << num_timepoints_done << endl;
+                if(num_timepoints_done == num_timepoints) {
+                    cout << "error output table: too many timepoints done ? (" << num_timepoints_done;
+                    cout << " when t = " << t << " / " << sim_duration << ")" << endl;
+                    //cout << (bool) (t < sim_duration) << endl;
+                    //exit(5);
+                }
+                else {
+                    lineage_traj_R_data[num_timepoints_done][c] = cell->get_P_R_Level();
+                    lineage_traj_E_data[num_timepoints_done][c] = cell->get_P_E_Level();
+                    lineage_traj_Q_data[num_timepoints_done][c] = cell->get_P_Q_Level();
+                    lineage_traj_U_data[num_timepoints_done][c] = cell->get_P_U_Level();
+                    lineage_traj_X_data[num_timepoints_done][c] = cell->get_P_X_Level();
+                    lineage_traj_A_data[num_timepoints_done][c] = cell->get_A_Level();
+                    lineage_traj_RI_data[num_timepoints_done][c] = cell->get_P_RI_Level();
+                    lineage_traj_size_data[num_timepoints_done][c] = cell->get_size();
+                    lineage_traj_time_data[num_timepoints_done][c] = t;
+                    num_timepoints_done++;
+                    num_updates_since_last_output = 0;
+                    if(verbose) cout << "outputs done = " << num_timepoints_done << endl;
+                }
             }
 
             // simulate until next update

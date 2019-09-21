@@ -18,7 +18,7 @@ C = cost_find_fR(steady_state.fR,sigma_k_ratio, env_pars.fRI, cell_pars.K, cell_
 
 if (C>1e-4)
     C
-    error('could not find fR coreg low delta model ?!!');
+    error('could not find fR coreg high   delta model ?!!');
 end
 
 end
