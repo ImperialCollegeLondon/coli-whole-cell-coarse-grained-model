@@ -1,0 +1,18 @@
+function constants = give_constants()
+
+constants.K = 0.11 * 0.76; % in units of extended ribosome mass fraction. from Dai et al. Km in R/P unit converted to Scott extended ribosome unit
+
+constants.sigma = 1 / (7336 * 1.67 / 22) * 3600; % in hr-1. from Dai et al max elong rate (22 aa/s), and extended ribosome AA number (7336 * 1.67)
+
+constants.cm_koff = 5.04; % in hr-1. From Dai et al. SI (0.084 min-1), itself referencing Harvey et al., Antimicrob Agents Chemother, 1980
+
+constants.reference_delta = 10; % somewhat arbitrary choice. needs to be high enough for steady-state a to be small. constrains a_sat because delta * asat = K.
+
+constants.reference_fQ = 0.5; % chosen manually to explain scott et al. and dai et al. data
+
+constants.reference_Xdiv = 80; % chosen manually together with fX so that for intermediate nutrient (growth rate ~1 per hr), noise in size and growth rate is realistic
+
+constants.reference_fX = 0.1; % chosen manually together with Xdiv so that for intermediate nutrient (growth rate ~1 per hr), noise in size and growth rate is realistic
+
+end
+

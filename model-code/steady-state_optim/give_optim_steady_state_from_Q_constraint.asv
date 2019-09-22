@@ -1,5 +1,7 @@
 function [steady_state,cell_pars] = give_optim_steady_state_from_Q_constraint(cell_pars, env_pars)
 
+addpath('../steady-state'
+
 % find the maximum a allowing constraints to be respected
 a_max = 1 - (cell_pars.constraint.q + env_pars.ri) / (1 - cell_pars.allocation.fU);
 if a_max < 0

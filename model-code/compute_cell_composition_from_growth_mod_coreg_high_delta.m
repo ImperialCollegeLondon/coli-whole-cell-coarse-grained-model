@@ -2,13 +2,13 @@
 
 
 
-function composition_data = compute_cell_composition_from_growth_mod_coreg_high_delta(modulation_data)
+function composition_data = compute_cell_composition_from_growth_mod_coreg_high_delta(modulation_data, constants)
 
 addpath('../model-code/steady-state_coreg-high-delta');
 
-cell_pars.sigma = 1 / (7336 * 1.67 / 22) * 3600; % in hr-1. set from Dai et al max elong rate (22 aa/s), and extended ribosome AA number (7336 * 1.67)
-cell_pars.fQ = 0.5;
-cell_pars.K = 0.11 * 0.76; % in units of extended ribosome mass fraction. from Dai et al. Km in R/P unit converted to Scott extended ribosome unit
+cell_pars.sigma = constants.sigma;
+cell_pars.fQ = constants.reference_fQ;
+cell_pars.K = constants.K;
 
 % prepare table columns
 model_k = []; model_fRI = []; model_fU = [];

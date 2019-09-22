@@ -6,11 +6,14 @@ if ~exist(output_folder, 'dir')
     mkdir(output_folder);
 end
 
+%
+constants = give_constants();
+
 %%% the scott data alone
 % load data
 data_scott = readtable('../external-data/scott_2010_data.csv');
 % compute composition
-composition_scott = compute_cell_composition_from_growth_mod_coreg_high_delta(data_scott);
+composition_scott = compute_cell_composition_from_growth_mod_coreg_high_delta(data_scott, constants);
 % output 
 writetable(composition_scott, [output_folder, 'scott_2010_modulations.csv']);
 
@@ -18,13 +21,13 @@ writetable(composition_scott, [output_folder, 'scott_2010_modulations.csv']);
 % load data
 data_dai = readtable('../external-data/dai_2016_data.csv');
 % compute composition
-composition_dai = compute_cell_composition_from_growth_mod_coreg_high_delta(data_dai);
+composition_dai = compute_cell_composition_from_growth_mod_coreg_high_delta(data_dai, constants);
 % output 
 writetable(composition_dai, [output_folder 'dai_2016_modulations.csv']);
 
 %%% the merged basan and si and taheri with same-scale size data
 data_basan_si_taheri = readtable('../results-data/res1_size-normalization/basan-2015-si-2017-taheri-2015_normalized_data.csv');
 % compute composition
-composition_basan_si_taheri = compute_cell_composition_from_growth_mod_coreg_high_delta(data_basan_si_taheri);
+composition_basan_si_taheri = compute_cell_composition_from_growth_mod_coreg_high_delta(data_basan_si_taheri, constants);
 % output
 writetable(composition_basan_si_taheri, [output_folder, 'basan_2015_si_2017_taheri_2015_modulations.csv']);
