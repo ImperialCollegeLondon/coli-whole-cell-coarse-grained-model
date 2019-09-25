@@ -1,7 +1,12 @@
 function [steady_state,cell_pars] = give_steady_state_from_a_and_Q_constraint(a, cell_pars, env_pars)
 
 % compute fQ, check
-fQ = cell_pars.constraint.q / (1-a);
+% two cases, q or allocation fixed fQ
+if isfield(cell_pars.constraint,'q')
+    fQ = cell_pars.constraint.q / (1-a);
+else
+    fQ = cell_pars.allocation.fQ;
+end
 if fQ > 1
     steady_state.alpha = 0;
     return;

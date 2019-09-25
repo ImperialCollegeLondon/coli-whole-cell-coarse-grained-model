@@ -55,7 +55,8 @@ for i=1:size(ss_preds,1)
     %
     optim.env_pars.k = env_pars.k;
     optim.env_pars.ri = traj.RI(end) / traj.M_or_V(end);
-    optim.cell_pars.constraint.q = (traj.Q(end) + traj.X(end)) / traj.M_or_V(end);
+    %optim.cell_pars.constraint.q = (traj.Q(end) + traj.X(end)) / traj.M_or_V(end);
+    optim.cell_pars.allocation.fQ = cell_pars.fQ;
     optim.cell_pars.allocation.fU = cell_pars.fU;
     ss_optim = give_optim_steady_state_from_Q_constraint(optim.cell_pars, optim.env_pars);
     optimality_ratio(i) = alpha / ss_optim.alpha;
