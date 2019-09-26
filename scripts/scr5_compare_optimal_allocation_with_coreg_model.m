@@ -49,7 +49,7 @@ for i=1:size(ss_preds,1)
     % 
     duration = 50 / ss_preds.model_growth_rate(i);
     env_pars.k = ss_preds.model_k(i);
-    env_pars.cm_kon = compute_cm_kon_from_coreg_high_delta_approx_ss(constants.sigma, constants.K, constants.cm_koff, ss_preds(i,:));
+    env_pars.cm_kon = ss_preds.model_cm_kon(i);
     cell_pars.fU = ss_preds.model_fU(i);
     traj = solve_amount(init_cell_state, cell_pars, env_pars, duration);
     alpha = env_pars.k * traj.E(end) / traj.M_or_V(end);

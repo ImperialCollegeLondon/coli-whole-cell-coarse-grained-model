@@ -38,7 +38,9 @@ cell_size = [data_basan.estim_avg_cell_volume_um3; data_si.estim_vol_um3 .* best
 nutrient_type = [data_basan.nutrient_type; data_si.nutrient_type; data_taheri.nutrient_type];
 cm_type = [data_basan.cm_type; data_si.cm_type; data_taheri.cm_type];
 useless_type = [data_basan.useless_type; data_si.useless_type; data_taheri.useless_type];
-writetable(table(growth_rate_per_hr, cell_size, nutrient_type, cm_type, useless_type), ...
+cm_uM = [data_basan.cm_uM; data_si.cm_uM; data_taheri.cm_uM];
+source = [data_basan.source; data_si.source; data_taheri.source];
+writetable(table(growth_rate_per_hr, cell_size, nutrient_type, cm_type, useless_type, cm_uM, source), ...
  [output_folder 'basan-2015-si-2017-taheri-2015_normalized_data.csv']);
 
 end

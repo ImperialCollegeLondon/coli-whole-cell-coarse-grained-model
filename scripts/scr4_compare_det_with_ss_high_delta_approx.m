@@ -37,13 +37,7 @@ fR = zeros(size(ss_preds.model_growth_rate));
 for i=1:size(ss_preds,1)
     duration = 50 / ss_preds.model_growth_rate(i);
     env_pars.k = ss_preds.model_k(i);
-    % we need to go from fRI (ss high delta approx) to cm_kon (for dynamic
-    % model)
-    % the equation linking is just ratio of new made R that is RI or RA
-    % RI/RA = (cm_kon * RA - koff * RI) / (fR * total_synth_rate - cm_kon * RA + koff * RI)
-    % <->
-    % ... cf notebook
-    env_pars.cm_kon = compute_cm_kon_from_coreg_high_delta_approx_ss(constants.sigma, constants.K, constants.cm_koff, ss_preds(i,:));
+    env_pars.cm_kon = ss_preds.model_cm_kon(i);
     cell_pars.fU = ss_preds.model_fU(i);
     traj = solve_amount(init_cell_state, cell_pars, env_pars, duration);
     growth_rate(i) = env_pars.k * traj.E(end) / traj.M_or_V(end);

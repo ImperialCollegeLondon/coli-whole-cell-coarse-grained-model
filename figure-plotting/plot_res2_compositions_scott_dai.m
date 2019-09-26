@@ -3,9 +3,7 @@
 %% load data
 all_comp_folder = '../results-data/res2_compositions_coreg-high-delta-model/';
 scott_data = readtable([all_comp_folder 'scott_2010_modulations.csv']);
-scott_data.source(:,1) = string('Scott 2010');
 dai_data = readtable([all_comp_folder 'dai_2016_modulations.csv']);
-dai_data.source(:,1) = string('Dai 2016');
 data = [scott_data; dai_data];
 
 %% output folder
@@ -34,7 +32,7 @@ for i_nut=1:length(nutrients)
     figure(1);
     data_this = data(data.nutrient_type==nutrients(i_nut) & data.useless_type==0, :);
     symb = 'o';
-    if (data_this.source == 'Dai 2016')
+    if strcmp(data_this.source,'Dai 2016')
         symb = 's';
     end
     plot(data_this.growth_rate_per_hr, data_this.estim_ribosomal_fraction_scott, symb, 'MarkerFaceColor', colors(i_nut,:), 'Color', colors(i_nut,:), 'MarkerSize', mk_size); hold on;
@@ -50,13 +48,13 @@ for i_nut=1:length(nutrients)
 
     % nut x cm : elongation rate
     figure(3);
-    data_this = data(data.nutrient_type==nutrients(i_nut) & data.useless_type==0 & data.source=='Dai 2016', :);
+    data_this = data(data.nutrient_type==nutrients(i_nut) & data.useless_type==0 & strcmp(data.source,'Dai 2016'), :);
     plot(data_this.growth_rate_per_hr, data_this.translation_elong_rate_aa_s ./ 22, 's', 'MarkerFaceColor', colors(i_nut,:), 'Color', colors(i_nut,:), 'MarkerSize', mk_size); hold on;
     plot(data_this.model_growth_rate, data_this.model_fR ./ (data_this.model_fR + 0.11*0.76), 'Color', colors(i_nut,:), 'LineWidth', lw); hold on;
     
     % nut x cm : active ribosome fraction
     figure(4);
-    data_this = data(data.nutrient_type==nutrients(i_nut) & data.useless_type==0 & data.source=='Dai 2016', :);
+    data_this = data(data.nutrient_type==nutrients(i_nut) & data.useless_type==0 & strcmp(data.source,'Dai 2016'), :);
     plot(data_this.growth_rate_per_hr, data_this.fraction_active_rib_equivalent, 's', 'MarkerFaceColor', colors(i_nut,:), 'Color', colors(i_nut,:), 'MarkerSize', mk_size); hold on;
     plot(data_this.model_growth_rate, data_this.model_active_rib_frac, 'Color', colors(i_nut,:), 'LineWidth', lw); hold on;
     

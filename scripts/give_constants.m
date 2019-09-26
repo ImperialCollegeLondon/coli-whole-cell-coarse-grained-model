@@ -5,9 +5,10 @@ constants.K = 0.11 * 0.76; % in units of extended ribosome mass fraction. from D
 constants.sigma = 1 / (7336 * 1.67 / 22) * 3600; % in hr-1. from Dai et al max elong rate (22 aa/s), and extended ribosome AA number (7336 * 1.67)
 
 constants.cm_koff = 5.04; % in hr-1. From Dai et al. SI (0.084 min-1), itself referencing Harvey et al., Antimicrob Agents Chemother, 1980
-constants.cm_kon_per_uM = 2.04; % in hr-1 per uM. From Dai et al. SI (0.034 per min per uM), itself referencing Harvey et al., Antimicrob Agents Chemother, 1980
 
-constants.reference_delta = 5; % somewhat arbitrary choice. needs to be high enough for steady-state a to be small. constrains a_sat because delta * asat = K.
+%constants.cm_kon_per_uM = 2.04; % in hr-1 per uM. From Dai et al. SI (0.034 per min per uM), itself referencing Harvey et al., Antimicrob Agents Chemother, 1980
+
+constants.reference_delta = 1; % constrains a_sat because delta * asat = K from dai et al
 
 constants.reference_fQ = 0.5; % chosen manually to explain scott et al. and dai et al. data
 

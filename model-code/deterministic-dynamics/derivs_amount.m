@@ -1,6 +1,6 @@
 function dy_dt = derivs_amount( ~ , cell_state_vec , cell_pars , env_pars )
 
-EPS = 1e-5;
+EPS = 1e-3;
 
 % to store derivatives
 dy_dt = zeros(7,1);

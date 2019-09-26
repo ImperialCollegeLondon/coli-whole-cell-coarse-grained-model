@@ -5,9 +5,10 @@ if abs(sum(cell_pars.fE + cell_pars.fR + cell_pars.fQ + cell_pars.fU)-1) > 1e-5
     error('incorrect allocation ?');
 end
 
-a = fminsearch(@(x)cost_fun(x, cell_pars.fE, cell_pars.fR, env_pars.k, cell_pars.sigma, cell_pars.a_sat, env_pars.cm_kon, cell_pars.cm_koff), cell_pars.a_sat);
+options = optimset('MaxIter',1e4,'TolFun',1e-6,'TolX',1e-6);
+a = fminsearch(@(x)cost_fun(x, cell_pars.fE, cell_pars.fR, env_pars.k, cell_pars.sigma, cell_pars.a_sat, env_pars.cm_kon, cell_pars.cm_koff), cell_pars.a_sat, options);
 C = cost_fun(a, cell_pars.fE, cell_pars.fR, env_pars.k, cell_pars.sigma, cell_pars.a_sat, env_pars.cm_kon, cell_pars.cm_koff);
-if C > 1e-5
+if C > 1e-4
     C
     error('ss not found');
 end

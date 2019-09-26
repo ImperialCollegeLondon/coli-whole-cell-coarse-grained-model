@@ -1,1 +1,0 @@
-V_{div} \propto fE^{-1.34}

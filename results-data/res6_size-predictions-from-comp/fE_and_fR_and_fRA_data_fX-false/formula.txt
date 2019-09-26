@@ -1,1 +1,0 @@
-V_{div} \propto fE^{-0.96} \times fR^{-0.31}\times fRA^{0.72}

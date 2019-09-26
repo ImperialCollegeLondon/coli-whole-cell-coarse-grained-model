@@ -1,7 +1,7 @@
 
 function fU = fit_fU_from_alpha_coreg_high_delta(cell_pars,env_pars,alpha_to_fit)
 % return empty array if not possible
-cell_pars.fU = fminbnd(@(fU)(cost_fit_fU_from_alpha(fU,cell_pars,env_pars,alpha_to_fit)),0,1-cell_pars.fQ-env_pars.fRI);
+cell_pars.fU = fminbnd(@(fU)(cost_fit_fU_from_alpha(fU,cell_pars,env_pars,alpha_to_fit)),0,1-cell_pars.fQ);
 ss = give_steady_state_coreg_high_delta(cell_pars,env_pars);
 if abs(ss.alpha-alpha_to_fit)/alpha_to_fit > 0.01
     fU = [];

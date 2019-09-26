@@ -17,9 +17,9 @@ cell_pars.fX = constants.reference_fX;
 cell_pars.fQ = cell_pars.fQ - cell_pars.fX; % guarantee fX + fQ det = 'fQ' ss
 cell_pars.X_div = constants.reference_Xdiv;
 
-env_pars.cm_kon = 5;
+env_pars.cm_kon = 0;
 cell_pars.fU = 0;
-env_pars.k = 3.53; % chosen for alpha ~ 1 hr-1
+env_pars.k = 3.58; % chosen for alpha ~ 1 hr-1
 
 % initial state
 init_cell_state.A = 0;
