@@ -5,7 +5,7 @@ addpath('../model-code/steady-state_coreg-high-delta/');
 %%% load the data with size to predict and cell composition
 data_file = 'basan_2015_si_2017_taheri_2015_modulations.csv';
 data = readtable(['../results-data/res2_compositions_coreg-high-delta-model/' data_file]);
-data.model_fRA = data.model_fR - data.model_fRI;
+data.model_fRA = data.model_fR .* data.model_active_rib_frac;
 data_nut_only = data(data.cm_type == 0 & data.useless_type == 0, :);
 data_nut_cm = data(data.useless_type == 0, :);
 data_nut_useless = data(data.cm_type == 0, :);
@@ -47,7 +47,8 @@ for sector=single_sectors
             eval(['nutrient_type = ' data_str{1} '.nutrient_type;']);
             eval(['cm_type = ' data_str{1} '.cm_type;']);
             eval(['useless_type = ' data_str{1} '.useless_type;']);
-            writetable(table(growth_rate_per_hr,real,prediction,nutrient_type,cm_type,useless_type),[out_dir '/predictions.csv']);
+            eval(['source = ' data_str{1} '.source;']);
+            writetable(table(growth_rate_per_hr,real,prediction,nutrient_type,cm_type,useless_type,source),[out_dir '/predictions.csv']);
             if strcmp(fX_str,'true')
                 formula_str = ['f_X \\propto ' sector{1} '^{' num2str(round(100*exponents(1))/100) '}'];
             else
@@ -97,7 +98,8 @@ for i_sector_1=1:length(single_sectors)
                 eval(['nutrient_type = ' data_str{1} '.nutrient_type;']);
                 eval(['cm_type = ' data_str{1} '.cm_type;']);
                 eval(['useless_type = ' data_str{1} '.useless_type;']);
-                writetable(table(growth_rate_per_hr,real,prediction,nutrient_type,cm_type,useless_type),[out_dir '/predictions.csv']);
+                eval(['source = ' data_str{1} '.source;']);
+                writetable(table(growth_rate_per_hr,real,prediction,nutrient_type,cm_type,useless_type,source),[out_dir '/predictions.csv']);
                 if strcmp(fX_str,'true')
                     formula_str = ['f_X \\propto ' sector_1{1} '^{' num2str(round(100*exponents(1))/100) '} \\times ' sector_2{1} '^{' num2str(round(100*exponents(2))/100) '}'];
                 else
@@ -148,7 +150,8 @@ for i_sector_1=1:length(single_sectors)
                     eval(['nutrient_type = ' data_str{1} '.nutrient_type;']);
                     eval(['cm_type = ' data_str{1} '.cm_type;']);
                     eval(['useless_type = ' data_str{1} '.useless_type;']);
-                    writetable(table(growth_rate_per_hr,real,prediction,nutrient_type,cm_type,useless_type),[out_dir '/predictions.csv']);
+                    eval(['source = ' data_str{1} '.source;']);
+                    writetable(table(growth_rate_per_hr,real,prediction,nutrient_type,cm_type,useless_type,source),[out_dir '/predictions.csv']);
                     if strcmp(fX_str,'true')
                         formula_str = ['f_X \\propto ' sector_1{1} '^{' num2str(round(100*exponents(1))/100) '} \\times ' sector_2{1} '^{' num2str(round(100*exponents(2))/100) '}' '\\times ' sector_3{1} '^{' num2str(round(100*exponents(3))/100) '}'];
                     else

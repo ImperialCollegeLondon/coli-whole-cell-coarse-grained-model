@@ -1,7 +1,5 @@
 
 
-%%
-data_type = '';
 
 %%
 output_folder = '../figure-assembly/components/';
@@ -14,17 +12,11 @@ single_sector = readtable('../results-data/res6_size-predictions-from-comp/singl
 two_sectors = readtable('../results-data/res6_size-predictions-from-comp/two-sectors-size-predictions-R2-values.csv','ReadRowNames',true);
 three_sectors = readtable('../results-data/res6_size-predictions-from-comp/three-sectors-size-predictions-R2-values.csv','ReadRowNames',true);
 
-%% sort by R2
-all_V = [];
-for s={two_sectors} %, two_sectors, three_sectors}
-    ss = s{1};
-    t_V = table(ss{['data' data_type '_fX-false'],:}.', 'RowNames', ss.Properties.VariableNames, 'VariableNames', {'R2'});
-    all_V = [all_V; t_V];
-end
-all_V = sortrows(all_V,1,'descend');
-
-
 %%
+conditions = { {'_nut_useless', single_sector}, {'', two_sectors} };
+
+
+%% styling
 mk_size = 4;
 n_rows = 2;
 n_cols = 3;
@@ -35,30 +27,30 @@ axsize = 7;
 axlw = 0.8;
 n_plots_per_fig = n_rows * n_cols;
 
-for i_V_fX = 2
+
+%% main loop
+pred_type = 'fX-false';
+for cond=conditions
+    data_type = cond{1}{1};
+    ss = cond{1}{2};
     
-    if i_V_fX == 1
-        data = all_fX;
-        pred_type = 'fX-true';
-    else
-        data = all_V;
-        pred_type = 'fX-false';
-    end
+    % sort by R2
+    R2s = table(ss{['data' data_type '_fX-false'],:}.', 'RowNames', ss.Properties.VariableNames, 'VariableNames', {'R2'});
+    R2s = sortrows(R2s,1,'descend');
     
+    % plotting
     i_plot = 1; i_panel = 1;
-    for i_pred=1:height(data)
-        
-        pred = data(i_pred,:);
+    for i_pred=1:height(R2s)
+        pred = R2s(i_pred,:);
         pred_name = pred.Properties.RowNames{1};
         pred_data = readtable(['../results-data/res6_size-predictions-from-comp/' pred_name '_data' data_type '_' pred_type '/predictions.csv']);
         pred_formula = fileread(['../results-data/res6_size-predictions-from-comp/' pred_name '_data' data_type '_' pred_type '/formula.txt']);
-        I_cm_basan = find(pred_data.cm_type > 0 & pred_data.nutrient_type <= 6);
-        I_cm_si = find(pred_data.cm_type > 0 & pred_data.nutrient_type > 6 & pred_data.nutrient_type <= 11);
-        I_useless_basan = find(pred_data.useless_type > 0 & pred_data.nutrient_type <= 6);
-        I_nut_basan = find(pred_data.cm_type == 0 & pred_data.useless_type == 0 & pred_data.nutrient_type <= 6);
-        I_nut_si = find(pred_data.cm_type == 0 & pred_data.useless_type == 0 & pred_data.nutrient_type > 6 & pred_data.nutrient_type <= 11);
-        I_nut_taheri = find(pred_data.cm_type == 0 & pred_data.useless_type == 0 & pred_data.nutrient_type > 11);
-        
+        I_cm_basan = find(pred_data.cm_type > 0 & strcmp(pred_data.source, 'Basan 2015'));
+        I_cm_si = find(pred_data.cm_type > 0 & strcmp(pred_data.source, 'Si 2017'));
+        I_useless_basan = find(pred_data.useless_type > 0 & strcmp(pred_data.source, 'Basan 2015'));
+        I_nut_basan = find(pred_data.cm_type == 0 & pred_data.useless_type == 0 & strcmp(pred_data.source, 'Basan 2015'));
+        I_nut_si = find(pred_data.cm_type == 0 & pred_data.useless_type == 0 & strcmp(pred_data.source, 'Si 2017'));
+        I_nut_taheri = find(pred_data.cm_type == 0 & pred_data.useless_type == 0 & strcmp(pred_data.source, 'Taheri-Araghi 2015'));
         
         if i_plot > n_plots_per_fig
             set(gcf,'Position',figsize,'Color','w');
@@ -91,15 +83,13 @@ for i_V_fX = 2
         
         i_plot = i_plot + 1;
         
-        if i_pred == height(data)
+        if i_pred == height(R2s)
             set(gcf,'Position',figsize,'Color','w');
-            saveas(gcf,[output_folder '/res6_all-size-pred_' data_type '-pred_' pred_type '_panel-' num2str(i_panel) '.pdf']);
+            saveas(gcf,[output_folder '/res6_size-pred_' data_type '_panel-' num2str(i_panel) '.pdf']);
             close;
         end
         
         
     end
     
-    
 end
-
