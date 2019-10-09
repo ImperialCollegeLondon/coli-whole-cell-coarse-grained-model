@@ -12,9 +12,13 @@ constants.reference_delta = 5; % constrains a_sat because delta * asat = K from 
 
 constants.reference_fQ = 0.5; % chosen manually to explain scott et al. and dai et al. data
 
-constants.reference_Xdiv = 80; % chosen manually together with fX so that for intermediate nutrient (growth rate ~1 per hr), noise in size and growth rate is realistic
+constants.reference_Xdiv = 70; % chosen manually together with fX_scale so that for intermediate nutrient (growth rate ~1 per hr), noise in size and growth rate is realistic
 
-constants.reference_fX = 0.1; % chosen manually together with Xdiv so that for intermediate nutrient (growth rate ~1 per hr), noise in size and growth rate is realistic
+constants.reference_fX_scale = 0.25; % chosen manually together with Xdiv so that for intermediate nutrient (growth rate ~1 per hr), noise in size and growth rate is realistic
+
+constants.reference_fX_e_exponent = 1;
+
+constants.reference_fX_active_rib_frac_exponent = -2/3;
 
 end
 

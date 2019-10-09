@@ -4,6 +4,7 @@ all_comp_folder = '../results-data/res2_compositions_coreg-high-delta-model/';
 scott_data = readtable([all_comp_folder 'scott_2010_modulations.csv']);
 dai_data = readtable([all_comp_folder 'dai_2016_modulations.csv']);
 basan_si_taheri_data = readtable([all_comp_folder 'basan_2015_si_2017_taheri_2015_modulations.csv']);
+harvey_koch = readtable('../external-data/harvey-koch-1980/digitized-harvey-koch-1980.csv');
 
 cm_uM = [scott_data.cm_uM; dai_data.cm_uM; basan_si_taheri_data.cm_uM];
 source = [scott_data.source; dai_data.source; basan_si_taheri_data.source]; 
@@ -57,6 +58,7 @@ for i=1:size(data_cm_only,1)
     i_color = ceil(point.growth_rate_no_cm/2*20);
     plot(point.growth_rate_per_hr / point.growth_rate_no_cm, point.cm_uM,  'Marker', symbol, 'Color', colors(i_color,:), 'MarkerFaceColor', colors(i_color,:), 'MarkerSize', mk_size); hold on; 
 end
+plot(1-harvey_koch.growth_rate_reduction, harvey_koch.cm_uM, '-ko', 'MarkerSize', mk_size, 'LineWidth', lw);
 xlabel('Growth rate reduction');
 ylabel('chloramphenicol concentration (\muM)');
 

@@ -41,14 +41,25 @@ struct StochSimulator
     // rate functions
     inline Doub get_size(VecDoub &s) {return s[0]+s[1]+s[2]+s[3]+s[4]+s[5]+s[6];}
     inline Doub get_tot_synth(VecDoub &s) {return mf_ModelParameters->sigma * s[2] * s[1] / (s[1] + mf_ModelParameters->a_sat*get_size(s));}
-    inline Doub get_fR(VecDoub &s) {return mf_ModelParameters->delta * s[1] / get_size(s) < 1. - (mf_ModelParameters->fQ + mf_ModelParameters->fX + mf_ModelParameters->fU) ? mf_ModelParameters->delta * s[1] / get_size(s) : 1 - (mf_ModelParameters->fQ + mf_ModelParameters->fX + mf_ModelParameters->fU);}
-    inline Doub get_fE(VecDoub &s) {return 1. - (mf_ModelParameters->fQ + mf_ModelParameters->fX + mf_ModelParameters->fU) - get_fR(s);}
+    Doub get_fR(VecDoub &s) {
+        Doub max_fR = 1. - mf_ModelParameters->fQ - mf_ModelParameters->fU;
+        Doub fR_reg = mf_ModelParameters->delta * s[1] / get_size(s);
+        return fR_reg < max_fR ? fR_reg : max_fR;
+    }
+    Doub get_fX(VecDoub &s) {
+        Doub cell_size = get_size(s);
+        Doub e = s[0] / cell_size;
+        Doub active_rib_frac = s[2] / (s[2]+s[6]);
+        return mf_ModelParameters->fX_scale * pow(e,mf_ModelParameters->fX_e_exp) * pow(active_rib_frac,mf_ModelParameters->fX_active_rib_frac_exp);
+    }
+    inline Doub get_fQ(VecDoub &s) {return mf_ModelParameters->fQ - get_fX(s);}
+    inline Doub get_fE(VecDoub &s) {return 1. - get_fR(s) - mf_ModelParameters->fQ - mf_ModelParameters->fU;}
     Doub rate0(VecDoub &s){return mf_ModelParameters->k_media * s[0]; } // metabolism
   	Doub rate1(VecDoub &s){return get_fR(s) * get_tot_synth(s);} // R_synth
   	Doub rate2(VecDoub &s){return get_fE(s) * get_tot_synth(s);} // E_synth
-  	Doub rate3(VecDoub &s){return mf_ModelParameters->fQ * get_tot_synth(s);} // Q_synth
+  	Doub rate3(VecDoub &s){return get_fQ(s) * get_tot_synth(s);} // Q_synth
   	Doub rate4(VecDoub &s){return mf_ModelParameters->fU * get_tot_synth(s);} // U_synth
-  	Doub rate5(VecDoub &s){return mf_ModelParameters->fX * get_tot_synth(s);} // X_synth
+  	Doub rate5(VecDoub &s){return get_fX(s) * get_tot_synth(s);} // X_synth
     Doub rate6(VecDoub &s){return mf_ModelParameters->r_ri_rate * s[2];} // R gets inactivated
     Doub rate7(VecDoub &s){return mf_ModelParameters->ri_r_rate * s[6];} // RI gets activated back
     Doub rate8(VecDoub &s){return mf_ModelParameters->X_degrad_rate * s[5];}

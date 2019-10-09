@@ -38,13 +38,15 @@ int main(int argc, char *argv[])
     modelParameters->delta = sim_params.get_double_param("delta");
     modelParameters->fQ = sim_params.get_double_param("f_Q");
     modelParameters->fU = sim_params.get_double_param("f_U");
-    modelParameters->fX = sim_params.get_double_param("f_X");
+    modelParameters->fX_scale = sim_params.get_double_param("f_X_scale");
+    modelParameters->fX_e_exp = sim_params.get_double_param("f_X_e_exponent");
+    modelParameters->fX_active_rib_frac_exp = sim_params.get_double_param("f_X_active_rib_frac_exponent");
 
     // parsing X degradation rate
     modelParameters->X_degrad_rate = sim_params.get_double_param("X_degrad_rate");
 
     // check allocation sums to less 1
-    Doub sum_allocation = modelParameters->fQ + modelParameters->fU + modelParameters->fX;
+    Doub sum_allocation = modelParameters->fQ + modelParameters->fU;
     if (sum_allocation > 1) {
       cout << "allocation parameters are wrong (" << sum_allocation <<  ")" << endl;
       sim_params.display_params();
