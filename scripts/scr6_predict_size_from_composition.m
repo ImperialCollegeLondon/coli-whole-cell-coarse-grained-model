@@ -41,7 +41,10 @@ for sector=single_sectors
             out_dir = [output_folder '/' sector{1} '_' data_str{1} '_fX-' fX_str{1}];
             mkdir(out_dir);
             writetable(table(scale_factor),[out_dir '/scale_factor.csv']);
-            writetable(table(exponents),[out_dir '/exponents.csv']);
+            exponent = exponents(:,1); 
+            exponent_CI_95_low = exponents(:,2);
+            exponent_CI_95_high = exponents(:,3);
+            writetable(table(exponent, exponent_CI_95_low, exponent_CI_95_high),[out_dir '/exponents.csv']);
             eval(['real = ' data_str{1} '.cell_size;']);
             eval(['growth_rate_per_hr = ' data_str{1} '.growth_rate_per_hr;']);
             eval(['nutrient_type = ' data_str{1} '.nutrient_type;']);
@@ -92,7 +95,10 @@ for i_sector_1=1:length(single_sectors)
                 out_dir = [output_folder '/' sector_1{1} '_and_' sector_2{1} '_' data_str{1} '_fX-' fX_str{1}];
                 mkdir(out_dir);
                 writetable(table(scale_factor),[out_dir '/scale_factor.csv']);
-                writetable(table(exponents),[out_dir '/exponents.csv']);
+                exponent = exponents(:,1);
+                exponent_CI_95_low = exponents(:,2);
+                exponent_CI_95_high = exponents(:,3);
+                writetable(table(exponent, exponent_CI_95_low, exponent_CI_95_high),[out_dir '/exponents.csv']);
                 eval(['real = ' data_str{1} '.cell_size;']);
                 eval(['growth_rate_per_hr = ' data_str{1} '.growth_rate_per_hr;']);
                 eval(['nutrient_type = ' data_str{1} '.nutrient_type;']);
@@ -144,7 +150,10 @@ for i_sector_1=1:length(single_sectors)
                     out_dir = [output_folder '/' sector_1{1} '_and_' sector_2{1} '_and_' sector_3{1} '_' data_str{1} '_fX-' fX_str{1}];
                     mkdir(out_dir);
                     writetable(table(scale_factor),[out_dir '/scale_factor.csv']);
-                    writetable(table(exponents),[out_dir '/exponents.csv']);
+                    exponent = exponents(:,1);
+                    exponent_CI_95_low = exponents(:,2);
+                    exponent_CI_95_high = exponents(:,3);
+                    writetable(table(exponent, exponent_CI_95_low, exponent_CI_95_high),[out_dir '/exponents.csv']);
                     eval(['real = ' data_str{1} '.cell_size;']);
                     eval(['growth_rate_per_hr = ' data_str{1} '.growth_rate_per_hr;']);
                     eval(['nutrient_type = ' data_str{1} '.nutrient_type;']);

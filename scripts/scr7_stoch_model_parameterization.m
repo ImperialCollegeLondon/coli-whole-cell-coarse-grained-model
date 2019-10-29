@@ -23,14 +23,14 @@ params.X_div = constants.reference_Xdiv;
 params.destroy_X_after_div = 0;
 params.X_degrad_rate = 0;
 
-params.k_media = 3.58;
+params.k_media = constants.reference_k;
 params.f_U = 0;
 params.r_ri_rate = 0;
 
 params.random_seed = 0;
 params.partitioning_type = 'normal';
 params.num_lineages = 1;
-params.sim_duration = 10000;
+params.sim_duration = 200 * constants.stoch_sample_scale;
 params.update_period = 0.005;
 params.num_updates_per_output = 1;
 

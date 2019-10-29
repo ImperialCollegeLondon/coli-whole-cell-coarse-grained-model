@@ -36,7 +36,7 @@ plot(both_preds.model_fR(I_useless), both_preds.det_fR(I_useless), 'r+', 'Marker
 plot(both_preds.model_fR(I_cm), both_preds.det_fR(I_cm), 'b+', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
 plot([0 0.5],[0 0.5], 'k', 'LineWidth', lw);
 xlabel('ribosomal proteome fraction - low {\ita} steady-state approx.');
-ylabel('ribosomal proteome fraction - no approximation (\delta = 10)');
+ylabel('ribosomal proteome fraction - no approximation');
 
 %
 for i=1:2

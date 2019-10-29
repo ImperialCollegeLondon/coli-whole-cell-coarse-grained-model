@@ -14,20 +14,22 @@ params.ri_r_rate = constants.cm_koff;
 params.sigma = constants.sigma;
 params.delta = constants.reference_delta;
 params.a_sat = constants.K / params.delta; 
-params.f_X = constants.reference_fX;
-params.f_Q = constants.reference_fQ - params.f_X;
+params.f_Q = constants.reference_fQ;
+params.f_X_scale = constants.reference_fX_scale;
+params.f_X_e_exponent = constants.reference_fX_e_exponent;
+params.f_X_active_rib_frac_exponent = constants.reference_fX_active_rib_frac_exponent;
 params.X_div = constants.reference_Xdiv;
 params.destroy_X_after_div = 0;
 params.X_degrad_rate = 0;
 
-params.k_media = 3.58;
+params.k_media = constants.reference_k;
 params.f_U = 0;
 params.r_ri_rate = 0;
 
 params.random_seed = 0;
 params.partitioning_type = 'normal';
 params.num_lineages = 1;
-params.sim_duration = 50000;
+params.sim_duration = 5000 * constants.stoch_sample_scale;
 params.update_period = 0.005;
 params.num_updates_per_output = 1;
 

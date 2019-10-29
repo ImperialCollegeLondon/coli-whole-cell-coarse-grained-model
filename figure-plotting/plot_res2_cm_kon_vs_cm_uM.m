@@ -33,11 +33,11 @@ if ~exist(output_folder, 'dir')
 end
 
 %% style parameters
-lw = 2;
+lw = 1;
 mk_size = 10;
-fig_size = [0 0 800 400];
-ax_font_size = 15;
-ax_lw = 2;
+fig_size = [0 0 800 300];
+ax_font_size = 10;
+ax_lw = 1;
 
 %%
 subplot(1,2,1);
@@ -90,4 +90,19 @@ end
 set(gcf,'Color','w','Position',fig_size);
 
 saveas(gcf,[output_folder 'res2_cm_uM_vs_cm_kon.pdf']);
+close;
+
+
+growth_rates = linspace(0.3,1.9,20);
+i_colors = ceil(growth_rates/2*20);
+for i=1:length(growth_rates)
+    i_colors(i)
+    rectangle('Position',[growth_rates(i), 1, 0.1, 0.1], 'FaceColor', colors(i_colors(i),:), 'EdgeColor', 'None');
+    %plot(growth_rates(i), 1, 's', 'MarkerFaceColor', colors(i_colors(i),:), 'MarkerSize', 20, 'Color','None'); hold on;
+end
+ylim([1 1.01]); xlim([0.3 1.9]); 
+set(gca,'YTick',[], 'FontSize', ax_font_size);
+set(gcf,'Color', 'w', 'Position', [100 100 800 100]);
+xlabel('Growth rate without cm (hr^{-1})');
+saveas(gcf,[output_folder 'res2_cm_uM_vs_cm_kon_scalebar_media_quality.pdf']);
 close;

@@ -45,7 +45,7 @@ params.X_degrad_rate = 0;
 
 % first, nutrient modulation
 %ref_alpha = 1; % per hour, ~glucose
-k_media_vec = [0.8, 2, 3.6, 7, 12];
+k_media_vec = [0.8, 2, constants.reference_k, 7, 12];
 params.f_U = 0;
 params.r_ri_rate = 0;
 pars.nut_pars = cell(size(k_media_vec));
@@ -74,6 +74,7 @@ save([output_folder '/param-sets.mat'],'pars');
 end
 
 function simulate_all_conditions(output_folder)
+constants = give_constants();
 pars = load([output_folder '/param-sets.mat']);
 pars = pars.pars;
 path2bin = '..\model-code\stochastic-dynamics\cpp-simulator-cm-rates\bin\Debug\cpp-simulator-cm-rates.exe';
@@ -85,7 +86,7 @@ for i_nut=1:length(pars.nut_pars)
     this_pars.random_seed = 0;
     this_pars.partitioning_type = 'normal';
     this_pars.num_lineages = 1;
-    this_pars.sim_duration = 200000;
+    this_pars.sim_duration = 500 * constants.stoch_sample_scale;
     this_pars.update_period = 0.005;
     this_pars.num_updates_per_output = 100;
     sims.nut_sims{i_nut} = do_single_sim_cm_rates(this_pars, path2bin, path2output);
@@ -97,7 +98,7 @@ for i_cm=1:length(pars.cm_pars)
     this_pars.random_seed = 0;
     this_pars.partitioning_type = 'normal';
     this_pars.num_lineages = 1;
-    this_pars.sim_duration = 200000;
+    this_pars.sim_duration = 500 * constants.stoch_sample_scale;
     this_pars.update_period = 0.005;
     this_pars.num_updates_per_output = 100;
     sims.cm_sims{i_cm} = do_single_sim_cm_rates(this_pars, path2bin, path2output);
@@ -109,7 +110,7 @@ for i_useless=1:length(pars.useless_pars)
     this_pars.random_seed = 0;
     this_pars.partitioning_type = 'normal';
     this_pars.num_lineages = 1;
-    this_pars.sim_duration = 200000;
+    this_pars.sim_duration = 500 * constants.stoch_sample_scale;
     this_pars.update_period = 0.005;
     this_pars.num_updates_per_output = 100;
     sims.useless_sims{i_useless} = do_single_sim_cm_rates(this_pars, path2bin, path2output);

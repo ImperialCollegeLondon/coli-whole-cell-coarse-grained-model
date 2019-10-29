@@ -34,7 +34,7 @@ writetable(table(best_scaling_si_to_basan, best_scaling_taheri_to_basan), [outpu
 
 %%% assemble both datasets with normalized in a single table
 growth_rate_per_hr = [data_basan.growth_rate_per_hr; data_si.growth_rate_per_hr; data_taheri.growth_rate_per_hr];
-cell_size = [data_basan.estim_avg_cell_volume_um3; data_si.estim_vol_um3 .* best_scaling_si_to_basan; data_taheri.avg_cell_volume_um3 .* best_scaling_taheri_to_basan];
+cell_size = [data_basan.source_cell_volume_um3; data_si.source_cell_volume_um3 .* best_scaling_si_to_basan; data_taheri.avg_cell_volume_um3 .* best_scaling_taheri_to_basan];
 nutrient_type = [data_basan.nutrient_type; data_si.nutrient_type; data_taheri.nutrient_type];
 cm_type = [data_basan.cm_type; data_si.cm_type; data_taheri.cm_type];
 useless_type = [data_basan.useless_type; data_si.useless_type; data_taheri.useless_type];
@@ -49,7 +49,7 @@ end
 function C = cost_fun_good_scale(scaling, data_si, data_basan, data_taheri)
 
 data_si_basan_taheri_merged.growth_rate = [ data_basan.growth_rate_per_hr ; data_si.growth_rate_per_hr; data_taheri.growth_rate_per_hr ];
-data_si_basan_taheri_merged.size = [ data_basan.estim_avg_cell_volume_um3 ; scaling(1) .* data_si.estim_vol_um3 ; scaling(2) .* data_taheri.avg_cell_volume_um3 ];
+data_si_basan_taheri_merged.size = [ data_basan.source_cell_volume_um3 ; scaling(1) .* data_si.source_cell_volume_um3 ; scaling(2) .* data_taheri.avg_cell_volume_um3 ];
 [~,S] = polyfit(data_si_basan_taheri_merged.growth_rate,log(data_si_basan_taheri_merged.size),1);
 C = S.normr;
 

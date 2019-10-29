@@ -41,6 +41,7 @@ for i=1:size(ss_preds,1)
     cell_pars.fU = ss_preds.model_fU(i);
     traj = solve_amount(init_cell_state, cell_pars, env_pars, duration);
     growth_rate(i) = env_pars.k * traj.E(end) / traj.M_or_V(end);
+    %disp([num2str(ss_preds.model_growth_rate(i)) ' --- ' num2str(growth_rate(i))]);
     fR(i) = traj.R(end) / traj.total_prot(end);
 end
 
