@@ -29,7 +29,7 @@ init_cell_state.X = 0;
 
 k_ref = constants.reference_k;
 
-k_vec = linspace(0.5,20,100);
+k_vec = linspace(0.5,70,100);
 nut_size_vec = zeros(size(k_vec));
 nut_growth_rate_vec = zeros(size(k_vec));
 env_pars.cm_kon = 0;
@@ -77,7 +77,7 @@ birth_size = cm_size_vec';
 writetable(table(growth_rate, birth_size), [output_folder 'cm_mod.csv']);
 
 
-fU_vec = linspace(0,0.25,100);
+fU_vec = linspace(0,0.4,100);
 fU_size_vec = zeros(size(fU_vec));
 fU_growth_rate_vec = zeros(size(fU_vec));
 env_pars.k = k_ref;

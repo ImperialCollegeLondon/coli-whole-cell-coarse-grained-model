@@ -28,7 +28,7 @@ plot(both_preds.model_growth_rate(I_useless), both_preds.det_growth_rate(I_usele
 plot(both_preds.model_growth_rate(I_cm), both_preds.det_growth_rate(I_cm), 'b+', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;
 plot([0 2.5],[0 2.5], 'k', 'LineWidth', lw);
 xlabel('growth rate - low {\ita} steady-state approx.');
-ylabel('growth rate - no approximation (\delta = 10)');
+ylabel('growth rate - no approximation');
 
 subplot(1,2,2);
 plot(both_preds.model_fR(I_nut), both_preds.det_fR(I_nut), 'g+', 'MarkerSize', mk_size, 'LineWidth', lw); hold on;

@@ -2,6 +2,7 @@
 addpath('../model-code/steady-state_coreg-high-delta');
 
 size_exponents = readtable('../results-data/res6_size-predictions-from-comp/fE_and_active_rib_frac_data_fX-false/exponents.csv');
+size_exponents = size_exponents(:,1);
 size_scale = readtable('../results-data/res6_size-predictions-from-comp/fE_and_active_rib_frac_data_fX-false/scale_factor.csv');
 
 output_folder = '../results-data/res11_ss-high-delta-model-across-conds/';
@@ -24,7 +25,7 @@ for i_nut=1:length(nut_alpha_vec)
     % optimal parameterization for this nutrient growth rate
     env_pars.k = fit_k_from_alpha_coreg_high_delta(cell_pars,env_pars,nut_alpha_vec(i_nut));
     [ss,cell_pars] = give_steady_state_coreg_high_delta(cell_pars,env_pars);
-    nut_size_vec(i_nut) = size_scale.scale_factor * ss.fE^(size_exponents.exponents(1)) * (ss.active_rib_frac)^(size_exponents.exponents(2));
+    nut_size_vec(i_nut) = size_scale.scale_factor * ss.fE^(size_exponents.exponent(1)) * (ss.active_rib_frac)^(size_exponents.exponent(2));
 end
 growth_rate_per_hr = nut_alpha_vec';
 cell_size = nut_size_vec';
@@ -40,7 +41,7 @@ for i_alpha_ref=1:length(alpha_cm_refs)
     for i_cm=1:length(cm_alpha_vec)
         env_pars.cm_kon = fit_cm_kon_from_alpha_coreg_high_delta(cell_pars,env_pars,cm_alpha_vec(i_cm));
         [ss,cell_pars] = give_steady_state_coreg_high_delta(cell_pars,env_pars);
-        cm_size_vec(i_cm) = size_scale.scale_factor * ss.fE^(size_exponents.exponents(1)) * (ss.active_rib_frac)^(size_exponents.exponents(2));
+        cm_size_vec(i_cm) = size_scale.scale_factor * ss.fE^(size_exponents.exponent(1)) * (ss.active_rib_frac)^(size_exponents.exponent(2));
     end
     growth_rate_per_hr = cm_alpha_vec';
     cell_size = cm_size_vec';
@@ -58,7 +59,7 @@ for i_alpha_ref=1:length(alpha_useless_refs)
     for i_useless=1:length(useless_alpha_vec)
         cell_pars.fU = fit_fU_from_alpha_coreg_high_delta(cell_pars,env_pars,useless_alpha_vec(i_useless));
         [ss,cell_pars] = give_steady_state_coreg_high_delta(cell_pars,env_pars);
-        useless_size_vec(i_useless) = size_scale.scale_factor * ss.fE^(size_exponents.exponents(1)) * (ss.active_rib_frac)^(size_exponents.exponents(2));
+        useless_size_vec(i_useless) = size_scale.scale_factor * ss.fE^(size_exponents.exponent(1)) * (ss.active_rib_frac)^(size_exponents.exponent(2));
     end
     growth_rate_per_hr = useless_alpha_vec';
     cell_size = useless_size_vec';

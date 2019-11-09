@@ -19,6 +19,7 @@ I_taheri_nut_only = taheri_data.cm_type==0 & taheri_data.useless_type==0;
 
 %%
 lw = 1; mk_size = 10;
+ax_font_size = 10;
 colors = jet(20);
 
 %%
@@ -37,14 +38,14 @@ plot(taheri_data.growth_rate_per_hr(I_taheri_nut_only), taheri_data.avg_cell_vol
 %% styling
 for i=1:2
     subplot(1,2,i);
-    set(gca,'FontSize',15,'LineWidth',1);
+    set(gca,'FontSize',ax_font_size,'LineWidth',1);
     xlabel('Growth rate (hr^{-1})');
     ylabel('Average cell volume');
     legend({'Basan et al. 2015', 'Si et al. 2017', 'Taheri-Araghi et al. 2015'},'Location','NorthWest','FontSize', 8);
 end
 subplot(1,2,1); ylim([0 10]); title('Original data');
 subplot(1,2,2); ylim([0 14]); title('After scale normalization');
-set(gcf,'Position',[0 0 800 300].*1.5,'Color','w');
+set(gcf,'Position',[0 0 800 300],'Color','w');
 
 
 %% write figure

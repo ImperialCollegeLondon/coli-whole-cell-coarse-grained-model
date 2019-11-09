@@ -26,7 +26,7 @@ constants.reference_e = 0.2753;
 
 constants.reference_fX = constants.reference_fX_scale * constants.reference_e^constants.reference_fX_e_exponent;
 
-constants.stoch_sample_scale = 20; % to tune how long we simulate the stochastic simulations. The larger gives better statistics but will take long
+constants.stoch_sample_scale = 6; % to tune how long we simulate the stochastic simulations. The larger gives better statistics but will take long
 
 end
 

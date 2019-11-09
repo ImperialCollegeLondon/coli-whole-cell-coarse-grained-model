@@ -45,7 +45,8 @@ params.X_degrad_rate = 0;
 
 % first, nutrient modulation
 %ref_alpha = 1; % per hour, ~glucose
-k_media_vec = [0.8, 2, constants.reference_k, 7, 12];
+%k_media_vec = [0.8, 2, constants.reference_k, 7, 12];
+k_media_vec = [0.8, 2, constants.reference_k, 7, 12, 20, 45];
 params.f_U = 0;
 params.r_ri_rate = 0;
 pars.nut_pars = cell(size(k_media_vec));
@@ -63,7 +64,7 @@ for i_cm=1:length(cm_kon_vec)
 end
 % finally, useless modulation
 params.r_ri_rate = 0;
-fU_vec = [0.08 0.15 0.2];
+fU_vec = [0.2 0.35];
 pars.useless_pars = cell(size(fU_vec));
 for i_useless=1:length(fU_vec)
     params.f_U = fU_vec(i_useless);
@@ -126,6 +127,7 @@ sims = load([output_folder '/sims-data.mat']);
 sims = sims.sims;
 stats.nut_stats = cell(size(sims.nut_sims));
 stats.cm_stats = cell(size(sims.cm_sims));
+stats.useless_stats = cell(size(sims.useless_sims));
 % nut
 for i_nut=1:length(sims.nut_sims)
     lineages = sims.nut_sims{i_nut}.lineage_data(101:end,:); % cut first 100 cell cycles
