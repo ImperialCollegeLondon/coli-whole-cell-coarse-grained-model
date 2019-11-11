@@ -1,1 +1,1 @@
-V_{div} \propto fRA^{0.85} \times (fRA/fR)^{-0.38}
+V_{div} \propto r_a^{0.85[0.47,1.23]} \times \frac{r_a}{r}^{-0.38[-0.67,-0.09]}

@@ -1,1 +1,1 @@
-V_{div} \propto fE^{-0.83} \times fRA^{0.7}
+V_{div} \propto e^{-0.83[-0.93,-0.74]} \times r_a^{0.7[0.6,0.8]}

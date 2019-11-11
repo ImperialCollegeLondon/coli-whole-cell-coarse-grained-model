@@ -45,7 +45,7 @@ for i=1:2
     xlabel('log measured size');
     ylabel('log predicted size');
     ylim([-0.1 3]); xlim([-0.1 3]);
-    title(formulas{i},'FontSize',15);
+    title(['$' formulas{i} '$'],'FontSize',17, 'FontWeight', 'bold', 'Interpreter', 'latex');
     axis square;
     set(gca,'XTick',0:0.5:2.5,'YTick',0:0.5:2.5);
     set(gcf,'Position',[0 0 400 400],'Color','w');

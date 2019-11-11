@@ -24,7 +24,11 @@ ylim([0 1000]);
 
 %% plot X
 subplot(3,1,2);
-plot(traj.t, traj.X, 'r', 'LineWidth', lw);
+plot(traj.t, traj.X, 'r', 'LineWidth', lw); hold on;
+plot([0,10],[70, 70], '--k', 'LineWidth', lw); hold on;
+plot([0,10],[35, 35], '--k', 'LineWidth', lw); hold on;
+text(5,85, '$X_{div}$', 'Interpreter', 'latex', 'FontSize', 12);
+text(5.1,22, '$X_{div}/2$', 'Interpreter', 'latex', 'FontSize', 12);
 ylabel('X amount');
 ylim([0 130]);
 

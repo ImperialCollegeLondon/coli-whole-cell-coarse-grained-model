@@ -14,7 +14,7 @@ ax_font_size = 12;
 leg_font_size = 12;
 leg_lw = 1.5;
 ax_lw = 1.5;
-fig_size = [0 0 600 300];
+fig_size = [0 0 500 300];
 
 
 %%

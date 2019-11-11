@@ -1,1 +1,1 @@
-V_{div} \propto fR^{0.56} \times fRA^{0}
+V_{div} \propto r^{0.56[0.05,1.07]} \times r_a^{0[0,0]}

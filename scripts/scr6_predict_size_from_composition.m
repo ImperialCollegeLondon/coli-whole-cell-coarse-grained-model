@@ -52,15 +52,18 @@ for sector=single_sectors
             eval(['useless_type = ' data_str{1} '.useless_type;']);
             eval(['source = ' data_str{1} '.source;']);
             writetable(table(growth_rate_per_hr,real,prediction,nutrient_type,cm_type,useless_type,source),[out_dir '/predictions.csv']);
+            expo = round(100*exponent)/100;
+            expo_low = round(100*exponent_CI_95_low)/100;
+            expo_high = round(100*exponent_CI_95_high)/100;
             if strcmp(fX_str,'true')
-                formula_str = ['f_X \\propto ' sector{1} '^{' num2str(round(100*exponents(1))/100) '}'];
+                formula_str = ['f_X \\propto ' sector{1} '^{' num2str(expo) ' [' num2str(expo_low) ',' num2str(expo_high) ']}'];
             else
-                formula_str = ['V_{div} \\propto ' sector{1} '^{' num2str(round(100*exponents(1))/100) '}'];
+                formula_str = ['V_{div} \\propto ' sector{1} '^{' num2str(expo) ' [' num2str(expo_low) ',' num2str(expo_high) ']}'];
             end
-            formula_str = strrep(formula_str,'ra_over_r','(r_a/r)');
-            formula_str = strrep(formula_str,'e_over_ra','(e/r_a)');
-            formula_str = strrep(formula_str,'e_over_r','(e/r)');
-            formula_str = strrep(formula_str,'active_rib_frac','(fRA/fR)');
+            formula_str = strrep(formula_str,'fE','e');
+            formula_str = strrep(formula_str,'fRA','r_a');
+            formula_str = strrep(formula_str,'fR','r');
+            formula_str = strrep(formula_str,'active_rib_frac','\\frac{r_a}{r}');
             fileID = fopen([out_dir '/formula.txt'],'w');
             fprintf(fileID,formula_str);
             fclose(fileID);
@@ -105,16 +108,19 @@ for i_sector_1=1:length(single_sectors)
                 eval(['cm_type = ' data_str{1} '.cm_type;']);
                 eval(['useless_type = ' data_str{1} '.useless_type;']);
                 eval(['source = ' data_str{1} '.source;']);
+                expo = round(100*exponent)/100;
+                expo_low = round(100*exponent_CI_95_low)/100;
+                expo_high = round(100*exponent_CI_95_high)/100;
                 writetable(table(growth_rate_per_hr,real,prediction,nutrient_type,cm_type,useless_type,source),[out_dir '/predictions.csv']);
                 if strcmp(fX_str,'true')
-                    formula_str = ['f_X \\propto ' sector_1{1} '^{' num2str(round(100*exponents(1))/100) '} \\times ' sector_2{1} '^{' num2str(round(100*exponents(2))/100) '}'];
+                    formula_str = ['f_X \\propto ' sector_1{1} '^{' num2str(expo(1)) '[' num2str(expo_low(1)) ',' num2str(expo_high(1)) ']} \\times ' sector_2{1} '^{' num2str(expo(2)) '[' num2str(expo_low(2)) ',' num2str(expo_high(2)) ']}'];
                 else
-                    formula_str = ['V_{div} \\propto ' sector_1{1} '^{' num2str(round(100*exponents(1))/100) '} \\times ' sector_2{1} '^{' num2str(round(100*exponents(2))/100) '}'];
+                    formula_str = ['V_{div} \\propto ' sector_1{1} '^{' num2str(expo(1)) '[' num2str(expo_low(1)) ',' num2str(expo_high(1)) ']} \\times ' sector_2{1} '^{' num2str(expo(2)) '[' num2str(expo_low(2)) ',' num2str(expo_high(2)) ']}'];
                 end
-                formula_str = strrep(formula_str,'ra_over_r','(r_a/r)');
-                formula_str = strrep(formula_str,'e_over_ra','(e/r_a)');
-                formula_str = strrep(formula_str,'e_over_r','(e/r)');
-                formula_str = strrep(formula_str,'active_rib_frac','(fRA/fR)');
+                formula_str = strrep(formula_str,'fE','e');
+                formula_str = strrep(formula_str,'fRA','r_a');
+                formula_str = strrep(formula_str,'fR','r');
+                formula_str = strrep(formula_str,'active_rib_frac','\\frac{r_a}{r}');
                 fileID = fopen([out_dir '/formula.txt'],'w');
                 fprintf(fileID,formula_str);
                 fclose(fileID);
@@ -166,10 +172,6 @@ for i_sector_1=1:length(single_sectors)
                     else
                         formula_str = ['V_{div} \\propto ' sector_1{1} '^{' num2str(round(100*exponents(1))/100) '} \\times ' sector_2{1} '^{' num2str(round(100*exponents(2))/100) '}' '\\times ' sector_3{1} '^{' num2str(round(100*exponents(3))/100) '}'];
                     end
-                    formula_str = strrep(formula_str,'ra_over_r','(r_a/r)');
-                    formula_str = strrep(formula_str,'e_over_ra','(e/r_a)');
-                    formula_str = strrep(formula_str,'e_over_r','(e/r)');
-                    formula_str = strrep(formula_str,'active_rib_frac','(fRA/fR)');
                     fileID = fopen([out_dir '/formula.txt'],'w');
                     fprintf(fileID,formula_str);
                     fclose(fileID);

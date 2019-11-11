@@ -1,1 +1,1 @@
-V_{div} \propto fE^{-1.34} \times (fRA/fR)^{0}
+V_{div} \propto e^{-1.34[-1.6,-1.08]} \times \frac{r_a}{r}^{0[0,0]}

@@ -69,7 +69,7 @@ ylim([0 0.5]); xlim([0 2]);
 ylabel('useless proteome fraction'); xlabel('growth rate (hr^{-1})');
 figure(3);
 ylim([0.4 1.2]); xlim([0 2]);
-ylabel('ribosome elongation efficiency'); xlabel('growth rate (hr^{-1})');
+ylabel('ribosome efficiency'); xlabel('growth rate (hr^{-1})');
 figure(4);
 ylim([0 1.2]); xlim([0 2]);
 ylabel('active ribosome fraction'); xlabel('growth rate (hr^{-1})');

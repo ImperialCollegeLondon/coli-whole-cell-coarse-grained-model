@@ -21,7 +21,7 @@ mk_size = 4;
 n_rows = 2;
 n_cols = 3;
 figsize = [0 0 800 600];
-titlesize = 6.5;
+titlesize = 8;
 labelsize = 7;
 axsize = 7;
 axlw = 0.8;
@@ -77,7 +77,7 @@ for cond=conditions
         xlabel('log measured size', 'FontSize', labelsize);
         ylabel('log predicted size', 'FontSize', labelsize);
         ylim([-0.1 3]); xlim([-0.1 3]);
-        title([pred_formula ' (R2 = ' num2str(pred{1,'R2'}) ')'],'FontSize',titlesize);
+        title(['$' pred_formula ' (R^2 = ' num2str(round(100*pred{1,'R2'})/100) ')$'],'FontSize',titlesize, 'Interpreter', 'latex');
         axis square;
         set(gca,'XTick',0:0.5:3,'YTick',0:0.5:3);
         

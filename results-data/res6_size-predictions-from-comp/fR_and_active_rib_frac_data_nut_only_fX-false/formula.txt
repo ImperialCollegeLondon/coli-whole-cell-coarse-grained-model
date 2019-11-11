@@ -1,1 +1,1 @@
-V_{div} \propto fR^{1.55} \times (fRA/fR)^{0}
+V_{div} \propto r^{1.55[1.27,1.82]} \times \frac{r_a}{r}^{0[0,0]}

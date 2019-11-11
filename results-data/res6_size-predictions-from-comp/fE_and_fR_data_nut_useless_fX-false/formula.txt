@@ -1,1 +1,1 @@
-V_{div} \propto fE^{-1} \times fR^{0.47}
+V_{div} \propto e^{-1[-1.13,-0.88]} \times r^{0.47[0.31,0.62]}

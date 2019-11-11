@@ -1,1 +1,1 @@
-V_{div} \propto fR^{0.38} \times fRA^{0.47}
+V_{div} \propto r^{0.38[0.09,0.67]} \times r_a^{0.47[0.25,0.69]}

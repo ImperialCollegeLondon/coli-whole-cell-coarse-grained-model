@@ -1,1 +1,1 @@
-V_{div} \propto fRA^{0.5}
+V_{div} \propto r_a^{0.5 [0.26,0.73]}

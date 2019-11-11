@@ -1,1 +1,1 @@
-V_{div} \propto fE^{-1.34}
+V_{div} \propto e^{-1.34 [-1.6,-1.08]}

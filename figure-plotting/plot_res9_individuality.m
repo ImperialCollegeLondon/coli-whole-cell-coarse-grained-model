@@ -76,16 +76,16 @@ for i_useless=1:length(useless_mod)
 end
 
 for i=1:6
-    h4 = plot(mean_growth_rates(i).*(1 + CV_growth_rates(1) .* [-1, 1]), mean_birth_size(i) + slopes(i) .* mean_growth_rates(i) .* CV_growth_rates(i) .* [-1, 1], 'Color', 0.5 .* [1 1 1], 'LineWidth', lw); hold on;
+    h4 = plot(mean_growth_rates(i).*(1 + CV_growth_rates(1) .* [-1, 1]), mean_birth_size(i) + slopes(i) .* mean_growth_rates(i) .* CV_growth_rates(i) .* [-1, 1], 'Color', 0.5 .* [1 1 1], 'LineWidth', lw*1.25); hold on;
 end
 
 % styling
 xlim([0,2.8]);  
 xlabel('Growth rate (hr^{-1})');
 ylabel('Birth size');
-legend([h1, h2, h3, h4], {'nutrient modulation', 'chloramphenicol modulation', 'useless expression modulation', 'Taheri-Araghi et al. (2015) nutrient modulation'}, 'FontSize', 10, 'LineWidth', 1.1, 'Location', 'NorthWest');
-set(gca,'FontSize',17,'LineWidth',1.5);
-
+legend([h1, h2, h3, h4], {'nutrient modulation', 'chloramphenicol modulation', 'useless expression modulation', 'Taheri-Araghi et al. (2015) nutrient modulation'}, 'FontSize', 9, 'LineWidth', 1.1, 'Location', 'NorthWest');
+set(gca,'FontSize',12,'LineWidth',1.5);
+set(gcf,'Color','w','Position', [0 0 500 350]);
 %%
 saveas(gcf,[output_folder 'res9_individuality.pdf']);
 close;
