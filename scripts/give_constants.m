@@ -18,9 +18,9 @@ constants.reference_k = 3.67; % chosen such that growth rate ~1 per hour
 
 constants.reference_fX_scale = 0.25; % chosen manually together with Xdiv so that for intermediate nutrient (growth rate ~1 per hr), noise in size and growth rate is realistic
 
-constants.reference_fX_e_exponent = 1;
+constants.reference_fX_e_exponent = 1.04;
 
-constants.reference_fX_active_rib_frac_exponent = -2/3;
+constants.reference_fX_active_rib_frac_exponent = -0.6;
 
 constants.reference_e = 0.2753;
 
