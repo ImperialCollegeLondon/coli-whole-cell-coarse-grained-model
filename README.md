@@ -1,6 +1,6 @@
 # coli-whole-cell-coarse-grained-model
 
-Code for paper in preparation.
+Code for paper currently in revision.
 
 The folder `model-code` contains all the model analytics and simulation functions, mostly in `matlab`, except the simulation code for the stochastic model that is written in `c++`.
 For the `c++` code, the source is given, together with a binary compiled on mac and a basic `shell` compilation script to adapt to one's needs.
