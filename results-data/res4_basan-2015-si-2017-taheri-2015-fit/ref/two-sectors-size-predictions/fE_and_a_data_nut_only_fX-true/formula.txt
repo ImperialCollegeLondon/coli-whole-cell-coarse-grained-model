@@ -1,1 +1,0 @@
-f_X \propto fE^{0.62} \times a^{-1.14}

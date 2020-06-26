@@ -1,1 +1,0 @@
-V_{div} \propto e^{-121.76} \times fE^{121.75}

@@ -1,1 +1,0 @@
-V_{div} \propto r^{0.41} \times (r_a/r)^{0}

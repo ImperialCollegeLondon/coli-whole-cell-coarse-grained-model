@@ -1,1 +1,0 @@
-f_X \propto r^{80.24} \times fR^{-77.78}

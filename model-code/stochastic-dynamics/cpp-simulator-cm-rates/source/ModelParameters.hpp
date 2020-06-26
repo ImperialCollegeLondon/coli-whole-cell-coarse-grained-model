@@ -26,11 +26,12 @@ struct ModelParameters
     // for synthesis
     Doub sigma;
     Doub a_sat;
-    Doub fR;
-    Doub fE;
+    Doub delta;
     Doub fQ;
     Doub fU;
-    Doub fX;
+    Doub fX_scale;
+    Doub fX_e_exp;
+    Doub fX_active_rib_frac_exp;
 
     // media
     Doub k_media;

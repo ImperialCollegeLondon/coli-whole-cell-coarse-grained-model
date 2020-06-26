@@ -1,1 +1,0 @@
-f_X \propto r^{0.07} \times fE^{0.63}

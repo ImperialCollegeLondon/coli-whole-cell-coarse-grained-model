@@ -1,1 +1,0 @@
-V_{div} \propto fQ^{20.23}

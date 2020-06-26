@@ -1,0 +1,1 @@
+V_{div} \propto r^{0.56[0.05,1.07]} \times \frac{r_a}{r}^{0[0,0]}

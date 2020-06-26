@@ -1,1 +1,0 @@
-f_X \propto fR^{2.46} \times fQ^{-80.24}

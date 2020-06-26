@@ -1,1 +1,0 @@
-f_X \propto e^{21.19} \times fE^{-20.56}

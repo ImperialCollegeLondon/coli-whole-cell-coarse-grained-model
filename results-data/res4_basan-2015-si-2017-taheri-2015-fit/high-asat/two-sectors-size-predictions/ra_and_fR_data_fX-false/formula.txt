@@ -1,1 +1,0 @@
-V_{div} \propto ra^{0.63} \times fR^{0.14}

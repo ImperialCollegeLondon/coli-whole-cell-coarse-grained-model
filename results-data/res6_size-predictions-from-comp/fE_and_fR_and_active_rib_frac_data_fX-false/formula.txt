@@ -1,0 +1,1 @@
+V_{div} \propto fE^{-0.96} \times fR^{0.41}\times active_rib_frac^{0.72}

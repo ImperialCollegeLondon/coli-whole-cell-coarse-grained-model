@@ -1,1 +1,0 @@
-V_{div} \propto ra^{-2.46} \times fQ^{78.78}

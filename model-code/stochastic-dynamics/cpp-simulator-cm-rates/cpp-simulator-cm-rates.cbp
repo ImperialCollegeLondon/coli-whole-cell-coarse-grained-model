@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="cpp-simulator-cm-rates" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/cpp-simulator-cm-rates" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/cpp-simulator-cm-rates" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="source/CellState.cpp" />
+		<Unit filename="source/CellState.hpp" />
+		<Unit filename="source/ModelParameters.cpp" />
+		<Unit filename="source/ModelParameters.hpp" />
+		<Unit filename="source/StochSimulator.cpp" />
+		<Unit filename="source/StochSimulator.hpp" />
+		<Unit filename="source/libs/common.cpp" />
+		<Unit filename="source/libs/common.h" />
+		<Unit filename="source/libs/ludcmp.cpp" />
+		<Unit filename="source/libs/ludcmp.h" />
+		<Unit filename="source/libs/nr3.h" />
+		<Unit filename="source/libs/odeint.h" />
+		<Unit filename="source/libs/ran.h" />
+		<Unit filename="source/libs/sort.h" />
+		<Unit filename="source/libs/sparse.cpp" />
+		<Unit filename="source/libs/sparse.h" />
+		<Unit filename="source/libs/stepper.h" />
+		<Unit filename="source/libs/stepperdopr5.h" />
+		<Unit filename="source/libs/stepperdopr853.cpp" />
+		<Unit filename="source/libs/stepperdopr853.h" />
+		<Unit filename="source/libs/steppersie.h" />
+		<Unit filename="source/main.cpp" />
+		<Unit filename="source/partitioningfunctions.hpp" />
+		<Unit filename="source/simparams.cpp" />
+		<Unit filename="source/simparams.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

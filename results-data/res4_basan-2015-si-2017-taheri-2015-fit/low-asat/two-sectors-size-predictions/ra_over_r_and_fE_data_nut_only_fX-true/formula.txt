@@ -1,1 +1,0 @@
-f_X \propto (r_a/r)^{0} \times fE^{1.35}

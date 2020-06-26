@@ -1,1 +1,0 @@
-f_X \propto fE^{0.63} \times fQ^{-21.19}

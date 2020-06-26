@@ -1,1 +1,0 @@
-f_X \propto fQ^{-23.36} \times a^{1.39}

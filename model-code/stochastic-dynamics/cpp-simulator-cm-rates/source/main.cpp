@@ -35,28 +35,22 @@ int main(int argc, char *argv[])
     // parsing synthesis parameters
     modelParameters->sigma = sim_params.get_double_param("sigma");
     modelParameters->a_sat = sim_params.get_double_param("a_sat");
-    modelParameters->fR = sim_params.get_double_param("f_R");
-    modelParameters->fE = sim_params.get_double_param("f_E");
+    modelParameters->delta = sim_params.get_double_param("delta");
     modelParameters->fQ = sim_params.get_double_param("f_Q");
     modelParameters->fU = sim_params.get_double_param("f_U");
-    modelParameters->fX = sim_params.get_double_param("f_X");
+    modelParameters->fX_scale = sim_params.get_double_param("f_X_scale");
+    modelParameters->fX_e_exp = sim_params.get_double_param("f_X_e_exponent");
+    modelParameters->fX_active_rib_frac_exp = sim_params.get_double_param("f_X_active_rib_frac_exponent");
 
     // parsing X degradation rate
     modelParameters->X_degrad_rate = sim_params.get_double_param("X_degrad_rate");
 
-    // check allocation sums to 1
-    Doub sum_allocation = modelParameters->fR + modelParameters->fE + modelParameters->fQ + modelParameters->fU + modelParameters->fX;
-    Doub error_allocation = fabs(1.0 - sum_allocation);
-    if (error_allocation > 0.00005) { // more than rounding error?
-      cout << "allocation parameters are wrong (" << error_allocation <<  ")" << endl;
+    // check allocation sums to less 1
+    Doub sum_allocation = modelParameters->fQ + modelParameters->fU;
+    if (sum_allocation > 1) {
+      cout << "allocation parameters are wrong (" << sum_allocation <<  ")" << endl;
       sim_params.display_params();
       exit(1);
-    }
-    else { // correct the small rounding error
-      cout << "error_allocation = " << error_allocation << endl;
-      modelParameters->fQ = 1 - (modelParameters->fR + modelParameters->fE + modelParameters->fU + modelParameters->fX);
-      sum_allocation = modelParameters->fR + modelParameters->fE + modelParameters->fQ + modelParameters->fU + modelParameters->fX;
-      // if (sum_allocation != 1) { cout << "WTF ? sum is : " << sum_allocation << endl; exit(1); }
     }
 
     // parsing division parameters
@@ -68,6 +62,7 @@ int main(int argc, char *argv[])
     Doub update_period = sim_params.get_double_param("update_period");
     Int num_updates_per_output = sim_params.get_double_param("num_updates_per_output");
     Int num_timepoints =(Int)(sim_duration / update_period /(Doub) num_updates_per_output ) + 1;
+    cout << "computed timepoints number = " << num_timepoints << endl;
     string out_folder = sim_params.get_string_param("out_folder");
     sim_params.display_params();
     sim_params.write_params();
@@ -100,7 +95,8 @@ int main(int argc, char *argv[])
         // construction of a cell(look constructor for init state)
         CellState *cell = new CellState(modelParameters);
         cell->set_P_R_Level(100);
-        cell->set_P_E_Level(10);
+        cell->set_P_E_Level(100);
+        cell->set_A_Level(10);
 
         // timers(all in absolute time)
         Doub t_birth = 0;
@@ -109,9 +105,9 @@ int main(int argc, char *argv[])
         num_timepoints_done = 0;
         Int num_updates_since_last_output = 0;
 
-        while(t < sim_duration)
+        while (t < sim_duration)
         {
-            if(verbose) cout << endl << "__ t = " << t << ", t_birth = " << t_birth << " __" << endl;
+            if(verbose) cout << endl << "__ t = " << t << ", t_birth = " << t_birth << ", X = " << cell->get_P_X_Level() << " __" << endl;
 
             // if division should occur
             if(cell->get_P_X_Level() >= modelParameters->X_div)
@@ -143,21 +139,28 @@ int main(int argc, char *argv[])
             }
 
             // if output needed, do output
-            if((num_updates_since_last_output == num_updates_per_output) ||(t == 0)  )
+            if((num_updates_since_last_output == num_updates_per_output) || (t == 0))
             {
-                if(num_timepoints_done == num_timepoints) { cout << "error output table" << endl; exit(5); }
-                lineage_traj_R_data[num_timepoints_done][c] = cell->get_P_R_Level();
-                lineage_traj_E_data[num_timepoints_done][c] = cell->get_P_E_Level();
-                lineage_traj_Q_data[num_timepoints_done][c] = cell->get_P_Q_Level();
-                lineage_traj_U_data[num_timepoints_done][c] = cell->get_P_U_Level();
-                lineage_traj_X_data[num_timepoints_done][c] = cell->get_P_X_Level();
-                lineage_traj_A_data[num_timepoints_done][c] = cell->get_A_Level();
-                lineage_traj_RI_data[num_timepoints_done][c] = cell->get_P_RI_Level();
-                lineage_traj_size_data[num_timepoints_done][c] = cell->get_size();
-                lineage_traj_time_data[num_timepoints_done][c] = t;
-                num_timepoints_done++;
-                num_updates_since_last_output = 0;
-                if(verbose) cout << "outputs done = " << num_timepoints_done << endl;
+                if(num_timepoints_done == num_timepoints) {
+                    cout << "error output table: too many timepoints done ? (" << num_timepoints_done;
+                    cout << " when t = " << t << " / " << sim_duration << ")" << endl;
+                    //cout << (bool) (t < sim_duration) << endl;
+                    //exit(5);
+                }
+                else {
+                    lineage_traj_R_data[num_timepoints_done][c] = cell->get_P_R_Level();
+                    lineage_traj_E_data[num_timepoints_done][c] = cell->get_P_E_Level();
+                    lineage_traj_Q_data[num_timepoints_done][c] = cell->get_P_Q_Level();
+                    lineage_traj_U_data[num_timepoints_done][c] = cell->get_P_U_Level();
+                    lineage_traj_X_data[num_timepoints_done][c] = cell->get_P_X_Level();
+                    lineage_traj_A_data[num_timepoints_done][c] = cell->get_A_Level();
+                    lineage_traj_RI_data[num_timepoints_done][c] = cell->get_P_RI_Level();
+                    lineage_traj_size_data[num_timepoints_done][c] = cell->get_size();
+                    lineage_traj_time_data[num_timepoints_done][c] = t;
+                    num_timepoints_done++;
+                    num_updates_since_last_output = 0;
+                    if(verbose) cout << "outputs done = " << num_timepoints_done << endl;
+                }
             }
 
             // simulate until next update

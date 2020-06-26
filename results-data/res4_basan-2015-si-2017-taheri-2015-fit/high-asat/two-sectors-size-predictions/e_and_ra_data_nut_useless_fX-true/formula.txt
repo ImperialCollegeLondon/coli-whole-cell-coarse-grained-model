@@ -1,1 +1,0 @@
-f_X \propto e^{0.97} \times ra^{-0.34}

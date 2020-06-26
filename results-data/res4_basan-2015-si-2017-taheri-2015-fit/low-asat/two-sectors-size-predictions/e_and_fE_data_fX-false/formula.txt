@@ -1,1 +1,0 @@
-V_{div} \propto e^{-84.8} \times fE^{84.1}

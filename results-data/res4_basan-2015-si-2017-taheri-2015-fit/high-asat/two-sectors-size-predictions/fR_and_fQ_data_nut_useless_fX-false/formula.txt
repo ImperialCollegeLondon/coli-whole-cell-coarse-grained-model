@@ -1,1 +1,0 @@
-V_{div} \propto fR^{-2.87} \times fQ^{46.04}

@@ -1,1 +1,0 @@
-V_{div} \propto (r_a/r)^{0.6} \times fR^{1.36}

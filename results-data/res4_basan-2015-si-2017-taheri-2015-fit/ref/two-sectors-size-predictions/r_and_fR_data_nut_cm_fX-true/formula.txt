@@ -1,1 +1,0 @@
-f_X \propto r^{18.92} \times fR^{-19.69}

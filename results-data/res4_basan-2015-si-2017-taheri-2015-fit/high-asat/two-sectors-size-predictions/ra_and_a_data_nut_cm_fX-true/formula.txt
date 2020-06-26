@@ -1,1 +1,0 @@
-f_X \propto ra^{14.44} \times a^{-18.38}

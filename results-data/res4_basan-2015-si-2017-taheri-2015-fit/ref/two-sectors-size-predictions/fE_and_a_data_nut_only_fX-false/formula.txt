@@ -1,1 +1,0 @@
-V_{div} \propto fE^{-0.63} \times a^{1.18}

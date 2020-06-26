@@ -16,7 +16,7 @@ else
 end
 
 % do the regression
-[reg_factors, ~, ~, ~, reg_stats] = regress(to_predict, predictors);
+[reg_factors, reg_factors_CI_95, ~, ~, reg_stats] = regress(to_predict, predictors);
 
 % compute predictions from the regression
 predictions = zeros(size(to_predict));
@@ -29,7 +29,7 @@ end
 % output
 R2 = reg_stats(1);
 scale_factor = exp(reg_factors(1));
-exponents = reg_factors(2:end);
+exponents = [reg_factors(2:end), reg_factors_CI_95(2:end,:)];
 
 if via_fX
     predictions = exp(-predictions) ./ (1-data.model_a);

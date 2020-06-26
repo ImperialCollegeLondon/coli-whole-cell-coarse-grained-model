@@ -1,1 +1,0 @@
-V_{div} \propto fE^{-0.2} \times fQ^{15.17}

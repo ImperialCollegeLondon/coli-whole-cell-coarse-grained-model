@@ -1,0 +1,1 @@
+V_{div} \propto fR^{0} \times fRA^{0.85}\times active_rib_frac^{-0.38}

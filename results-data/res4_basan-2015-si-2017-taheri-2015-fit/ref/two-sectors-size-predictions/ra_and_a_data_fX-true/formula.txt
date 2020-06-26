@@ -1,1 +1,0 @@
-f_X \propto ra^{2.08} \times a^{-3.86}
