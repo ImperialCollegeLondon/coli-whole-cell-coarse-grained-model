@@ -40,8 +40,13 @@ cm_type = [data_basan.cm_type; data_si.cm_type; data_taheri.cm_type];
 useless_type = [data_basan.useless_type; data_si.useless_type; data_taheri.useless_type];
 cm_uM = [data_basan.cm_uM; data_si.cm_uM; data_taheri.cm_uM];
 source = [data_basan.source; data_si.source; data_taheri.source];
-writetable(table(growth_rate_per_hr, cell_size, nutrient_type, cm_type, useless_type, cm_uM, source), ...
- [output_folder 'basan-2015-si-2017-taheri-2015_normalized_data.csv']);
+full_table = table(growth_rate_per_hr, cell_size, nutrient_type, cm_type, useless_type, cm_uM, source);
+writetable(full_table, [output_folder 'basan-2015-si-2017-taheri-2015_normalized_data.csv']);
+
+%%% also write the second low fit of the rescaled size data
+only_nut = full_table(full_table.cm_type==0 & full_table.useless_type==0,:);
+pfitlog = polyfit(only_nut.growth_rate_per_hr,log(only_nut.cell_size),1);
+writetable(table(pfitlog), [output_folder 'basan-2015-si-2017-taheri-2015_normalization-second-law-fit.csv']);
 
 end
 

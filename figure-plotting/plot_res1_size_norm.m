@@ -5,6 +5,7 @@ scale_factors = readtable('../results-data/res1_size-normalization/fitted_scalin
 basan_data = readtable('../external-data/basan_2015_data.csv');
 si_data = readtable('../external-data/si_2017_data.csv');
 taheri_data = readtable('../external-data/taheri-araghi_2015_data.csv');
+second_law_fit_pars = readtable('../results-data/res1_size-normalization/basan-2015-si-2017-taheri-2015_normalization-second-law-fit.csv')
 
 %% output folder
 output_folder = '../figure-assembly/components/';
@@ -33,7 +34,10 @@ subplot(1,2,2);
 plot(basan_data.growth_rate_per_hr(I_basan_nut_only), basan_data.source_cell_volume_um3(I_basan_nut_only), 'o', 'Color', 'k', 'MarkerFaceColor', colors(6,:), 'LineWidth', lw, 'MarkerSize', mk_size); hold on;
 plot(si_data.growth_rate_per_hr(I_si_nut_only), si_data.source_cell_volume_um3(I_si_nut_only) .* scale_factors.best_scaling_si_to_basan, 's', 'Color', 'k', 'MarkerFaceColor', colors(9,:), 'LineWidth', lw, 'MarkerSize', mk_size); hold on;
 plot(taheri_data.growth_rate_per_hr(I_taheri_nut_only), taheri_data.avg_cell_volume_um3(I_taheri_nut_only) .* scale_factors.best_scaling_taheri_to_basan, '^', 'Color', 'k', 'MarkerFaceColor', colors(12,:), 'LineWidth', lw, 'MarkerSize', mk_size); hold on;
-
+grs = linspace(0.3,2.4,50);
+pfitlog = table2array(second_law_fit_pars);
+pred_sizes = exp(polyval(pfitlog, grs));
+plot(grs,pred_sizes,'k');
 
 %% styling
 for i=1:2
