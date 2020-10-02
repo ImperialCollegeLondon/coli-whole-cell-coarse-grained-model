@@ -1,6 +1,6 @@
 # coli-whole-cell-coarse-grained-model
 
-Code for paper currently in revision.
+Code for the [paper](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008245) `A bacterial size law revealed by a coarse-grained model of cell physiology`.
 
 The folder `model-code` contains all the model analytics and simulation functions, mostly in `matlab`, except the simulation code for the stochastic model that is written in `c++`.
 For the `c++` code, the source is given, together with a binary compiled on mac and a basic `shell` compilation script to adapt to one's needs.
